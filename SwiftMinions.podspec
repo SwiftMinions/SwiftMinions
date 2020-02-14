@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftMinions'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'SwiftMinions'
 
 # This description is used to generate tags and improve search results.
@@ -26,10 +26,10 @@ Pod::Spec.new do |s|
 
   DESC
    
-  s.homepage         = 'https://github.com/SwiftMinions/SwiftMinions'
+  s.homepage         = 'https://github.com/SwiftMinions'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Chen Stephen' => 'tasb00429@gmail.com' }
-  s.source           = { :git => 'git@github.com:SwiftMinions/SwiftMinions.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/SwiftMinions/SwiftMinions.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.cocoapods_version = '>= 1.4.0'
   s.default_subspec = 'Core'
