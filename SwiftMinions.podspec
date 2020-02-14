@@ -34,8 +34,6 @@ Pod::Spec.new do |s|
   s.cocoapods_version = '>= 1.4.0'
   s.default_subspec = 'Core'
   s.swift_versions = '4.2'
-
-
   
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 
@@ -47,7 +45,7 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
 
   s.subspec 'Core' do |ss|
-    ss.source_files  = 'Sources/SwiftMinions/*'
+    ss.source_files  = 'Sources/SwiftMinions/UIKit'
     ss.framework = 'Foundation'
   end
 
