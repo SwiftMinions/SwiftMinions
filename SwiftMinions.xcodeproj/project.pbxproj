@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,27 @@
 		DC63C55A23F6D718005684DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DC63C59F23F6E287005684DE /* SwiftMinions */,
 				DC63C55B23F6D718005684DE /* SwiftMinions.h */,
 				DC63C55C23F6D718005684DE /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		DC63C59F23F6E287005684DE /* SwiftMinions */ = {
+			isa = PBXGroup;
+			children = (
+				DC63C5A023F6E287005684DE /* UIKit */,
+			);
+			path = SwiftMinions;
+			sourceTree = "<group>";
+		};
+		DC63C5A023F6E287005684DE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +114,7 @@
 				TargetAttributes = {
 					DC63C55723F6D718005684DE = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -131,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +281,7 @@
 		DC63C56123F6D718005684DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NLHXHRPT3H;
@@ -278,6 +300,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +309,7 @@
 		DC63C56223F6D718005684DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NLHXHRPT3H;
