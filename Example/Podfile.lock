@@ -1,0 +1,18 @@
+PODS:
+  - SwiftMinions (0.0.1):
+    - SwiftMinions/Core (= 0.0.1)
+  - SwiftMinions/Core (0.0.1)
+
+DEPENDENCIES:
+  - SwiftMinions (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftMinions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftMinions: 2cc0b3ac563978e8016f200bb95da78f42f322c1
+
+PODFILE CHECKSUM: 184d6942ad3c0aa46f8f57acc575962bded2d739
+
+COCOAPODS: 1.8.4

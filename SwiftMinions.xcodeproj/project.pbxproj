@@ -30,7 +30,7 @@
 		DC63C54E23F6D718005684DE = {
 			isa = PBXGroup;
 			children = (
-				DC63C55A23F6D718005684DE /* SwiftMinions */,
+				DC63C55A23F6D718005684DE /* Sources */,
 				DC63C55923F6D718005684DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +43,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC63C55A23F6D718005684DE /* SwiftMinions */ = {
+		DC63C55A23F6D718005684DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				DC63C55B23F6D718005684DE /* SwiftMinions.h */,
 				DC63C55C23F6D718005684DE /* Info.plist */,
 			);
-			path = SwiftMinions;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -32,8 +32,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'git@github.com:SwiftMinions/SwiftMinions.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.cocoapods_version = '>= 1.4.0'
-  # s.default_subspec = 'Core'
+  s.default_subspec = 'Core'
   s.swift_versions = '4.2'
+
+
   
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 
@@ -44,11 +46,10 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-  # s.subspec 'Core' do |ss|
-  #   ss.source_files  = 'Aletheia/Sources/General', 'Aletheia/Sources/Extensions', 'Aletheia/Sources/ExtensionsUI'
-  #   ss.dependency 'Log'
-  #   ss.framework = 'Foundation'
-  # end
+  s.subspec 'Core' do |ss|
+    ss.source_files  = 'Sources/SwiftMinions/*'
+    ss.framework = 'Foundation'
+  end
 
   # s.subspec "Network" do |ss|
   #   ss.source_files = 'Aletheia/Sources/Networking'
