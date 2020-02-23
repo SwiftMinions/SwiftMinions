@@ -55,7 +55,7 @@ public extension Date {
             }
         }
     }
-
+    
     var month: Int {
         get {
             return Calendar.current.component(.month, from: self)
@@ -149,36 +149,36 @@ public extension Date {
         if component == .day {
             return Calendar.current.startOfDay(for: self)
         }
-
+        
         var components: Set<Calendar.Component> {
             switch component {
             case .second:
                 return [.year, .month, .day, .hour, .minute, .second]
-
+                
             case .minute:
                 return [.year, .month, .day, .hour, .minute]
-
+                
             case .hour:
                 return [.year, .month, .day, .hour]
-
+                
             case .weekOfYear, .weekOfMonth:
                 return [.yearForWeekOfYear, .weekOfYear]
-
+                
             case .month:
                 return [.year, .month]
-
+                
             case .year:
                 return [.year]
-
+                
             default:
                 return []
             }
         }
-
+        
         guard !components.isEmpty else { return nil }
         return Calendar.current.date(from: Calendar.current.dateComponents(components, from: self))
     }
-
+    
     /// SwifterSwift: Date at the end of calendar component.
     ///
     ///     let date = Date() // "Jan 12, 2017, 7:27 PM"
@@ -197,48 +197,48 @@ public extension Date {
                 calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date))!
             date.add(.second, value: -1)
             return date
-
+            
         case .minute:
             var date = add(.minute, value: 1)
             let after = calendar.date(from:
                 calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date))!
             date = after.add(.second, value: -1)
             return date
-
+            
         case .hour:
             var date = add(.hour, value: 1)
             let after = calendar.date(from:
                 calendar.dateComponents([.year, .month, .day, .hour], from: date))!
             date = after.add(.second, value: -1)
             return date
-
+            
         case .day:
             var date = add(.day, value: 1)
             date = calendar.startOfDay(for: date)
             date.add(.second, value: -1)
             return date
-
+            
         case .weekOfYear, .weekOfMonth:
             var date = self
             let beginningOfWeek = calendar.date(from:
                 calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date))!
             date = beginningOfWeek.add(.day, value: 7).add(.second, value: -1)
             return date
-
+            
         case .month:
             var date = add(.month, value: 1)
             let after = calendar.date(from:
                 calendar.dateComponents([.year, .month], from: date))!
             date = after.add(.second, value: -1)
             return date
-
+            
         case .year:
             var date = add(.year, value: 1)
             let after = calendar.date(from:
                 calendar.dateComponents([.year], from: date))!
             date = after.add(.second, value: -1)
             return date
-
+            
         default:
             return nil
         }
@@ -248,30 +248,30 @@ public extension Date {
 public extension TimeInterval {
     
     /**
-    Date to String
-    ### Usage Example: ###
-    ```swift
-    TimeInterval().dateSince1970
-    ```
-    - Parameter format: date format
-    */
+     Date to String
+     ### Usage Example: ###
+     ```swift
+     TimeInterval().dateSince1970
+     ```
+     - Parameter format: date format
+     */
     var dateSince1970: Date{
         return Date(timeIntervalSince1970: self)
     }
     
     /**
-    TimeInterval to String
-    ### Usage Example: ###
-    ```swift
-    TimeInterval().toString()
-    // 2020-11-24 05:30:30
-    
-    TimeInterval().toString(format: "yyyy-MM-dd")
-    // 2020-11-24
-    
-    ```
-    - Parameter format: date format
-    */
+     TimeInterval to String
+     ### Usage Example: ###
+     ```swift
+     TimeInterval().toString()
+     // 2020-11-24 05:30:30
+     
+     TimeInterval().toString(format: "yyyy-MM-dd")
+     // 2020-11-24
+     
+     ```
+     - Parameter format: date format
+     */
     func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         return dateSince1970.toString(format: format)
     }
@@ -366,27 +366,27 @@ public extension UIEdgeInsets {
     }
     
     /**
-    Get veritical edge
-    ### Usage Example: ###
-    ````
+     Get veritical edge
+     ### Usage Example: ###
+     ````
      let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
      inset.vertical
      // 20
-    ````
-    */
+     ````
+     */
     var vertical: CGFloat {
         return top + bottom
     }
     
     /**
-    Get horizontal edge
-    ### Usage Example: ###
-    ````
+     Get horizontal edge
+     ### Usage Example: ###
+     ````
      let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
      inset.horizontal
      // 16
-    ````
-    */
+     ````
+     */
     var horizontal: CGFloat {
         return left + right
     }
@@ -470,3 +470,27 @@ public extension Collection {
     }
 }
 
+public extension Collection {
+    func group(by size: Int) -> [[Element]]? {
+        // Inspired by: https://lodash.com/docs/4.17.4#chunk
+        guard size > 0, !isEmpty else { return nil }
+        var start = startIndex
+        var slices = [[Element]]()
+        while start != endIndex {
+            let end = index(start, offsetBy: size, limitedBy: endIndex) ?? endIndex
+            slices.append(Array(self[start..<end]))
+            start = end
+        }
+        return slices
+    }
+    
+    func group<K: Hashable>(by keyForValue: (Element) -> K) -> [K: [Element]] {
+        var group = [K: [Element]]()
+        for value in self {
+            let key = keyForValue(value)
+            group[key] = (group[key] ?? []) + [value]
+            
+        }
+        return group
+    }
+}
