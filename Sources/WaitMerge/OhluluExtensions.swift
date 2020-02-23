@@ -276,3 +276,63 @@ public extension TimeInterval {
         return dateSince1970.toString(format: format)
     }
 }
+
+public extension Int {
+    
+    var toDouble: Double {
+        return Double(self)
+    }
+    
+    var toCgfloat: CGFloat {
+        return CGFloat(self)
+    }
+    
+    var toFloat: Float {
+        return Float(self)
+    }
+}
+
+public extension Double {
+    
+    var toInt: Int {
+        return Int(self)
+    }
+    
+    var toCgfloat: CGFloat {
+        return CGFloat(self)
+    }
+    
+    var toFloat: Float {
+        return Float(self)
+    }
+}
+
+public extension CGFloat {
+    
+    var toInt: Int {
+        return Int(self)
+    }
+    
+    var toDouble: Double {
+        return Double(self)
+    }
+    
+    var toFloat: Float {
+        return Float(self)
+    }
+}
+
+public extension Float {
+    
+    var toInt: Int {
+        return Int(self)
+    }
+    
+    var toDouble: Double {
+        return Double(self)
+    }
+    
+    var toCgfloat: CGFloat {
+        return CGFloat(self)
+    }
+}
