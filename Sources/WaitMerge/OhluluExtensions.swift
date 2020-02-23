@@ -710,3 +710,14 @@ public extension UIScreen {
         return UIScreen.main.bounds.width
     }
 }
+public extension Thread {
+    static func mainThread(_ closure: @escaping () -> Void) {
+        if Thread.isMainThread {
+            closure()
+        } else {
+            DispatchQueue.main.async {
+                closure()
+            }
+        }
+    }
+}
