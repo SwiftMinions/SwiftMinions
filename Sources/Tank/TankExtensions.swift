@@ -69,3 +69,54 @@ extension Data {
         return nil
     }
 }
+
+extension UserDefaults {
+    /**
+     ### Usage Example: ###
+     ````
+     struct UserModel: Codable {
+         let id: String
+         enum CodingKeys: String, CodingKey {
+             case id = "id"
+         }
+     }
+     let jsonString = "{ id : \"123\" }"
+     let data = string.data(using: .utf8)
+     let userModel: UserModel = data.toCodable()
+     UserDefaults.standard.saveCodable(model: userModel, key: "userKey")
+     ````
+    */
+    func saveCodable<T: Codable>(model : T, key : String) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(model) {
+            self.set(encoded, forKey: key)
+        }
+    }
+    
+    /**
+     ### Usage Example: ###
+     ````
+     struct UserModel: Codable {
+         let id: String
+         enum CodingKeys: String, CodingKey {
+             case id = "id"
+         }
+     }
+     let jsonString = "{ id : \"123\" }"
+     let data = string.data(using: .utf8)
+     let userModel: UserModel = data.toCodable()
+     UserDefaults.standard.saveCodable(model: userModel, key: "userKey")
+     var user: UserModel = UserDefaults.standard.getCodable("userKey")
+     print(user ?? "nil")
+     ````
+    */
+    func getCodable<T: Codable>(key : String) -> T? {
+        if let savedData = self.object(forKey: key) as? Data {
+            let decoder = JSONDecoder()
+            if let loadedModel = try? decoder.decode(T.self, from: savedData) {
+                return loadedModel
+            }
+        }
+        return nil
+    }
+}
