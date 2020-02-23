@@ -928,3 +928,29 @@ fileprivate extension UIScrollView {
         objc_removeAssociatedObjects(self)
     }
 }
+
+public extension UIStackView {
+    
+    func addArrangedSubviews(_ views: [UIView]) {
+        for view in views {
+            addArrangedSubview(view)
+        }
+    }
+    
+    func forceRemoveAllArrangedSubviews() {
+        for view in arrangedSubviews {
+            removeArrangedSubview(view)
+            view.removeFromSuperview()
+        }
+    }
+    
+    func forceRemoveArrangedSubviews(_ views: [UIView]) {
+        for view in views {
+            if !subviews.contains(view) {
+                continue
+            }
+            removeArrangedSubview(view)
+            view.removeFromSuperview()
+        }
+    }
+}
