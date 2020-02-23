@@ -279,60 +279,60 @@ public extension TimeInterval {
 
 public extension Int {
     
-    var toDouble: Double {
+    func toDouble() -> Double {
         return Double(self)
     }
     
-    var toCgfloat: CGFloat {
+    func toCgfloat() -> CGFloat {
         return CGFloat(self)
     }
     
-    var toFloat: Float {
+    func toFloat() -> Float {
         return Float(self)
     }
 }
 
 public extension Double {
     
-    var toInt: Int {
+    func toInt() -> Int {
         return Int(self)
     }
     
-    var toCgfloat: CGFloat {
+    func toCgfloat() -> CGFloat {
         return CGFloat(self)
     }
     
-    var toFloat: Float {
+    func toFloat() -> Float {
         return Float(self)
     }
 }
 
 public extension CGFloat {
     
-    var toInt: Int {
+    func toInt() -> Int {
         return Int(self)
     }
     
-    var toDouble: Double {
+    func toDouble() -> Double {
         return Double(self)
     }
     
-    var toFloat: Float {
+    func toFloat() -> Float {
         return Float(self)
     }
 }
 
 public extension Float {
     
-    var toInt: Int {
+    func toInt() -> Int {
         return Int(self)
     }
     
-    var toDouble: Double {
+    func toDouble() -> Double {
         return Double(self)
     }
     
-    var toCgfloat: CGFloat {
+    func toCgfloat() -> CGFloat {
         return CGFloat(self)
     }
 }
