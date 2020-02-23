@@ -8,12 +8,8 @@
 
 import UIKit
 
-
-
-
-//URL
 extension URL: ExpressibleByStringLiteral {
-    /*
+    /**
      Creates a url instance initialized to the given string value.
      ### Usage Example: ###
      ````
@@ -26,4 +22,27 @@ extension URL: ExpressibleByStringLiteral {
         }
         self = url
     }
+}
+
+
+extension UILabel {
+    /**
+     計算Label高度.
+     ### Usage Example: ###
+     ````
+     let height: CGFloat = UILabel().heightForLabel(text: "123", font: UIFont.systemFont(ofSize: 100), width: 100)
+     print(height)
+     ````
+    */
+    func calculateHeight(text:String, font:UIFont, width:CGFloat) -> CGFloat {
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+        
+        label.sizeToFit()
+        return label.frame.height
+    }
+    
 }
