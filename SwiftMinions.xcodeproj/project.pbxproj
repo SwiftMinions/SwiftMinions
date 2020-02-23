@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +31,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22C5A31F240226E30077E880 /* Tank */ = {
+			isa = PBXGroup;
+			children = (
+				22C5A31D240226D10077E880 /* TankExtensions.swift */,
+			);
+			path = Tank;
+			sourceTree = "<group>";
+		};
 		DC63C54E23F6D718005684DE = {
 			isa = PBXGroup;
 			children = (
@@ -50,6 +60,7 @@
 			children = (
 				DC63C59F23F6E287005684DE /* SwiftMinions */,
 				DC63C55B23F6D718005684DE /* SwiftMinions.h */,
+				22C5A31F240226E30077E880 /* Tank */,
 				DC63C55C23F6D718005684DE /* Info.plist */,
 			);
 			path = Sources;
@@ -152,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */,
+				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
