@@ -624,3 +624,71 @@ private extension NSRange {
         self.length = string.distance(from: startIndex, to: endIndex)
     }
 }
+
+public extension CGSize {
+    
+    /// create size with square
+    init(square: Double) {
+        self.init(width: square, height: square)
+    }
+    
+    /// create size with square
+    init(square: Float) {
+        self.init(width: square.toCgfloat(), height: square.toCgfloat())
+    }
+    
+    /// create size with square
+    init(square: CGFloat) {
+        self.init(width: square, height: square)
+    }
+    
+    /// create size with square
+    init(square: Int) {
+        self = .init(width: square, height: square)
+    }
+}
+
+
+public extension CGRect {
+    
+    /// x, y is 0
+    init(width: Double, height: Double) {
+        self.init(x: 0, y: 0, width: width, height: height)
+    }
+    
+    /// x, y is 0
+    init(width: Float, height: Float) {
+        self.init(x: 0, y: 0, width: width.toCgfloat(), height: height.toCgfloat())
+    }
+
+    /// x, y is 0
+    init(width: CGFloat, height: CGFloat) {
+        self.init(x: 0, y: 0, width: width, height: height)
+    }
+    
+    /// x, y is 0
+    init(width: Int, height: Int) {
+        self.init(x: 0, y: 0, width: width, height: height)
+    }
+    
+    /// x, y is 0
+    init(square: Double) {
+        self.init(x: 0, y: 0, width: square, height: square)
+    }
+    
+    /// x, y is 0
+    init(square: Float) {
+        self.init(x: 0, y: 0, width: square.toCgfloat(), height: square.toCgfloat())
+    }
+    
+    /// x, y is 0
+    init(square: CGFloat) {
+        self.init(x: 0, y: 0, width: square, height: square)
+    }
+    
+    /// x, y is 0
+    init(square: Int) {
+        self.init(x: 0, y: 0, width: square, height: square)
+    }
+}
+
