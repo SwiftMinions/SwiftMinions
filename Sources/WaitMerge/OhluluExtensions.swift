@@ -542,14 +542,14 @@ public struct AttributeStringBuilder {
     }
     
     public func appendBase(
-           text: String,
-           attribute: [NSAttributedString.Key: Any]? = nil)
-           -> Self {
-               attString.append(
-                   NSMutableAttributedString(string: text, attributes: attribute ?? baseAttributed)
-               )
-               return self
-       }
+        text: String,
+        attribute: [NSAttributedString.Key: Any]? = nil)
+        -> Self {
+            attString.append(
+                NSMutableAttributedString(string: text, attributes: attribute ?? baseAttributed)
+            )
+            return self
+    }
     
     public func build() -> NSMutableAttributedString {
         return attString
@@ -557,7 +557,7 @@ public struct AttributeStringBuilder {
 }
 
 public extension NSAttributedString {
-
+    
     /**
      ### Usage Exsample ###
      ```
@@ -569,7 +569,7 @@ public extension NSAttributedString {
          .setSpecial(text: "*", attribute: [.foregroundColor: UIColor.black])
          .build()
      ```
-    */
+     */
     static var builder: AttributeStringBuilder {
         get { return AttributeStringBuilder() }
         set { }
@@ -660,7 +660,7 @@ public extension CGRect {
     init(width: Float, height: Float) {
         self.init(x: 0, y: 0, width: width.toCgfloat(), height: height.toCgfloat())
     }
-
+    
     /// x, y is 0
     init(width: CGFloat, height: CGFloat) {
         self.init(x: 0, y: 0, width: width, height: height)
@@ -692,3 +692,21 @@ public extension CGRect {
     }
 }
 
+public extension UIScreen {
+    
+    static var height: Double {
+        return Double(UIScreen.heightf)
+    }
+    
+    static var width: Double {
+        return Double(UIScreen.widthf)
+    }
+    
+    static var heightf: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
+    static var widthf: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+}
