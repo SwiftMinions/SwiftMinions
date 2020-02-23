@@ -245,3 +245,34 @@ public extension Date {
     }
 }
 
+public extension TimeInterval {
+    
+    /**
+    Date to String
+    ### Usage Example: ###
+    ```swift
+    TimeInterval().dateSince1970
+    ```
+    - Parameter format: date format
+    */
+    var dateSince1970: Date{
+        return Date(timeIntervalSince1970: self)
+    }
+    
+    /**
+    TimeInterval to String
+    ### Usage Example: ###
+    ```swift
+    TimeInterval().toString()
+    // 2020-11-24 05:30:30
+    
+    TimeInterval().toString(format: "yyyy-MM-dd")
+    // 2020-11-24
+    
+    ```
+    - Parameter format: date format
+    */
+    func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
+        return dateSince1970.toString(format: format)
+    }
+}
