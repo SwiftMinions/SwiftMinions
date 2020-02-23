@@ -24,7 +24,6 @@ extension URL: ExpressibleByStringLiteral {
     }
 }
 
-
 extension UILabel {
     /**
      計算Label高度.
@@ -45,4 +44,28 @@ extension UILabel {
         return label.frame.height
     }
     
+}
+
+extension Data {
+    /**
+     ### Usage Example: ###
+     ````
+     struct UserModel: Codable {
+         let id: String
+         enum CodingKeys: String, CodingKey {
+             case id = "id"
+         }
+     }
+     let jsonString = "{ id : \"123\" }"
+     let data = string.data(using: .utf8)
+     let userModel: UserModel = data.toCodable()
+     print(userModel)
+     ````
+    */
+    func toCodable<T: Codable>(decoder: JSONDecoder = JSONDecoder()) -> T? {
+        if let model = try? decoder.decode(T.self, from: self) {
+            return model
+        }
+        return nil
+    }
 }
