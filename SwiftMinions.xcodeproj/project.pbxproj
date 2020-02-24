@@ -11,7 +11,6 @@
 		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +20,6 @@
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +42,27 @@
 			path = WaitMerge;
 			sourceTree = "<group>";
 		};
+		DC01EF2D24040F4000B8B65D /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
+		DC01EF2F24040F4000B8B65D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftStandardLibrary;
+			sourceTree = "<group>";
+		};
 		DC63C54E23F6D718005684DE = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +83,8 @@
 		DC63C55A23F6D718005684DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DC63C59F23F6E287005684DE /* SwiftMinions */,
 				DC63C55B23F6D718005684DE /* SwiftMinions.h */,
+				DC63C59F23F6E287005684DE /* SwiftMinions */,
 				22C5A31F240226E30077E880 /* WaitMerge */,
 				DC63C55C23F6D718005684DE /* Info.plist */,
 			);
@@ -75,6 +94,9 @@
 		DC63C59F23F6E287005684DE /* SwiftMinions */ = {
 			isa = PBXGroup;
 			children = (
+				DC01EF2D24040F4000B8B65D /* CoreLocation */,
+				DC01EF2F24040F4000B8B65D /* Foundation */,
+				DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */,
 				DC63C5A023F6E287005684DE /* UIKit */,
 			);
 			path = SwiftMinions;
@@ -83,7 +105,6 @@
 		DC63C5A023F6E287005684DE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -170,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
-				DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
