@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.cocoapods_version = '>= 1.4.0'
   s.default_subspec = 'Core'
-  s.swift_versions = '4.2'
+  s.swift_version = '5.1'
   
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 
