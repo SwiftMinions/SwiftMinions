@@ -225,3 +225,27 @@ extension JSONDecoder.KeyDecodingStrategy {
     }
 
 }
+
+extension UIStackView {
+
+    func addBackgroundView(color: UIColor, cornerRadius: CGFloat? = nil) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        if let cornerRadius = cornerRadius {
+            subView.layer.cornerRadius = cornerRadius
+        }
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
+    }
+
+    func removeAllArrangedSubviews() {
+        let removedSubviews = arrangedSubviews.reduce([]) { (sum, next) -> [UIView] in
+            self.removeArrangedSubview(next)
+            return sum + [next]
+        }
+
+        NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
+
+        removedSubviews.forEach({ $0.removeFromSuperview() })
+    }
+}
