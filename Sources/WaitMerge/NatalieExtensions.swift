@@ -285,3 +285,9 @@ extension Double {
         return (self * divisor).rounded(.towardZero) / divisor
     }
 }
+
+extension Decimal {
+    var doubleValue: Double {
+        return NSDecimalNumber(decimal: self).doubleValue
+    }
+}
