@@ -11,6 +11,8 @@
 		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC63C5A223F6E28E005684DE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */; };
+		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC63C5A123F6E28E005684DE /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalieExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			children = (
 				22C5A31D240226D10077E880 /* TankExtensions.swift */,
 				1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */,
+				E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */,
 			);
 			path = WaitMerge;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);
