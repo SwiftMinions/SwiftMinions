@@ -8,40 +8,18 @@
 
 import UIKit
 
-extension URL: ExpressibleByStringLiteral {
-    /**
-     Creates a url instance initialized to the given string value.
-     ### Usage Example: ###
-     ````
-     let url: URL = "https://apple.com"
-     ````
-     */
-    public init(stringLiteral value: StaticString) {
-        guard let url = URL(string: "\(value)") else {
-            fatalError("Invalid URL string literal: \(value)")
-        }
-        self = url
-    }
-}
-
 extension UILabel {
     /**
-     計算Label高度.
+     計算 Label 高度.
      ### Usage Example: ###
      ````
      let height: CGFloat = UILabel().heightForLabel(text: "123", font: UIFont.systemFont(ofSize: 100), width: 100)
      print(height)
      ````
      */
-    func calculateHeight(text:String, font:UIFont, width:CGFloat) -> CGFloat {
-        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-        label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.byWordWrapping
-        label.font = font
-        label.text = text
-        
-        label.sizeToFit()
-        return label.frame.height
+    func calculateHeight(width: CGFloat) -> CGFloat {
+        let size = text?.calculateRectSize(font: font, maxSize: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
+        return size?.height ?? 0
     }
     
 }
@@ -87,7 +65,7 @@ extension Data {
 
 extension UserDefaults {
     /**
-     將Codable 存入UserDefaults
+     將 Codable 存入 UserDefaults
      ### Usage Example: ###
      ````
      struct UserModel: Codable {
@@ -110,7 +88,7 @@ extension UserDefaults {
     }
     
     /**
-     從UserDefaults取出Codable
+     從 UserDefaults 取出 Codable
      ### Usage Example: ###
      ````
      struct UserModel: Codable {
@@ -140,7 +118,7 @@ extension UserDefaults {
 
 extension String {
     /**
-     計算String 在一個方框下的大小.
+     計算 String 在一個方框下的大小.
      ### Usage Example: ###
      ````
      let size: CGSize = "tttttttttttttttttt".calculateRectSize(font: UIFont.systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
@@ -157,7 +135,7 @@ extension String {
 
 extension String {
     /**
-     16進位文字轉Int
+     16 進位文字轉 Int
      ### Usage Example: ###
      ````
      let hexString = "FF"
@@ -170,7 +148,7 @@ extension String {
         return Int(strtoul(self, nil, 16))
     }
     /**
-     16進位文字轉Binary文字
+     16 進位文字轉 Binary 文字
      ### Usage Example: ###
      ````
      let hexString = "FF"
@@ -183,7 +161,7 @@ extension String {
         return String(hexToInt(), radix: 2)
     }
     /**
-     10進位文字轉16進位文字
+     10 進位文字轉 16 進位文字
      ### Usage Example: ###
      ````
      let decimalString = "255"
@@ -196,7 +174,7 @@ extension String {
         return String(Int(self) ?? 0, radix: 16)
     }
     /**
-     10進位文字轉Binary文字
+     10 進位文字轉 Binary 文字
      ### Usage Example: ###
      ````
      let decimalString = "255"
@@ -209,7 +187,7 @@ extension String {
         return String(Int(self) ?? 0, radix: 2)
     }
     /**
-     Binary文字轉10進位
+     Binary 文字轉 10 進位
      ### Usage Example: ###
      ````
      let binaryString = "11111111"
@@ -222,7 +200,7 @@ extension String {
         return Int(strtoul(self, nil, 2))
     }
     /**
-     Binary文字轉16進位文字
+     Binary 文字轉 16 進位文字
      ### Usage Example: ###
      ````
      let binaryString = "11111111"
@@ -236,7 +214,7 @@ extension String {
     }
     
     /**
-     16進位文字轉Float
+     16 進位文字轉 Float
      ### Usage Example: ###
      ````
      let hexString = "3D512EE0"
@@ -251,7 +229,7 @@ extension String {
 
 extension String {
     /**
-     16進位文字轉Data
+     16 進位文字轉Data
      ### Usage Example: ###
      ````
      let data = "FF".hexToData()
@@ -280,7 +258,7 @@ extension String {
 extension UICollectionView {
     
     /**
-     註冊Cell
+     註冊 Cell
      ### Old Example: ###
      ````
      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -294,7 +272,7 @@ extension UICollectionView {
         register(cellType, forCellWithReuseIdentifier: String(describing: cellType))
     }
     /**
-     註冊Nib Cell
+     註冊 Nib Cell
      ### Old Example: ###
      ````
      collectionView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
@@ -309,7 +287,7 @@ extension UICollectionView {
         register(UINib(nibName: className, bundle: nil), forCellWithReuseIdentifier: className)
     }
     /**
-     註冊Nib Header
+     註冊 Nib Header
      ### Old Example: ###
      ````
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
@@ -324,7 +302,7 @@ extension UICollectionView {
         register(UINib(nibName: className, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: className)
     }
     /**
-     註冊Nib Footer
+     註冊 Nib Footer
      ### Old Example: ###
      ````
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
@@ -339,7 +317,7 @@ extension UICollectionView {
         register(UINib(nibName: className, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: className)
     }
     /**
-     註冊Header
+     註冊 Header
      ### Old Example: ###
      ````
      collectionView.register(Header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
@@ -354,7 +332,7 @@ extension UICollectionView {
         register(T.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: className)
     }
     /**
-     註冊Nib Footer
+     註冊 Nib Footer
      ### Old Example: ###
      ````
      collectionView.register(Footer.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
@@ -371,7 +349,7 @@ extension UICollectionView {
     }
     
     /**
-     取得Header
+     取得 Header
      ### Old Example: ###
      ````
      let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as? HeaderClass
@@ -385,7 +363,7 @@ extension UICollectionView {
         return self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: type), for: indexPath) as! T
     }
     /**
-     取得Footer
+     取得 Footer
      ### Old Example: ###
      ````
      let Footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Footer", for: indexPath) as? FooterClass
@@ -399,7 +377,7 @@ extension UICollectionView {
         return self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: String(describing: type), for: indexPath) as! T
     }
     /**
-     取得cell
+     取得 cell
      ### Old Example: ###
      ````
      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
@@ -417,7 +395,7 @@ extension UICollectionView {
 
 extension UICollectionView {
     /**
-     reloadData完畢後處理。
+     reloadData 完畢後處理。
      用在ViewDidLoad上
      */
     func reloadData(completion: @escaping ()->()) {
@@ -429,7 +407,7 @@ extension UICollectionView {
 
 extension UITableView {
     /**
-     註冊Cell
+     註冊 Cell
      ### Old Example: ###
      ````
      tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -443,7 +421,7 @@ extension UITableView {
         register(type, forCellReuseIdentifier: String(describing: type))
     }
     /**
-     註冊Nib Cell
+     註冊 Nib Cell
      ### Old Example: ###
      ````
      tableView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
@@ -458,7 +436,7 @@ extension UITableView {
         register(UINib(nibName: className, bundle: nil), forCellReuseIdentifier: className)
     }
     /**
-     取得cell
+     取得 cell
      ### Old Example: ###
      ````
      let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
@@ -472,7 +450,7 @@ extension UITableView {
         return self.dequeueReusableCell(withIdentifier: String(describing: type)) as! T
     }
     /**
-    取得cell
+    取得 cell
     ### Old Example: ###
     ````
     let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
@@ -489,8 +467,8 @@ extension UITableView {
 
 extension UITableView {
     /**
-     reloadData完畢後處理。
-     用在ViewDidLoad上
+     reloadData 完畢後處理。
+     用在 ViewDidLoad 上
      */
     func reloadData(completion: @escaping ()->()) {
         UIView.animate(withDuration: 0, animations: {
