@@ -6,8 +6,24 @@
 //  Copyright © 2020 SwiftMinions. All rights reserved.
 //
 
+#if os(Linux)
+
+// Code specific to Linux
+
+#elseif os(macOS)
+
+// Code specific to macOS
+
+#endif
+
+#if canImport(UIKit)
+
 import UIKit
 import Foundation
+
+#endif
+
+
 
 extension Double {
         
