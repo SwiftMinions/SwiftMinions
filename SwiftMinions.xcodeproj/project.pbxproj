@@ -10,9 +10,11 @@
 		10273587240292CD00A0347F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 10273586240292CD00A0347F /* .gitattributes */; };
 		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
+		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
+		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
+		AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */; };
 		DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */; };
 		DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F10240FEDF900B39B31 /* StephenObjects.swift */; };
-		AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -21,9 +23,11 @@
 		10273586240292CD00A0347F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhluluExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
+		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
+		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HankExtensions.swift; sourceTree = "<group>"; };
 		DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenExtensions.swift; sourceTree = "<group>"; };
 		DC297F10240FEDF900B39B31 /* StephenObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenObjects.swift; sourceTree = "<group>"; };
-		AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HankExtensions.swift; sourceTree = "<group>"; };
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */,
+				A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */,
 			);
 			path = SwiftStandardLibrary;
 			sourceTree = "<group>";
@@ -206,7 +212,9 @@
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
+				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
+				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
