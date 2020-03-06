@@ -25,29 +25,6 @@ import Foundation
 
 
 
-extension Double {
-        
-    /// Convert from degrees to radians
-    public var degreesToRadians: Double {
-        return Double.pi * self / 180.0
-    }
-    
-    /// Convert from radians to degrees
-    public var radiansToDegrees: Double {
-        return self * 180 / Double.pi
-    }
-}
-
-/// NSObject haa been conform to protocol 'AletheiaCompatible',
-/// so 'UIResponder' can benefit from it
-extension UIResponder {
-    
-    /// Get response chain through the UIResponder
-    public func responderChain(responder: UIResponder?) {
-        guard let responder = responder else { return }
-        responderChain(responder: responder.next)
-    }
-}
 
 extension Array {
     
@@ -70,29 +47,7 @@ extension Array {
 
 extension String {
     
-    /// 取得當前 字串的寬度
-    ///
-    /// - Parameter font: 字體
-    /// - Returns: 寬度
-    public func width(fontSize font: UIFont) -> CGFloat {
-        return self.size(withAttributes: [NSAttributedString.Key.font: font]).width
-    }
-    
-    /// 取得當前 字串的長度
-    ///
-    /// - Parameter font: 字體
-    /// - Returns: 長度
-    public func height(fontSize font: UIFont) -> CGFloat {
-        return self.size(withAttributes: [NSAttributedString.Key.font: font]).height
-    }
-    
-    /// 取得當前 字串大小
-    ///
-    /// - Parameter font: 字體
-    /// - Returns: 大小
-    public func size(fontSize font: UIFont) -> CGSize {
-        return self.size(withAttributes: [NSAttributedString.Key.font: font])
-    }
+
     
     /// Convert into int type
     public var toInt: Int? { return Int(self) }
