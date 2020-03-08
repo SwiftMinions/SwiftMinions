@@ -14,7 +14,7 @@ public extension BinaryInteger {
      Change to radians value
      
      ### Chinese description
-     轉乘弧度，單位 π
+     轉成弧度，單位 π
      
      ## Use example ##
      ```swift
@@ -36,7 +36,7 @@ public extension BinaryInteger {
      Change to degrees value
      
      ### Chinese description
-     轉乘度數，單位 0° ~ 360°
+     轉成度數，單位 0° ~ 360°
      
      ## Use example ##
      ```swift
