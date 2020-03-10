@@ -13,7 +13,7 @@
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
 		A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B224128144000D8A0E /* StringExtensions.swift */; };
-		A2D9F3B524128156000D8A0E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B424128156000D8A0E /* Config.swift */; };
+		A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B424128156000D8A0E /* MinionsConfig.swift */; };
 		AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */; };
 		DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */; };
 		DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F10240FEDF900B39B31 /* StephenObjects.swift */; };
@@ -28,7 +28,7 @@
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B224128144000D8A0E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		A2D9F3B424128156000D8A0E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A2D9F3B424128156000D8A0E /* MinionsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsConfig.swift; sourceTree = "<group>"; };
 		AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HankExtensions.swift; sourceTree = "<group>"; };
 		DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenExtensions.swift; sourceTree = "<group>"; };
 		DC297F10240FEDF900B39B31 /* StephenObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenObjects.swift; sourceTree = "<group>"; };
@@ -117,11 +117,11 @@
 		DC63C59F23F6E287005684DE /* SwiftMinions */ = {
 			isa = PBXGroup;
 			children = (
+				A2D9F3B424128156000D8A0E /* MinionsConfig.swift */,
 				DC01EF2D24040F4000B8B65D /* CoreLocation */,
 				DC01EF2F24040F4000B8B65D /* Foundation */,
 				DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */,
 				DC63C5A023F6E287005684DE /* UIKit */,
-				A2D9F3B424128156000D8A0E /* Config.swift */,
 			);
 			path = SwiftMinions;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
-				A2D9F3B524128156000D8A0E /* Config.swift in Sources */,
+				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);

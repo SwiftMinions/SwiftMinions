@@ -1,5 +1,5 @@
 //
-//  Config.swift
+//  MinionsConfig.swift
 //  SwiftMinions
 //
 //  Created by twStephen on 2020/3/6.
