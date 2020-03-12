@@ -48,6 +48,7 @@ public extension Array {
     
     
     /**
+     ### Chinese description
      移動陣列內的元素
      
      ## Usage Example: ##
