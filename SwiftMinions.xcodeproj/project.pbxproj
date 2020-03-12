@@ -10,6 +10,7 @@
 		10273587240292CD00A0347F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 10273586240292CD00A0347F /* .gitattributes */; };
 		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
+		22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3CFF62419D857009B09F8 /* LabelExtensions.swift */; };
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
@@ -27,6 +28,7 @@
 		10273586240292CD00A0347F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhluluExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
+		22D3CFF62419D857009B09F8 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		DC63C5A023F6E287005684DE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				22D3CFF62419D857009B09F8 /* LabelExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
 				ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */,
+				22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
 				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
