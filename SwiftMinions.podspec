@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftMinions'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'Save your day.'
 
   s.description      = <<-DESC
@@ -45,11 +45,6 @@ Pod::Spec.new do |s|
   # UIKit Extensions
   s.subspec 'UIKit' do |ss|
     ss.source_files  = 'Sources/SwiftMinions/UIKit/*.swift'
-  end
-
-  # CoreLocation Extensions
-  s.subspec 'CoreLocation' do |ss|
-    ss.source_files  = 'Sources/SwiftMinions/CoreLocation/*.swift'
   end
 
 end

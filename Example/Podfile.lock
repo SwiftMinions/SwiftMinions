@@ -1,29 +1,20 @@
 PODS:
-  - SwiftLint (0.39.1)
-  - SwiftMinions (0.0.4):
-    - SwiftMinions/Core (= 0.0.4)
-  - SwiftMinions/Core (0.0.4)
-  - SwiftMinions/CoreLocation (0.0.4)
-  - SwiftMinions/UIKit (0.0.4)
+  - SwiftMinions (0.0.5):
+    - SwiftMinions/Core (= 0.0.5)
+  - SwiftMinions/Core (0.0.5)
+  - SwiftMinions/UIKit (0.0.5)
 
 DEPENDENCIES:
-  - SwiftLint
   - SwiftMinions (from `../`)
-  - SwiftMinions/CoreLocation (from `../`)
   - SwiftMinions/UIKit (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - SwiftLint
 
 EXTERNAL SOURCES:
   SwiftMinions:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
-  SwiftMinions: b6f81b803fdcd959434de04aa80bb1d081a187d0
+  SwiftMinions: 052450f8856da01d4e4a477912b06dac58525be1
 
-PODFILE CHECKSUM: 3d7e4c3552acb9d5aa689a8e49c00166533a5e88
+PODFILE CHECKSUM: b6b0c9b76eeb60b812efd392b5a6e3ba85ddc9c1
 
 COCOAPODS: 1.8.4
