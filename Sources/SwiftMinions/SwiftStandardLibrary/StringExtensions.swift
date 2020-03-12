@@ -34,3 +34,31 @@ public extension String {
         return self.size(withAttributes: [NSAttributedString.Key.font: font])
     }
 }
+
+extension String {
+    
+    /**
+     Calculate the size of string in a max rect.
+     
+     ### Chinese description
+     計算 String 在一個方框下的大小.
+    
+     ## Use example ##
+     ```swift
+     
+     let size: CGSize = "tttttttttttttttttt".calculateRectSize(font: UIFont.systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
+     print(size)
+
+     ```
+     Parameter font: UIFont class
+     Parameter maxSize: CGSize class
+
+     Returns: CGSize
+     */
+    func calculateRectSize(font: UIFont, maxSize: CGSize) -> CGSize {
+        let attributedString = NSAttributedString.init(string: self, attributes: [NSAttributedString.Key.font:font])
+        let rect = attributedString.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, context: nil)
+        let size = CGSize(width:rect.size.width, height : rect.size.height)
+        return size
+    }
+}
