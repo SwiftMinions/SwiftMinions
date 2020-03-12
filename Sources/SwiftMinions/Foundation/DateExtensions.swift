@@ -28,11 +28,27 @@ extension Date {
      ```
      - Parameter format: format string
      
-     Returns: String
+     - Returns: String
      */
     func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         formatter.dateFormat = format
         return formatter.string(from: self)
+    }
+    
+    /**
+     Date add value with component.
+     
+     ### Chinese description
+     依據 Calendar.Component & value ，回傳新的時間
+
+     - Parameter component: Calendar.Component
+     - Parameter value: modify value
+     
+     - Returns: Date
+     */
+    @discardableResult
+    func add(_ component: Calendar.Component, value: Int) -> Date {
+        return MinionsConfig.calendar.date(byAdding: component, value: value, to: self) ?? self
     }
     
     /**
@@ -47,7 +63,7 @@ extension Date {
      // 2020
      ```
      
-     Returns: Int
+     - Returns: Int
      */
     var year: Int {
         MinionsConfig.calendar.component(.year, from: self)
