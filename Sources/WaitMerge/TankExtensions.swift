@@ -8,21 +8,6 @@
 
 import UIKit
 
-extension UILabel {
-    /**
-     計算 Label 高度.
-     ### Usage Example: ###
-     ````
-     let height: CGFloat = UILabel().heightForLabel(text: "123", font: UIFont.systemFont(ofSize: 100), width: 100)
-     print(height)
-     ````
-     */
-    func calculateHeight(width: CGFloat) -> CGFloat {
-        let size = text?.calculateRectSize(font: font, maxSize: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
-        return size?.height ?? 0
-    }
-    
-}
 
 extension Data {
     /**
@@ -116,22 +101,6 @@ extension UserDefaults {
     }
 }
 
-extension String {
-    /**
-     計算 String 在一個方框下的大小.
-     ### Usage Example: ###
-     ````
-     let size: CGSize = "tttttttttttttttttt".calculateRectSize(font: UIFont.systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
-     print(size)
-     ````
-     */
-    func calculateRectSize(font: UIFont, maxSize: CGSize) -> CGSize {
-        let attributedString = NSAttributedString.init(string: self, attributes: [NSAttributedString.Key.font:font])
-        let rect = attributedString.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, context: nil)
-        let size = CGSize(width:rect.size.width, height : rect.size.height)
-        return size
-    }
-}
 
 extension String {
     /**

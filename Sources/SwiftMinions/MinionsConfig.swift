@@ -1,5 +1,5 @@
 //
-//  Config.swift
+//  MinionsConfig.swift
 //  SwiftMinions
 //
 //  Created by twStephen on 2020/3/6.
@@ -15,4 +15,5 @@ open class MinionsConfig {
     
     static public var font: UIFont = UIFont.systemFont(ofSize: 20)
     
+    static public var calendar: Calendar = Calendar.current
 }
