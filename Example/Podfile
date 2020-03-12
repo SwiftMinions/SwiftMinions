@@ -7,7 +7,7 @@ target 'Example' do
 
   # Pods for Example
   pod 'SwiftMinions', :path => '../'
-  pod 'SwiftMinions/UIKit', :path => '../'
+#  pod 'SwiftMinions/UIKit', :path => '../'
   
 #  pod 'SwiftLint'
   target 'ExampleTests' do
