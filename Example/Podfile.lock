@@ -1,20 +1,18 @@
 PODS:
-  - SwiftMinions (0.0.5):
-    - SwiftMinions/Core (= 0.0.5)
-  - SwiftMinions/Core (0.0.5)
-  - SwiftMinions/UIKit (0.0.5)
+  - SwiftMinions (0.0.6):
+    - SwiftMinions/Core (= 0.0.6)
+  - SwiftMinions/Core (0.0.6)
 
 DEPENDENCIES:
   - SwiftMinions (from `../`)
-  - SwiftMinions/UIKit (from `../`)
 
 EXTERNAL SOURCES:
   SwiftMinions:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftMinions: 052450f8856da01d4e4a477912b06dac58525be1
+  SwiftMinions: 8d134417a8f0647f8267a04fff0f633311422670
 
-PODFILE CHECKSUM: b6b0c9b76eeb60b812efd392b5a6e3ba85ddc9c1
+PODFILE CHECKSUM: 57d9c4b5df9c208c529550765909a61812f277df
 
 COCOAPODS: 1.8.4

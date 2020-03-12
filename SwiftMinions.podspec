@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftMinions'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Save your day.'
 
   s.description      = <<-DESC
@@ -33,9 +33,9 @@ Pod::Spec.new do |s|
   s.source                = { :git => 'https://github.com/SwiftMinions/SwiftMinions.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.cocoapods_version     = '>= 1.4.0'
-  s.default_subspec       = 'Core'
   s.swift_version         = '5.1'
   s.requires_arc          = true
+  s.default_subspec       = 'Core'
 
   # Foundation Extensions and this is core library
   s.subspec 'Core' do |ss|
@@ -45,6 +45,9 @@ Pod::Spec.new do |s|
   # UIKit Extensions
   s.subspec 'UIKit' do |ss|
     ss.source_files  = 'Sources/SwiftMinions/UIKit/*.swift'
+    ss.dependency 'SwiftMinions/Core'
   end
+
+
 
 end
