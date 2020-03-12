@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMinions
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-

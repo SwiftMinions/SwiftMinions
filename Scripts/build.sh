@@ -1,5 +1,7 @@
 #!/bin/sh
 
-source $PWD/Scripts/not_so_important.sh
+source ./not_so_important.sh
 
-carthage build --no-skip-current --platform iOS
+carthage build --project-directory $PWD/../ --no-skip-current --platform iOS 
+
+
