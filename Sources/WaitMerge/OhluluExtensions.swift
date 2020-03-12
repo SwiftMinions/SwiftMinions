@@ -11,26 +11,6 @@ import UIKit
 public extension Date {
     
     /**
-     Date to String
-     ### Usage Example: ###
-     ```swift
-     Date().toString()
-     // print 2020-11-24 05:30:30
-     
-     Date().toString(format: "yyyy-MM-dd")
-     // print 2020-11-24
-     
-     ```
-     - Parameter format: date format
-     */
-    func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        return formatter.string(from: self)
-    }
-    
-    
-    /**
      Date add value with component
      add from
      - Parameter component: Calendar.Component
@@ -38,103 +18,9 @@ public extension Date {
      */
     @discardableResult
     func add(_ component: Calendar.Component, value: Int) -> Date {
-        return Calendar.current.date(byAdding: component, value: value, to: self)!
+        return MinionsConfig.calendar.date(byAdding: component, value: value, to: self)!
     }
     
-    // MARK: - component
-    var year: Int {
-        get {
-            return Calendar.current.component(.year, from: self)
-        }
-        set {
-            guard newValue > 0 else { return }
-            let currentYear = Calendar.current.component(.year, from: self)
-            let yearsToAdd = newValue - currentYear
-            if let date = Calendar.current.date(byAdding: .year, value: yearsToAdd, to: self) {
-                self = date
-            }
-        }
-    }
-    
-    var month: Int {
-        get {
-            return Calendar.current.component(.month, from: self)
-        }
-        set {
-            let allowedRange = Calendar.current.range(of: .month, in: .year, for: self)!
-            guard allowedRange.contains(newValue) else { return }
-            
-            let currentMonth = Calendar.current.component(.month, from: self)
-            let monthsToAdd = newValue - currentMonth
-            if let date = Calendar.current.date(byAdding: .month, value: monthsToAdd, to: self) {
-                self = date
-            }
-        }
-    }
-    
-    var day: Int {
-        get {
-            return Calendar.current.component(.day, from: self)
-        }
-        set {
-            let allowedRange = Calendar.current.range(of: .day, in: .month, for: self)!
-            guard allowedRange.contains(newValue) else { return }
-            
-            let currentDay = Calendar.current.component(.day, from: self)
-            let daysToAdd = newValue - currentDay
-            if let date = Calendar.current.date(byAdding: .day, value: daysToAdd, to: self) {
-                self = date
-            }
-        }
-    }
-    
-    var hour: Int {
-        get {
-            return Calendar.current.component(.hour, from: self)
-        }
-        set {
-            let allowedRange = Calendar.current.range(of: .hour, in: .day, for: self)!
-            guard allowedRange.contains(newValue) else { return }
-            
-            let currentHour = Calendar.current.component(.hour, from: self)
-            let hoursToAdd = newValue - currentHour
-            if let date = Calendar.current.date(byAdding: .hour, value: hoursToAdd, to: self) {
-                self = date
-            }
-        }
-    }
-    
-    var minute: Int {
-        get {
-            return Calendar.current.component(.minute, from: self)
-        }
-        set {
-            let allowedRange = Calendar.current.range(of: .minute, in: .hour, for: self)!
-            guard allowedRange.contains(newValue) else { return }
-            
-            let currentMinutes = Calendar.current.component(.minute, from: self)
-            let minutesToAdd = newValue - currentMinutes
-            if let date = Calendar.current.date(byAdding: .minute, value: minutesToAdd, to: self) {
-                self = date
-            }
-        }
-    }
-    
-    var second: Int {
-        get {
-            return Calendar.current.component(.second, from: self)
-        }
-        set {
-            let allowedRange = Calendar.current.range(of: .second, in: .minute, for: self)!
-            guard allowedRange.contains(newValue) else { return }
-            
-            let currentSeconds = Calendar.current.component(.second, from: self)
-            let secondsToAdd = newValue - currentSeconds
-            if let date = Calendar.current.date(byAdding: .second, value: secondsToAdd, to: self) {
-                self = date
-            }
-        }
-    }
     
     /// SwifterSwift: Data at the beginning of calendar component.
     ///
@@ -255,7 +141,7 @@ public extension TimeInterval {
      ```
      - Parameter format: date format
      */
-    var dateSince1970: Date{
+    var toDateSince1970: Date{
         return Date(timeIntervalSince1970: self)
     }
     
@@ -273,7 +159,7 @@ public extension TimeInterval {
      - Parameter format: date format
      */
     func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
-        return dateSince1970.toString(format: format)
+        return toDateSince1970.toString(format: format)
     }
 }
 
@@ -562,7 +448,7 @@ public extension NSAttributedString {
      ### Usage Exsample ###
      ```
      let att = NSAttributedString.builder
-         .setBase(text: *Title,
+         .setBase(text: *SwiftMininos,
                   attribute: [
                      .font: UIFont.systemFont(ofSize: 16, weight: .regular),
                      .foregroundColor: UIColor.red])
@@ -737,25 +623,23 @@ public extension UIWindow {
         }
     }
     
-    static var topVC: UIViewController? {
-        var rs: UIViewController? = nil
-        Thread.mainThread {
-            guard let window = UIApplication.shared.delegate?.window,
-                var topVC = window?.rootViewController else {
-                    return
-            }
-            while let presentedVC = topVC.presentedViewController {
-                topVC = presentedVC
-            }
-            rs = topVC
+    static var topViewController: UIViewController? {
+        var result: UIViewController? = nil
+        guard let window = UIApplication.shared.delegate?.window,
+            var topViewController = window?.rootViewController else {
+                return result
         }
-        return rs
+        while let presentedVC = topViewController.presentedViewController {
+            topViewController = presentedVC
+        }
+        result = topViewController
+        return result
     }
     
-    static func switchRootViewController(
-        to viewController: UIViewController,
+    static func `switch`(
+        toRootViewController viewController: UIViewController,
         animated: Bool = true,
-        duration: TimeInterval = 0.5,
+        duration: TimeInterval = 0.35,
         options: UIView.AnimationOptions = .transitionCrossDissolve,
         _ completion: (() -> Void)? = nil) {
         guard let _window = UIApplication.shared.delegate?.window,
@@ -1026,7 +910,7 @@ public extension UINavigationController {
 public extension UIView {
     enum AnimationType {
         case fadeOut
-        case fadeInt
+        case fadeIn
     }
 
     /// Animation type
