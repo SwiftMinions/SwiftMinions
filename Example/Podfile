@@ -8,11 +8,8 @@ target 'Example' do
   # Pods for Example
   pod 'SwiftMinions', :path => '../'
   pod 'SwiftMinions/UIKit', :path => '../'
-  pod 'SwiftMinions/CoreLocation', :path => '../'
-  pod 'SwiftMinions/SwiftStandardLibrary', :path => '../'
   
-
-  pod 'SwiftLint'
+#  pod 'SwiftLint'
   target 'ExampleTests' do
     inherit! :search_paths
     # Pods for testing
