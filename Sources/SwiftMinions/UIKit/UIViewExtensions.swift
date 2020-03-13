@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
 
     /**
     Use UIBezierPath to create rounded corners for this view.
