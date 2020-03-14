@@ -7,8 +7,11 @@
 //
 
 import UIKit
+#if !COCOAPODS
+import SwiftMinions
+#endif
 
-extension UILabel {
+public extension UILabel {
     
     /**
      Calculate the height of label in a width.

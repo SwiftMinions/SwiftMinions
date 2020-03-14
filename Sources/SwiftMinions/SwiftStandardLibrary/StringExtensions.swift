@@ -35,7 +35,7 @@ public extension String {
     }
 }
 
-extension String {
+public extension String {
     
     /**
      Calculate the size of string in a max rect.
