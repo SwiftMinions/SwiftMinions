@@ -10,7 +10,7 @@ import Foundation
 
 private let formatter = DateFormatter()
 
-extension Date {
+public extension Date {
     
     /**
      Get string with format.
