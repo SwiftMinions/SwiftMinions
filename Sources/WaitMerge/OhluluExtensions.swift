@@ -10,17 +10,6 @@ import UIKit
 
 public extension Date {
     
-    /**
-     Date add value with component
-     add from
-     - Parameter component: Calendar.Component
-     - Parameter value: modify value
-     */
-    @discardableResult
-    func add(_ component: Calendar.Component, value: Int) -> Date {
-        return MinionsConfig.calendar.date(byAdding: component, value: value, to: self)!
-    }
-    
     
     /// SwifterSwift: Data at the beginning of calendar component.
     ///
