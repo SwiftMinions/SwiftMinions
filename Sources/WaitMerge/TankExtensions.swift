@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension Data {
+public extension Data {
     /**
      Data 轉 Codable
      ### Usage Example: ###
@@ -48,7 +48,7 @@ extension Data {
     }
 }
 
-extension UserDefaults {
+public extension UserDefaults {
     /**
      將 Codable 存入 UserDefaults
      ### Usage Example: ###
@@ -102,7 +102,7 @@ extension UserDefaults {
 }
 
 
-extension String {
+public extension String {
     /**
      16 進位文字轉 Int
      ### Usage Example: ###
@@ -196,7 +196,7 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     /**
      16 進位文字轉Data
      ### Usage Example: ###
@@ -224,7 +224,7 @@ extension String {
 
 
 
-extension UICollectionView {
+public extension UICollectionView {
     
     /**
      註冊 Cell
@@ -362,7 +362,7 @@ extension UICollectionView {
     
 }
 
-extension UICollectionView {
+public extension UICollectionView {
     /**
      reloadData 完畢後處理。
      用在ViewDidLoad上
@@ -374,7 +374,7 @@ extension UICollectionView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     /**
      註冊 Cell
      ### Old Example: ###
@@ -434,7 +434,7 @@ extension UITableView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     /**
      reloadData 完畢後處理。
      用在 ViewDidLoad 上
