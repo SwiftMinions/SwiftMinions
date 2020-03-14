@@ -40,6 +40,13 @@ extension Date {
      
      ### Chinese description
      依據 Calendar.Component & value ，回傳新的時間
+     
+     ## Use example ##
+     ```swift
+     Date().add(.day, value: 5) // 2020/11/24 -> 2020/11/29
+     Date().add(.month, value: -1) // 2020/11/24 -> 2021/10/24
+     Date().add(.year, value: 1) // 2020/11/24 -> 2021/11/24
+     ```
 
      - Parameter component: Calendar.Component
      - Parameter value: modify value
@@ -113,7 +120,7 @@ extension Date {
     
      ## Use example ##
      ```swift
-     Date().
+     Date().hour
      // 8
      ```
      
