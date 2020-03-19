@@ -7,8 +7,6 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 MainPath="Sources"
-# currentVersion=""
-# newVersion=""
 
 # 印出 cd 的過程
 CdAndPrint() {
@@ -53,10 +51,10 @@ Build() {
     CdAndPrint ".."
     printf "${GREEN}start xcodebuild...\n${NC}"
     xcodebuild \
-        -project Test.xcodeproj \
-        -scheme Test \
+        -project SwiftMinions.xcodeproj \
+        -scheme SwiftMinions \
         -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone 11 pro,OS=13.3' \
+        -destination 'platform=iOS Simulator,name=iPhone 11 pro,OS=13.3' 
     if [ $? != 0 ]; then
 		echo "${RED}xcodebuild fail!\nㄅㄅ"
 		exit 1
