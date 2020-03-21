@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10273587240292CD00A0347F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 10273586240292CD00A0347F /* .gitattributes */; };
 		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
+		22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E724262AFC006E2FD8 /* DataExtensions.swift */; };
+		22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3CFF62419D857009B09F8 /* LabelExtensions.swift */; };
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		10273586240292CD00A0347F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhluluExtensions.swift; sourceTree = "<group>"; };
+		22C359E724262AFC006E2FD8 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
 		22D3CFF62419D857009B09F8 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				5047132F24128D3E004A05A2 /* DateExtensions.swift */,
+				22C359E724262AFC006E2FD8 /* DataExtensions.swift */,
+				22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -234,11 +240,13 @@
 				A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
+				22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */,
 				ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */,
 				22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
 				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
+				22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
