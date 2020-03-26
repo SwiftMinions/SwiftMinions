@@ -20,6 +20,8 @@
 		DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */; };
 		DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F10240FEDF900B39B31 /* StephenObjects.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E035687C242CD9B200D7277A /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687B242CD9B200D7277A /* DoubleExtensions.swift */; };
+		E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687D242CDC0800D7277A /* DecimalExtensions.swift */; };
 		E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */; };
 		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E035687B242CD9B200D7277A /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		E035687D242CDC0800D7277A /* DecimalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
 		E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalieExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,8 @@
 				A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */,
 				A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */,
 				A2D9F3B224128144000D8A0E /* StringExtensions.swift */,
+				E035687B242CD9B200D7277A /* DoubleExtensions.swift */,
+				E035687D242CDC0800D7277A /* DecimalExtensions.swift */,
 			);
 			path = SwiftStandardLibrary;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
+				E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */,
 				A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
@@ -235,6 +242,7 @@
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
 				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
+				E035687C242CD9B200D7277A /* DoubleExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
