@@ -22,6 +22,8 @@
 		ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */; };
 		DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */; };
 		DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F10240FEDF900B39B31 /* StephenObjects.swift */; };
+		DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF112426845F001E08B4 /* MinionsHelper.swift */; };
+		DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF1324268559001E08B4 /* MinionsFunctions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */; };
 		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
@@ -43,6 +45,8 @@
 		ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenExtensions.swift; sourceTree = "<group>"; };
 		DC297F10240FEDF900B39B31 /* StephenObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenObjects.swift; sourceTree = "<group>"; };
+		DC62AF112426845F001E08B4 /* MinionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsHelper.swift; sourceTree = "<group>"; };
+		DC62AF1324268559001E08B4 /* MinionsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsFunctions.swift; sourceTree = "<group>"; };
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,7 +137,9 @@
 		DC63C59F23F6E287005684DE /* SwiftMinions */ = {
 			isa = PBXGroup;
 			children = (
+				DC62AF112426845F001E08B4 /* MinionsHelper.swift */,
 				A2D9F3B424128156000D8A0E /* MinionsConfig.swift */,
+				DC62AF1324268559001E08B4 /* MinionsFunctions.swift */,
 				DC01EF2D24040F4000B8B65D /* CoreLocation */,
 				DC01EF2F24040F4000B8B65D /* Foundation */,
 				DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */,
@@ -233,11 +239,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */,
+				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
 				A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */,
+				DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
 				22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */,
