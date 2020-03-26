@@ -11,10 +11,10 @@ import Foundation
 /**
  A convenience syntax for both success and fail unwrapped
 
- ### Chinese description
- 一個方便的語法糖，讓你可以處理 unwrapped 成功根失敗的時候
+ ## Chinese description
+ 一個方便的語法糖，讓你可以處理 unwrapped 成功跟失敗的時候
  
- ## Use example ##
+ ## Use example
  ```swift
  let c: String? = "Ya"
  let b = ifLet(value: c,
