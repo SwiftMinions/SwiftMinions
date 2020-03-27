@@ -14,10 +14,10 @@ extension Double {
 
      Round a double correctly to specific decimal places with specific option (rounded/ round up/ round down/ round-to-even)
 
-     ### Chinese description
+     ## Chinese description
      用指定方法（四捨五入/無條件進位/無條件捨去/四捨五入取偶數）取至小數位第x位
 
-     ### Usage Example
+     ## Usage Example
      ```
      let num = 6.445677
      num.rounded(to: 2, option: .down) // get 6.45
