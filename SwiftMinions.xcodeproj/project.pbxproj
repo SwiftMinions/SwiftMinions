@@ -13,6 +13,7 @@
 		22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3CFF62419D857009B09F8 /* LabelExtensions.swift */; };
+		5043E6AD242A560E00E705C4 /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */; };
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
@@ -36,6 +37,7 @@
 		22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
 		22D3CFF62419D857009B09F8 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
+		5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */,
+				5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */,
 				22D3CFF62419D857009B09F8 /* LabelExtensions.swift */,
 			);
 			path = UIKit;
@@ -256,6 +259,7 @@
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
 				22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
+				5043E6AD242A560E00E705C4 /* UINavigationControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
