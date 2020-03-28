@@ -40,28 +40,6 @@ public extension TimeInterval {
     }
 }
 
-
-public extension String {
-    
-    var int: Int? {
-        return Int(self)
-    }
-    
-    var intValue: Int {
-        return Int(self) ?? 0
-    }
-    
-    func base64(encoding: String.Encoding = .utf8) -> String? {
-        guard let decodeData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else {
-            return nil
-        }
-        guard let decodeString = String(data: decodeData, encoding: encoding) else {
-            return nil
-        }
-        return decodeString
-    }
-}
-
 public struct SafeRangeable<Base> {
     
     let base: Base
