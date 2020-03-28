@@ -40,60 +40,6 @@ public extension TimeInterval {
     }
 }
 
-/// Initialize
-public extension UIEdgeInsets {
-    
-    /// Convenience initialize
-    init(edge: CGFloat) {
-        self.init(top: edge, left: edge, bottom: edge, right: edge)
-    }
-    
-    /// Convenience initialize
-    init(top: CGFloat? = 0, left: CGFloat? = 0, bottom: CGFloat? = 0, right: CGFloat? = 0, default defaultValue: CGFloat = 0) {
-        self.init(top: top ?? defaultValue, left: left ?? defaultValue, bottom: bottom ?? defaultValue, right: right ?? defaultValue)
-    }
-    
-    /// Convenience initialize
-    init(horizontalEdge edge: CGFloat) {
-        self.init(top: 0, left: edge, bottom: 0, right: edge)
-    }
-    
-    /// Convenience initialize
-    init(verticalEdge edge: CGFloat) {
-        self.init(top: edge, left: 0, bottom: edge, right: 0)
-    }
-    
-    /// Convenience initialize
-    init(horizontalEdge hEdge: CGFloat, verticalEdge vEdge: CGFloat) {
-        self.init(top: vEdge, left: hEdge, bottom: vEdge, right: hEdge)
-    }
-    
-    /**
-     Get veritical edge
-     ### Usage Example: ###
-     ````
-     let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
-     inset.vertical
-     // 20
-     ````
-     */
-    var vertical: CGFloat {
-        return top + bottom
-    }
-    
-    /**
-     Get horizontal edge
-     ### Usage Example: ###
-     ````
-     let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
-     inset.horizontal
-     // 16
-     ````
-     */
-    var horizontal: CGFloat {
-        return left + right
-    }
-}
 
 public extension String {
     
