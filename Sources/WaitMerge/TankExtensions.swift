@@ -11,7 +11,7 @@ import UIKit
 public extension String {
     /**
      16 進位文字轉 Int
-     ### Usage Example: ###
+     ## Use example
      ````
      let hexString = "FF"
      let int = hexString.hexToInt()
@@ -24,7 +24,7 @@ public extension String {
     }
     /**
      16 進位文字轉 Binary 文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let hexString = "FF"
      let binaryString = hexString.hexToBinary()
@@ -37,7 +37,7 @@ public extension String {
     }
     /**
      10 進位文字轉 16 進位文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let decimalString = "255"
      let hexString = decimalString.decimalToHex()
@@ -50,7 +50,7 @@ public extension String {
     }
     /**
      10 進位文字轉 Binary 文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let decimalString = "255"
      let binaryString = decimalString.decimalToBinary()
@@ -63,7 +63,7 @@ public extension String {
     }
     /**
      Binary 文字轉 10 進位
-     ### Usage Example: ###
+     ## Use example
      ````
      let binaryString = "11111111"
      let decimal = binaryString.binaryToInt()
@@ -76,7 +76,7 @@ public extension String {
     }
     /**
      Binary 文字轉 16 進位文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let binaryString = "11111111"
      let hexString = binaryString.binaryToHex()
@@ -90,7 +90,7 @@ public extension String {
     
     /**
      16 進位文字轉 Float
-     ### Usage Example: ###
+     ## Use example
      ````
      let hexString = "3D512EE0"
      print(hexString.hexToFloat())
@@ -105,7 +105,7 @@ public extension String {
 public extension String {
     /**
      16 進位文字轉Data
-     ### Usage Example: ###
+     ## Use example
      ````
      let data = "FF".hexToData()
      let hexString = data.map { String(format: "%02x", $0)}.joined(separator: "")
@@ -138,7 +138,7 @@ public extension UICollectionView {
      ````
      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerCell(cellType: Cell.self)
      ````
@@ -152,7 +152,7 @@ public extension UICollectionView {
      ````
      collectionView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerNibCell(type: Cell.self)
      ````
@@ -167,7 +167,7 @@ public extension UICollectionView {
      ````
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerNibHeaderReusableView(type: Header.self)
      ````
@@ -182,7 +182,7 @@ public extension UICollectionView {
      ````
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerNibFooterReusableView(type: Footer.self)
      ````
@@ -197,7 +197,7 @@ public extension UICollectionView {
      ````
      collectionView.register(Header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerHeaderReusableView(type: Header.self)
      ````
@@ -212,7 +212,7 @@ public extension UICollectionView {
      ````
      collectionView.register(Footer.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerFooterReusableView(type: Footer.self)
      ````
@@ -229,7 +229,7 @@ public extension UICollectionView {
      ````
      let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as? HeaderClass
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let header = collectionView.dequeueHeaderReusableView(type: Header.self,for: indexPath)
      ````
@@ -243,7 +243,7 @@ public extension UICollectionView {
      ````
      let Footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Footer", for: indexPath) as? FooterClass
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let Footer = collectionView.dequeueFooterReusableView(type: Footer.self,for: indexPath)
      ````
@@ -257,7 +257,7 @@ public extension UICollectionView {
      ````
      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let cell = collectionView.dequeueReusableCell(type: Cell.self,for: indexPath)
      ````
@@ -287,7 +287,7 @@ public extension UITableView {
      ````
      tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      tableView.registerCell(cellType: Cell.self)
      ````
@@ -301,7 +301,7 @@ public extension UITableView {
      ````
      tableView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      tableView.registerNibCell(type: Cell.self)
      ````
@@ -316,7 +316,7 @@ public extension UITableView {
      ````
      let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let cell = tableView.dequeueReusableCell(type: Cell.self,for: indexPath)
      ````
@@ -330,7 +330,7 @@ public extension UITableView {
     ````
     let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
     ````
-    ### Usage Example: ###
+    ## Use example
     ````
     let cell = tableView.dequeueReusableCell(type: Cell.self,for: indexPath)
     ````
