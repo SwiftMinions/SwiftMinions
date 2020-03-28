@@ -40,66 +40,6 @@ public extension TimeInterval {
     }
 }
 
-public extension Int {
-    
-    func toDouble() -> Double {
-        return Double(self)
-    }
-    
-    func toCgfloat() -> CGFloat {
-        return CGFloat(self)
-    }
-    
-    func toFloat() -> Float {
-        return Float(self)
-    }
-}
-
-public extension Double {
-    
-    func toInt() -> Int {
-        return Int(self)
-    }
-    
-    func toCgfloat() -> CGFloat {
-        return CGFloat(self)
-    }
-    
-    func toFloat() -> Float {
-        return Float(self)
-    }
-}
-
-public extension CGFloat {
-    
-    func toInt() -> Int {
-        return Int(self)
-    }
-    
-    func toDouble() -> Double {
-        return Double(self)
-    }
-    
-    func toFloat() -> Float {
-        return Float(self)
-    }
-}
-
-public extension Float {
-    
-    func toInt() -> Int {
-        return Int(self)
-    }
-    
-    func toDouble() -> Double {
-        return Double(self)
-    }
-    
-    func toCgfloat() -> CGFloat {
-        return CGFloat(self)
-    }
-}
-
 /// Initialize
 public extension UIEdgeInsets {
     
