@@ -30,7 +30,7 @@ public extension Data {
      print(userModel)
      ```
      */
-    func toCodable<T: Codable>(decoder: JSONDecoder = JSONDecoder()) -> T? {
+    func toCodable<T: Codable>(decoder: JSONDecoder = MinionsConfig.decoder) -> T? {
         if let model = try? decoder.decode(T.self, from: self) {
             return model
         }

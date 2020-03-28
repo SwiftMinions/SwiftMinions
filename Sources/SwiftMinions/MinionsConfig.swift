@@ -16,4 +16,6 @@ open class MinionsConfig {
     static public var font: UIFont = UIFont.systemFont(ofSize: 20)
     
     static public var calendar: Calendar = Calendar.current
+    
+    static public var decoder: JSONDecoder = JSONDecoder()
 }
