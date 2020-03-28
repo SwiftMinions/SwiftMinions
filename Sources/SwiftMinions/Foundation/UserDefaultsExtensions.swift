@@ -16,7 +16,7 @@ public extension UserDefaults {
      ## Chinese description
      將 Codable 存入 UserDefaults
      
-     ### Usage Example: ###
+     ## Use example
      ```
      struct UserModel: Codable {
      let id: String
@@ -43,7 +43,7 @@ public extension UserDefaults {
      ## Chinese description
      從 UserDefaults 取出 Codable
      
-     ### Usage Example: ###
+     ## Use example
      ```
      struct UserModel: Codable {
      let id: String
