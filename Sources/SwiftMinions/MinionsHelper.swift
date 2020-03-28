@@ -13,10 +13,10 @@ open class SMHelper {
     /**
      Get value form plist
      
-     ### Chinese description
+     ## Chinese description
      從 plist 取值
      
-     ## Use example ##
+     ## Use example
      ```swift
      SMHelper.getValueFromPlist(key: "Key")
      ```
@@ -28,10 +28,10 @@ open class SMHelper {
     /**
      Get application version
      
-     ### Chinese description
+     ## Chinese description
      拿到 app 的版本號
      
-     ## Use example ##
+     ## Use example
      ```swift
      SMHelper.appVersion
      ```
@@ -41,10 +41,10 @@ open class SMHelper {
     /**
      Get application build number
      
-     ### Chinese description
+     ## Chinese description
      拿到 app 的 build 版本號
      
-     ## Use example ##
+     ## Use example
      ```swift
      SMHelper.appBuildNumber
      ```
@@ -54,10 +54,10 @@ open class SMHelper {
     /**
      Get application bundle identifier
      
-     ### Chinese description
+     ## Chinese description
      拿到 app 的 build identifier
      
-     ## Use example ##
+     ## Use example
      ```swift
      SMHelper.appBundleID
      ```
@@ -67,10 +67,10 @@ open class SMHelper {
     /**
      An alphanumeric string that uniquely identifies a device to the app’s vendor.
 
-     ### Chinese description
+     ## Chinese description
      拿到當前 device 的 uuid
      
-     ## Use example ##
+     ## Use example
      ```swift
      SMHelper.deviceID
      ```
