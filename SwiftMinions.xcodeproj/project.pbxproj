@@ -21,6 +21,7 @@
 		A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B424128156000D8A0E /* MinionsConfig.swift */; };
 		AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */; };
 		ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */; };
+		DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC005E6324309975004229E0 /* UIScrollViewExtensions.swift */; };
 		DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */; };
 		DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F10240FEDF900B39B31 /* StephenObjects.swift */; };
 		DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF112426845F001E08B4 /* MinionsHelper.swift */; };
@@ -45,6 +46,7 @@
 		A2D9F3B424128156000D8A0E /* MinionsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsConfig.swift; sourceTree = "<group>"; };
 		AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HankExtensions.swift; sourceTree = "<group>"; };
 		ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		DC005E6324309975004229E0 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenExtensions.swift; sourceTree = "<group>"; };
 		DC297F10240FEDF900B39B31 /* StephenObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenObjects.swift; sourceTree = "<group>"; };
 		DC62AF112426845F001E08B4 /* MinionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsHelper.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */,
 				5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */,
 				22D3CFF62419D857009B09F8 /* LabelExtensions.swift */,
+				DC005E6324309975004229E0 /* UIScrollViewExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */,
 				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
+				DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */,
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
