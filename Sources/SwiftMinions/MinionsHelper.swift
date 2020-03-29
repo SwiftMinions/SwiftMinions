@@ -68,14 +68,14 @@ open class SMHelper {
      An alphanumeric string that uniquely identifies a device to the app’s vendor.
 
      ## Chinese description
-     拿到當前 device 的 uuid
+     拿到當前 App 的 IDFV
      
      ## Use example
      ```swift
-     SMHelper.deviceID
+     SMHelper.deviceIDFV
      ```
      */
-     public static let deviceID: String? = UIDevice.current.identifierForVendor?.uuidString
+     public static let deviceIDFV: String? = UIDevice.current.identifierForVendor?.uuidString
 }
 
 
