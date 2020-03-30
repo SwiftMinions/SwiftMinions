@@ -186,7 +186,7 @@ public extension Date {
      */
     func beginning(of component: Calendar.Component) -> Date? {
         if component == .day {
-            return Calendar.current.startOfDay(for: self)
+            return MinionsConfig.calendar.startOfDay(for: self)
         }
         
         var components: Set<Calendar.Component> {
@@ -215,7 +215,7 @@ public extension Date {
         }
         
         guard !components.isEmpty else { return nil }
-        return Calendar.current.date(from: Calendar.current.dateComponents(components, from: self))
+        return MinionsConfig.calendar.date(from: Calendar.current.dateComponents(components, from: self))
     }
     
     /**
@@ -237,7 +237,7 @@ public extension Date {
      - Returns: date at the end of calendar component (if applicable).
     */
     func end(of component: Calendar.Component) -> Date? {
-        let calendar = Calendar.current
+        let calendar = MinionsConfig.calendar
         switch component {
         case .second:
             var date = add(.second, value: 1)
