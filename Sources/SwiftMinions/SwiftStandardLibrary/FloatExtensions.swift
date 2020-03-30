@@ -14,18 +14,33 @@ import CoreGraphics
 
 public extension Float {
     
-    /// Get Double type
+    /**
+     Get Double type
+
+     ## Chinese description
+     轉型成 Double
+    */
     func toDouble() -> Double {
         return Double(self)
     }
     
-    /// Get Int type
+    /**
+     Get Int type
+
+     ## Chinese description
+     轉型成 Int
+    */
     func toInt() -> Int {
         return Int(self)
     }
     
+    /**
+     Get CGFloat type
+
+     ## Chinese description
+     轉型成 CGFloat
+    */
     #if canImport(CoreGraphics)
-    /// Get CGFloat type
     func toCgfloat() -> CGFloat {
         return CGFloat(self)
     }

@@ -15,18 +15,33 @@ import Foundation
 
 public extension CGFloat {
     
-    /// Get Double type
+    /**
+     Get Double type
+
+     ## Chinese description
+     轉型成 Double
+    */
     func toDouble() -> Double {
         return Double(self)
     }
     
-    /// Get Float type
+    /**
+     Get Float type
+
+     ## Chinese description
+     轉型成 Float
+    */
     func toFloat() -> Float {
         return Float(self)
     }
     
+    /**
+     Get Int type
+
+     ## Chinese description
+     轉型成 Int
+    */
     #if canImport(Foundation)
-    /// Get Int type
     func toInt() -> Int {
         return Int(self)
     }
