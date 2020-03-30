@@ -15,15 +15,18 @@ import Foundation
 
 public extension CGFloat {
     
+    /// Get Double type
     func toDouble() -> Double {
         return Double(self)
     }
     
+    /// Get Float type
     func toFloat() -> Float {
         return Float(self)
     }
     
     #if canImport(Foundation)
+    /// Get Int type
     func toInt() -> Int {
         return Int(self)
     }

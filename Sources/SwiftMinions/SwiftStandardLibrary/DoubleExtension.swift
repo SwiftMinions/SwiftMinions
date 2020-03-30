@@ -14,15 +14,18 @@ import CoreGraphics
 
 public extension Double {
     
+    /// Get Int type
     func toInt() -> Int {
         return Int(self)
     }
     
+    /// Get Float type
     func toFloat() -> Float {
         return Float(self)
     }
     
     #if canImport(CoreGraphics)
+    /// Get CGFloat type
     func toCgfloat() -> CGFloat {
         return CGFloat(self)
     }
