@@ -124,7 +124,7 @@ public extension TimeInterval {
     
     /**
      Date to String
-     ### Usage Example: ###
+     ## Use example
      ```swift
      TimeInterval().dateSince1970
      ```
@@ -136,7 +136,7 @@ public extension TimeInterval {
     
     /**
      TimeInterval to String
-     ### Usage Example: ###
+     ## Use example
      ```swift
      TimeInterval().toString()
      // 2020-11-24 05:30:30
@@ -242,7 +242,7 @@ public extension UIEdgeInsets {
     
     /**
      Get veritical edge
-     ### Usage Example: ###
+     ## Use example
      ````
      let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
      inset.vertical
@@ -255,7 +255,7 @@ public extension UIEdgeInsets {
     
     /**
      Get horizontal edge
-     ### Usage Example: ###
+     ## Use example
      ````
      let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
      inset.horizontal
