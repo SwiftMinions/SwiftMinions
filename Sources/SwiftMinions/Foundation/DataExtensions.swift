@@ -13,10 +13,10 @@ public extension Data {
     /**
      Data change to codable model.
      
-     ### Chinese description
+     ## Chinese description
      Data 轉 Codable
      
-     ### Usage Example: ###
+     ## Use example
      ```
      struct UserModel: Codable {
      let id: String
@@ -40,10 +40,10 @@ public extension Data {
     /**
      Data to hex string.
      
-     ### Chinese description
+     ## Chinese description
      Data 轉 16進位文字
      
-     ### Usage Example: ###
+     ## Use example
      ```
      let data = Data([255])
      let hexString = data.hexStringValue
