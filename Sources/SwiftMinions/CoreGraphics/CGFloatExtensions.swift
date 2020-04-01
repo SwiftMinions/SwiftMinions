@@ -21,7 +21,7 @@ public extension CGFloat {
      ## Chinese description
      轉型成 Double
     */
-    func toDouble() -> Double {
+    var doubleValue: Double {
         return Double(self)
     }
     
@@ -31,7 +31,7 @@ public extension CGFloat {
      ## Chinese description
      轉型成 Float
     */
-    func toFloat() -> Float {
+    var floatValue: Float {
         return Float(self)
     }
     
@@ -42,7 +42,7 @@ public extension CGFloat {
      轉型成 Int
     */
     #if canImport(Foundation)
-    func toInt() -> Int {
+    var intValue: Int {
         return Int(self)
     }
     #endif

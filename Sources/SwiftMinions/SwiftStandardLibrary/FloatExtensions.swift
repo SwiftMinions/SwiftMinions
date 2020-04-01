@@ -20,7 +20,7 @@ public extension Float {
      ## Chinese description
      轉型成 Double
     */
-    func toDouble() -> Double {
+    var doubleValue: Double {
         return Double(self)
     }
     
@@ -30,7 +30,7 @@ public extension Float {
      ## Chinese description
      轉型成 Int
     */
-    func toInt() -> Int {
+    var intValue: Int {
         return Int(self)
     }
     
@@ -41,7 +41,7 @@ public extension Float {
      轉型成 CGFloat
     */
     #if canImport(CoreGraphics)
-    func toCgfloat() -> CGFloat {
+    var cgfloatValue: CGFloat {
         return CGFloat(self)
     }
     #endif
