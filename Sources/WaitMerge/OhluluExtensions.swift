@@ -8,134 +8,11 @@
 
 import UIKit
 
-public extension Date {
-    
-    /**
-     Date add value with component
-     add from
-     - Parameter component: Calendar.Component
-     - Parameter value: modify value
-     */
-    @discardableResult
-    func add(_ component: Calendar.Component, value: Int) -> Date {
-        return MinionsConfig.calendar.date(byAdding: component, value: value, to: self)!
-    }
-    
-    
-    /// SwifterSwift: Data at the beginning of calendar component.
-    ///
-    ///     let date = Date() // "Jan 12, 2017, 7:14 PM"
-    ///     let date2 = date.beginning(of: .hour) // "Jan 12, 2017, 7:00 PM"
-    ///     let date3 = date.beginning(of: .month) // "Jan 1, 2017, 12:00 AM"
-    ///     let date4 = date.beginning(of: .year) // "Jan 1, 2017, 12:00 AM"
-    ///
-    /// - Parameter component: calendar component to get date at the beginning of.
-    /// - Returns: date at the beginning of calendar component (if applicable).
-    func beginning(of component: Calendar.Component) -> Date? {
-        if component == .day {
-            return Calendar.current.startOfDay(for: self)
-        }
-        
-        var components: Set<Calendar.Component> {
-            switch component {
-            case .second:
-                return [.year, .month, .day, .hour, .minute, .second]
-                
-            case .minute:
-                return [.year, .month, .day, .hour, .minute]
-                
-            case .hour:
-                return [.year, .month, .day, .hour]
-                
-            case .weekOfYear, .weekOfMonth:
-                return [.yearForWeekOfYear, .weekOfYear]
-                
-            case .month:
-                return [.year, .month]
-                
-            case .year:
-                return [.year]
-                
-            default:
-                return []
-            }
-        }
-        
-        guard !components.isEmpty else { return nil }
-        return Calendar.current.date(from: Calendar.current.dateComponents(components, from: self))
-    }
-    
-    /// SwifterSwift: Date at the end of calendar component.
-    ///
-    ///     let date = Date() // "Jan 12, 2017, 7:27 PM"
-    ///     let date2 = date.end(of: .day) // "Jan 12, 2017, 11:59 PM"
-    ///     let date3 = date.end(of: .month) // "Jan 31, 2017, 11:59 PM"
-    ///     let date4 = date.end(of: .year) // "Dec 31, 2017, 11:59 PM"
-    ///
-    /// - Parameter component: calendar component to get date at the end of.
-    /// - Returns: date at the end of calendar component (if applicable).
-    func end(of component: Calendar.Component) -> Date? {
-        let calendar = Calendar.current
-        switch component {
-        case .second:
-            var date = add(.second, value: 1)
-            date = calendar.date(from:
-                calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date))!
-            date.add(.second, value: -1)
-            return date
-            
-        case .minute:
-            var date = add(.minute, value: 1)
-            let after = calendar.date(from:
-                calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date))!
-            date = after.add(.second, value: -1)
-            return date
-            
-        case .hour:
-            var date = add(.hour, value: 1)
-            let after = calendar.date(from:
-                calendar.dateComponents([.year, .month, .day, .hour], from: date))!
-            date = after.add(.second, value: -1)
-            return date
-            
-        case .day:
-            var date = add(.day, value: 1)
-            date = calendar.startOfDay(for: date)
-            date.add(.second, value: -1)
-            return date
-            
-        case .weekOfYear, .weekOfMonth:
-            var date = self
-            let beginningOfWeek = calendar.date(from:
-                calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date))!
-            date = beginningOfWeek.add(.day, value: 7).add(.second, value: -1)
-            return date
-            
-        case .month:
-            var date = add(.month, value: 1)
-            let after = calendar.date(from:
-                calendar.dateComponents([.year, .month], from: date))!
-            date = after.add(.second, value: -1)
-            return date
-            
-        case .year:
-            var date = add(.year, value: 1)
-            let after = calendar.date(from:
-                calendar.dateComponents([.year], from: date))!
-            date = after.add(.second, value: -1)
-            return date
-            
-        default:
-            return nil
-        }
-    }
-}
-
 public extension TimeInterval {
     
     /**
      Date to String
-     ### Usage Example: ###
+     ## Use example
      ```swift
      TimeInterval().dateSince1970
      ```
@@ -147,7 +24,7 @@ public extension TimeInterval {
     
     /**
      TimeInterval to String
-     ### Usage Example: ###
+     ## Use example
      ```swift
      TimeInterval().toString()
      // 2020-11-24 05:30:30
@@ -160,142 +37,6 @@ public extension TimeInterval {
      */
     func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         return toDateSince1970.toString(format: format)
-    }
-}
-
-public extension Int {
-    
-    func toDouble() -> Double {
-        return Double(self)
-    }
-    
-    func toCgfloat() -> CGFloat {
-        return CGFloat(self)
-    }
-    
-    func toFloat() -> Float {
-        return Float(self)
-    }
-}
-
-public extension Double {
-    
-    func toInt() -> Int {
-        return Int(self)
-    }
-    
-    func toCgfloat() -> CGFloat {
-        return CGFloat(self)
-    }
-    
-    func toFloat() -> Float {
-        return Float(self)
-    }
-}
-
-public extension CGFloat {
-    
-    func toInt() -> Int {
-        return Int(self)
-    }
-    
-    func toDouble() -> Double {
-        return Double(self)
-    }
-    
-    func toFloat() -> Float {
-        return Float(self)
-    }
-}
-
-public extension Float {
-    
-    func toInt() -> Int {
-        return Int(self)
-    }
-    
-    func toDouble() -> Double {
-        return Double(self)
-    }
-    
-    func toCgfloat() -> CGFloat {
-        return CGFloat(self)
-    }
-}
-
-/// Initialize
-public extension UIEdgeInsets {
-    
-    /// Convenience initialize
-    init(edge: CGFloat) {
-        self.init(top: edge, left: edge, bottom: edge, right: edge)
-    }
-    
-    /// Convenience initialize
-    init(top: CGFloat? = 0, left: CGFloat? = 0, bottom: CGFloat? = 0, right: CGFloat? = 0, default defaultValue: CGFloat = 0) {
-        self.init(top: top ?? defaultValue, left: left ?? defaultValue, bottom: bottom ?? defaultValue, right: right ?? defaultValue)
-    }
-    
-    /// Convenience initialize
-    init(horizontalEdge edge: CGFloat) {
-        self.init(top: 0, left: edge, bottom: 0, right: edge)
-    }
-    
-    /// Convenience initialize
-    init(verticalEdge edge: CGFloat) {
-        self.init(top: edge, left: 0, bottom: edge, right: 0)
-    }
-    
-    /// Convenience initialize
-    init(horizontalEdge hEdge: CGFloat, verticalEdge vEdge: CGFloat) {
-        self.init(top: vEdge, left: hEdge, bottom: vEdge, right: hEdge)
-    }
-    
-    /**
-     Get veritical edge
-     ### Usage Example: ###
-     ````
-     let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
-     inset.vertical
-     // 20
-     ````
-     */
-    var vertical: CGFloat {
-        return top + bottom
-    }
-    
-    /**
-     Get horizontal edge
-     ### Usage Example: ###
-     ````
-     let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
-     inset.horizontal
-     // 16
-     ````
-     */
-    var horizontal: CGFloat {
-        return left + right
-    }
-}
-
-public extension String {
-    
-    var int: Int? {
-        return Int(self)
-    }
-    
-    var intValue: Int {
-        return Int(self) ?? 0
-    }
-    
-    func base64(encoding: String.Encoding = .utf8) -> String? {
-        guard let decodeData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else {
-            return nil
-        }
-        guard let decodeString = String(data: decodeData, encoding: encoding) else {
-            return nil
-        }
-        return decodeString
     }
 }
 
@@ -520,7 +261,7 @@ public extension CGSize {
     
     /// create size with square
     init(square: Float) {
-        self.init(width: square.toCgfloat(), height: square.toCgfloat())
+        self.init(width: square.cgfloatValue, height: square.cgfloatValue)
     }
     
     /// create size with square
@@ -544,7 +285,7 @@ public extension CGRect {
     
     /// x, y is 0
     init(width: Float, height: Float) {
-        self.init(x: 0, y: 0, width: width.toCgfloat(), height: height.toCgfloat())
+        self.init(x: 0, y: 0, width: width.cgfloatValue, height: height.cgfloatValue)
     }
     
     /// x, y is 0
@@ -564,7 +305,7 @@ public extension CGRect {
     
     /// x, y is 0
     init(square: Float) {
-        self.init(x: 0, y: 0, width: square.toCgfloat(), height: square.toCgfloat())
+        self.init(x: 0, y: 0, width: square.cgfloatValue, height: square.cgfloatValue)
     }
     
     /// x, y is 0
@@ -875,35 +616,6 @@ public extension UIViewController {
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
-    }
-}
-
-public extension UINavigationController {
-    
-    /// SwifterSwift: Pop ViewController with completion handler.
-    ///
-    /// - Parameters:
-    ///   - animated: Set this value to true to animate the transition (default is true).
-    ///   - completion: optional completion handler (default is nil).
-    func popViewController(animated: Bool = true, _ completion: (() -> Void)? = nil) {
-        // https://github.com/cotkjaer/UserInterface/blob/master/UserInterface/UIViewController.swift
-        CATransaction.begin()
-        CATransaction.setCompletionBlock(completion)
-        popViewController(animated: animated)
-        CATransaction.commit()
-    }
-    
-    /// SwifterSwift: Push ViewController with completion handler.
-    ///
-    /// - Parameters:
-    ///   - viewController: viewController to push.
-    ///   - completion: optional completion handler (default is nil).
-    func pushViewController(_ viewController: UIViewController, completion: (() -> Void)? = nil) {
-        // https://github.com/cotkjaer/UserInterface/blob/master/UserInterface/UIViewController.swift
-        CATransaction.begin()
-        CATransaction.setCompletionBlock(completion)
-        pushViewController(viewController, animated: true)
-        CATransaction.commit()
     }
 }
 

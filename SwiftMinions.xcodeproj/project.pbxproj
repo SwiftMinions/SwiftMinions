@@ -9,16 +9,27 @@
 /* Begin PBXBuildFile section */
 		10273587240292CD00A0347F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 10273586240292CD00A0347F /* .gitattributes */; };
 		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
+		22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E724262AFC006E2FD8 /* DataExtensions.swift */; };
+		22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3CFF62419D857009B09F8 /* LabelExtensions.swift */; };
+		501E301B242FCDCC004D5D97 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301A242FCDCC004D5D97 /* IntExtensions.swift */; };
+		501E301D242FCDD8004D5D97 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301C242FCDD8004D5D97 /* DoubleExtension.swift */; };
+		501E301F242FCDE4004D5D97 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301E242FCDE4004D5D97 /* FloatExtensions.swift */; };
+		501E3021242FCDF1004D5D97 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E3020242FCDF1004D5D97 /* CGFloatExtensions.swift */; };
+		501E3024242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */; };
+		5043E6AD242A560E00E705C4 /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */; };
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
 		A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B224128144000D8A0E /* StringExtensions.swift */; };
 		A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B424128156000D8A0E /* MinionsConfig.swift */; };
 		AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */; };
+		ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */; };
 		DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */; };
 		DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC297F10240FEDF900B39B31 /* StephenObjects.swift */; };
+		DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF112426845F001E08B4 /* MinionsHelper.swift */; };
+		DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF1324268559001E08B4 /* MinionsFunctions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E035687C242CD9B200D7277A /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687B242CD9B200D7277A /* DoubleExtensions.swift */; };
 		E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687D242CDC0800D7277A /* DecimalExtensions.swift */; };
@@ -29,16 +40,27 @@
 /* Begin PBXFileReference section */
 		10273586240292CD00A0347F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhluluExtensions.swift; sourceTree = "<group>"; };
+		22C359E724262AFC006E2FD8 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
 		22D3CFF62419D857009B09F8 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
+		501E301A242FCDCC004D5D97 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		501E301C242FCDD8004D5D97 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		501E301E242FCDE4004D5D97 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
+		501E3020242FCDF1004D5D97 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
+		5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B224128144000D8A0E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B424128156000D8A0E /* MinionsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsConfig.swift; sourceTree = "<group>"; };
 		AD7FB1CB2403FEA500453C03 /* HankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HankExtensions.swift; sourceTree = "<group>"; };
+		ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenExtensions.swift; sourceTree = "<group>"; };
 		DC297F10240FEDF900B39B31 /* StephenObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephenObjects.swift; sourceTree = "<group>"; };
+		DC62AF112426845F001E08B4 /* MinionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsHelper.swift; sourceTree = "<group>"; };
+		DC62AF1324268559001E08B4 /* MinionsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionsFunctions.swift; sourceTree = "<group>"; };
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +94,14 @@
 			path = WaitMerge;
 			sourceTree = "<group>";
 		};
+		501E3022242FCFF5004D5D97 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				501E3020242FCDF1004D5D97 /* CGFloatExtensions.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		DC01EF2D24040F4000B8B65D /* CoreLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				5047132F24128D3E004A05A2 /* DateExtensions.swift */,
+				22C359E724262AFC006E2FD8 /* DataExtensions.swift */,
+				22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -95,6 +127,10 @@
 				A2D9F3B224128144000D8A0E /* StringExtensions.swift */,
 				E035687B242CD9B200D7277A /* DoubleExtensions.swift */,
 				E035687D242CDC0800D7277A /* DecimalExtensions.swift */,
+				ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */,
+				501E301A242FCDCC004D5D97 /* IntExtensions.swift */,
+				501E301C242FCDD8004D5D97 /* DoubleExtension.swift */,
+				501E301E242FCDE4004D5D97 /* FloatExtensions.swift */,
 			);
 			path = SwiftStandardLibrary;
 			sourceTree = "<group>";
@@ -130,8 +166,11 @@
 		DC63C59F23F6E287005684DE /* SwiftMinions */ = {
 			isa = PBXGroup;
 			children = (
+				DC62AF112426845F001E08B4 /* MinionsHelper.swift */,
 				A2D9F3B424128156000D8A0E /* MinionsConfig.swift */,
+				DC62AF1324268559001E08B4 /* MinionsFunctions.swift */,
 				DC01EF2D24040F4000B8B65D /* CoreLocation */,
+				501E3022242FCFF5004D5D97 /* CoreGraphics */,
 				DC01EF2F24040F4000B8B65D /* Foundation */,
 				DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */,
 				DC63C5A023F6E287005684DE /* UIKit */,
@@ -143,7 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */,
+				5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */,
 				22D3CFF62419D857009B09F8 /* LabelExtensions.swift */,
+				501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -230,20 +271,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */,
+				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
+				501E301B242FCDCC004D5D97 /* IntExtensions.swift in Sources */,
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
 				E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */,
 				A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */,
+				501E3024242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift in Sources */,
+				DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
+				22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */,
+				501E301F242FCDE4004D5D97 /* FloatExtensions.swift in Sources */,
+				501E301D242FCDD8004D5D97 /* DoubleExtension.swift in Sources */,
+				ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */,
 				22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
 				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
 				E035687C242CD9B200D7277A /* DoubleExtensions.swift in Sources */,
+				22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */,
+				501E3021242FCDF1004D5D97 /* CGFloatExtensions.swift in Sources */,
 				22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */,
+				5043E6AD242A560E00E705C4 /* UINavigationControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +440,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftminions.SwiftMinions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -416,6 +469,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftminions.SwiftMinions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

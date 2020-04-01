@@ -13,10 +13,10 @@ public extension FloatingPoint {
     /**
      Change to radians value
      
-     ### Chinese description
+     ## Chinese description
      轉成弧度，單位 π
      
-     ## Use example ##
+     ## Use example
      ```swift
      
      Double(1.1).radiansValue    // 0.01919862177193763
@@ -33,10 +33,10 @@ public extension FloatingPoint {
     /**
      Change to degrees value
      
-     ### Chinese description
+     ## Chinese description
      轉成度數，單位 0° ~ 360°
      
-     ## Use example ##
+     ## Use example
      ```swift
      
      Double(1.1).degreesValue    // 63.02535746439057

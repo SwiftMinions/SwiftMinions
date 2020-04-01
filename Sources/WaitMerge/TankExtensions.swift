@@ -8,104 +8,10 @@
 
 import UIKit
 
-
-extension Data {
-    /**
-     Data 轉 Codable
-     ### Usage Example: ###
-     ````
-     struct UserModel: Codable {
-     let id: String
-     enum CodingKeys: String, CodingKey {
-     case id = "id"
-     }
-     }
-     let jsonString = "{ id : \"123\" }"
-     let data = string.data(using: .utf8)
-     let userModel: UserModel = data.toCodable()
-     print(userModel)
-     ````
-     */
-    func toCodable<T: Codable>(decoder: JSONDecoder = JSONDecoder()) -> T? {
-        if let model = try? decoder.decode(T.self, from: self) {
-            return model
-        }
-        return nil
-    }
-    /**
-     Data 轉 16進位文字
-     ### Usage Example: ###
-     ````
-     let data = Data([255])
-     let hexString = data.toHexString()
-     print(hexString)
-     //ff
-     ````
-     */
-    func toHexString() -> String {
-        return map { String(format: "%02x", $0) }
-            .joined(separator: "")
-    }
-}
-
-extension UserDefaults {
-    /**
-     將 Codable 存入 UserDefaults
-     ### Usage Example: ###
-     ````
-     struct UserModel: Codable {
-     let id: String
-     enum CodingKeys: String, CodingKey {
-     case id = "id"
-     }
-     }
-     let jsonString = "{ id : \"123\" }"
-     let data = string.data(using: .utf8)
-     let userModel: UserModel = data.toCodable()
-     UserDefaults.standard.saveCodable(model: userModel, key: "userKey")
-     ````
-     */
-    func saveCodable<T: Codable>(model : T, key : String) {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(model) {
-            self.set(encoded, forKey: key)
-        }
-    }
-    
-    /**
-     從 UserDefaults 取出 Codable
-     ### Usage Example: ###
-     ````
-     struct UserModel: Codable {
-     let id: String
-     enum CodingKeys: String, CodingKey {
-     case id = "id"
-     }
-     }
-     let jsonString = "{ id : \"123\" }"
-     let data = string.data(using: .utf8)
-     let userModel: UserModel = data.toCodable()
-     UserDefaults.standard.saveCodable(model: userModel, key: "userKey")
-     var user: UserModel = UserDefaults.standard.getCodable("userKey")
-     print(user ?? "nil")
-     ````
-     */
-    func getCodable<T: Codable>(key : String) -> T? {
-        if let savedData = self.object(forKey: key) as? Data {
-            let decoder = JSONDecoder()
-            if let loadedModel = try? decoder.decode(T.self, from: savedData) {
-                return loadedModel
-            }
-        }
-        return nil
-    }
-}
-
-
-extension String {
+public extension String {
     /**
      16 進位文字轉 Int
-     ### Usage Example: ###
+     ## Use example
      ````
      let hexString = "FF"
      let int = hexString.hexToInt()
@@ -118,7 +24,7 @@ extension String {
     }
     /**
      16 進位文字轉 Binary 文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let hexString = "FF"
      let binaryString = hexString.hexToBinary()
@@ -131,7 +37,7 @@ extension String {
     }
     /**
      10 進位文字轉 16 進位文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let decimalString = "255"
      let hexString = decimalString.decimalToHex()
@@ -144,7 +50,7 @@ extension String {
     }
     /**
      10 進位文字轉 Binary 文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let decimalString = "255"
      let binaryString = decimalString.decimalToBinary()
@@ -157,7 +63,7 @@ extension String {
     }
     /**
      Binary 文字轉 10 進位
-     ### Usage Example: ###
+     ## Use example
      ````
      let binaryString = "11111111"
      let decimal = binaryString.binaryToInt()
@@ -170,7 +76,7 @@ extension String {
     }
     /**
      Binary 文字轉 16 進位文字
-     ### Usage Example: ###
+     ## Use example
      ````
      let binaryString = "11111111"
      let hexString = binaryString.binaryToHex()
@@ -184,7 +90,7 @@ extension String {
     
     /**
      16 進位文字轉 Float
-     ### Usage Example: ###
+     ## Use example
      ````
      let hexString = "3D512EE0"
      print(hexString.hexToFloat())
@@ -196,10 +102,10 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     /**
      16 進位文字轉Data
-     ### Usage Example: ###
+     ## Use example
      ````
      let data = "FF".hexToData()
      let hexString = data.map { String(format: "%02x", $0)}.joined(separator: "")
@@ -224,7 +130,7 @@ extension String {
 
 
 
-extension UICollectionView {
+public extension UICollectionView {
     
     /**
      註冊 Cell
@@ -232,7 +138,7 @@ extension UICollectionView {
      ````
      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerCell(cellType: Cell.self)
      ````
@@ -246,7 +152,7 @@ extension UICollectionView {
      ````
      collectionView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerNibCell(type: Cell.self)
      ````
@@ -261,7 +167,7 @@ extension UICollectionView {
      ````
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerNibHeaderReusableView(type: Header.self)
      ````
@@ -276,7 +182,7 @@ extension UICollectionView {
      ````
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerNibFooterReusableView(type: Footer.self)
      ````
@@ -291,7 +197,7 @@ extension UICollectionView {
      ````
      collectionView.register(Header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerHeaderReusableView(type: Header.self)
      ````
@@ -306,7 +212,7 @@ extension UICollectionView {
      ````
      collectionView.register(Footer.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      collectionView.registerFooterReusableView(type: Footer.self)
      ````
@@ -323,7 +229,7 @@ extension UICollectionView {
      ````
      let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as? HeaderClass
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let header = collectionView.dequeueHeaderReusableView(type: Header.self,for: indexPath)
      ````
@@ -337,7 +243,7 @@ extension UICollectionView {
      ````
      let Footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Footer", for: indexPath) as? FooterClass
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let Footer = collectionView.dequeueFooterReusableView(type: Footer.self,for: indexPath)
      ````
@@ -351,7 +257,7 @@ extension UICollectionView {
      ````
      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let cell = collectionView.dequeueReusableCell(type: Cell.self,for: indexPath)
      ````
@@ -362,7 +268,7 @@ extension UICollectionView {
     
 }
 
-extension UICollectionView {
+public extension UICollectionView {
     /**
      reloadData 完畢後處理。
      用在ViewDidLoad上
@@ -374,14 +280,14 @@ extension UICollectionView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     /**
      註冊 Cell
      ### Old Example: ###
      ````
      tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      tableView.registerCell(cellType: Cell.self)
      ````
@@ -395,7 +301,7 @@ extension UITableView {
      ````
      tableView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      tableView.registerNibCell(type: Cell.self)
      ````
@@ -410,7 +316,7 @@ extension UITableView {
      ````
      let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
      ````
-     ### Usage Example: ###
+     ## Use example
      ````
      let cell = tableView.dequeueReusableCell(type: Cell.self,for: indexPath)
      ````
@@ -424,7 +330,7 @@ extension UITableView {
     ````
     let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
     ````
-    ### Usage Example: ###
+    ## Use example
     ````
     let cell = tableView.dequeueReusableCell(type: Cell.self,for: indexPath)
     ````
@@ -434,7 +340,7 @@ extension UITableView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     /**
      reloadData 完畢後處理。
      用在 ViewDidLoad 上
