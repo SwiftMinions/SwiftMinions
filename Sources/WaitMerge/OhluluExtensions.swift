@@ -261,7 +261,7 @@ public extension CGSize {
     
     /// create size with square
     init(square: Float) {
-        self.init(width: square.toCgfloat(), height: square.toCgfloat())
+        self.init(width: square.cgfloatValue, height: square.cgfloatValue)
     }
     
     /// create size with square
@@ -285,7 +285,7 @@ public extension CGRect {
     
     /// x, y is 0
     init(width: Float, height: Float) {
-        self.init(x: 0, y: 0, width: width.toCgfloat(), height: height.toCgfloat())
+        self.init(x: 0, y: 0, width: width.cgfloatValue, height: height.cgfloatValue)
     }
     
     /// x, y is 0
@@ -305,7 +305,7 @@ public extension CGRect {
     
     /// x, y is 0
     init(square: Float) {
-        self.init(x: 0, y: 0, width: square.toCgfloat(), height: square.toCgfloat())
+        self.init(x: 0, y: 0, width: square.cgfloatValue, height: square.cgfloatValue)
     }
     
     /// x, y is 0
