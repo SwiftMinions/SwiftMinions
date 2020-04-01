@@ -13,10 +13,10 @@ public extension BinaryInteger {
     /**
      Change to radians value
      
-     ### Chinese description
+     ## Chinese description
      轉成弧度，單位 π
      
-     ## Use example ##
+     ## Use example
      ```swift
      
      90.radiansValue            /// 1.570796326794897
@@ -35,10 +35,10 @@ public extension BinaryInteger {
     /**
      Change to degrees value
      
-     ### Chinese description
+     ## Chinese description
      轉成度數，單位 0° ~ 360°
      
-     ## Use example ##
+     ## Use example
      ```swift
      
      1.degreesValue             /// 57.295

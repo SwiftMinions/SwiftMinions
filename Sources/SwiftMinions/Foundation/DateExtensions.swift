@@ -15,10 +15,10 @@ public extension Date {
     /**
      Get string with format.
      
-     ### Chinese description
+     ## Chinese description
      輸出格式化日期
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().toString()
      // print 2020-11-24 05:30:30
@@ -38,10 +38,10 @@ public extension Date {
     /**
      Date add value with component.
      
-     ### Chinese description
+     ## Chinese description
      依據 Calendar.Component & value ，回傳新的時間
      
-     ## Use example ##
+     ## Use example
      ```swift
      Date().add(.day, value: 5) // 2020/11/24 -> 2020/11/29
      Date().add(.month, value: -1) // 2020/11/24 -> 2021/10/24
@@ -61,10 +61,10 @@ public extension Date {
     /**
      Get year from date. Calendar instance from `MinionsConfig.calendar`.
      
-     ### Chinese description
+     ## Chinese description
      從日期物件取得年。日曆物件從 `MinionsConfig.calendar` 取得。
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().year
      // 2020
@@ -79,10 +79,10 @@ public extension Date {
     /**
      Get month from date. Calendar instance from `MinionsConfig.calendar`.
      
-     ### Chinese description
+     ## Chinese description
      從日期物件取得月。日曆物件從 `MinionsConfig.calendar` 取得。
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().month
      // 11
@@ -97,10 +97,10 @@ public extension Date {
     /**
      Get day from date. Calendar instance from `MinionsConfig.calendar`.
      
-     ### Chinese description
+     ## Chinese description
      從日期物件取得日。日曆物件從 `MinionsConfig.calendar` 取得。
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().day
      // 24
@@ -115,10 +115,10 @@ public extension Date {
     /**
      Get hour form date (24Hr). Calendar instance from `MinionsConfig.calendar`.
      
-     ### Chinese description
+     ## Chinese description
      從日期物件取得小時(24小時制)。日曆物件從 `MinionsConfig.calendar` 取得。
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().hour
      // 8
@@ -133,10 +133,10 @@ public extension Date {
     /**
      Get minute from date. Calendar instance from `MinionsConfig.calendar`.
      
-     ### Chinese description
+     ## Chinese description
      從日期物件取得分鐘。日曆物件從 `MinionsConfig.calendar` 取得。
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().minute
      // 11
@@ -151,10 +151,10 @@ public extension Date {
     /**
      Get second from date. Calendar instance from `MinionsConfig.calendar`.
      
-     ### Chinese description
+     ## Chinese description
      從日期物件取得秒。日曆物件從 `MinionsConfig.calendar` 取得。
     
-     ## Use example ##
+     ## Use example
      ```swift
      Date().second
      // 59

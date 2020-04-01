@@ -12,7 +12,7 @@ public extension TimeInterval {
     
     /**
      Date to String
-     ### Usage Example: ###
+     ## Use example
      ```swift
      TimeInterval().dateSince1970
      ```
@@ -24,7 +24,7 @@ public extension TimeInterval {
     
     /**
      TimeInterval to String
-     ### Usage Example: ###
+     ## Use example
      ```swift
      TimeInterval().toString()
      // 2020-11-24 05:30:30
