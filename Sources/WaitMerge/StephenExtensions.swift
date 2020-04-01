@@ -30,7 +30,7 @@ extension String {
 
     
     /// Convert into int type
-    public var toInt: Int? { return Int(self) }
+//    public var toInt: Int? { return Int(self) }
     
     /// Convert String into Date type
     ///
