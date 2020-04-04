@@ -46,50 +46,6 @@ extension SafeRangeable where Base == String {
     }
 }
 
-public struct SafeCollectionable<Base> where Base: Collection {
-    
-    let base: Base
-    init(_ base: Base) {
-        self.base = base
-    }
-    
-    public subscript(_ index: Base.Index) -> Base.Element? {
-        guard base.indices.contains(index) else { return nil }
-        return base[index]
-    }
-}
-
-public extension Collection {
-    var safe: SafeCollectionable<Self> {
-        return .init(self)
-    }
-}
-
-public extension Collection {
-    func group(by size: Int) -> [[Element]]? {
-        // Inspired by: https://lodash.com/docs/4.17.4#chunk
-        guard size > 0, !isEmpty else { return nil }
-        var start = startIndex
-        var slices = [[Element]]()
-        while start != endIndex {
-            let end = index(start, offsetBy: size, limitedBy: endIndex) ?? endIndex
-            slices.append(Array(self[start..<end]))
-            start = end
-        }
-        return slices
-    }
-    
-    func group<K: Hashable>(by keyForValue: (Element) -> K) -> [K: [Element]] {
-        var group = [K: [Element]]()
-        for value in self {
-            let key = keyForValue(value)
-            group[key] = (group[key] ?? []) + [value]
-            
-        }
-        return group
-    }
-}
-
 public struct AttributeStringBuilder {
     
     private var attString: NSMutableAttributedString = NSMutableAttributedString()
