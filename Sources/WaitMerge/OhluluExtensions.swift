@@ -8,44 +8,6 @@
 
 import UIKit
 
-public struct SafeRangeable<Base> {
-    
-    let base: Base
-    init(_ base: Base) {
-        self.base = base
-    }
-}
-
-public extension String {
-    var safe: SafeRangeable<Self> {
-        return .init(self)
-    }
-}
-
-extension SafeRangeable where Base == String {
-    subscript(_ bounds: CountableClosedRange<Int>) -> String {
-        if bounds.lowerBound >= base.count || bounds.upperBound < 0 {
-            return ""
-        }
-        let lowerBound = Swift.max(bounds.lowerBound, 0)
-        let start = base.index(base.startIndex, offsetBy: lowerBound)
-        let upperBound = Swift.min(bounds.upperBound, base.count-1)
-        let end = base.index(base.startIndex, offsetBy: upperBound)
-        return String(base[start...end])
-    }
-    
-    subscript(_ bounds: CountableRange<Int>) -> String {
-        if bounds.lowerBound >= base.count || bounds.upperBound < 0 {
-            return ""
-        }
-        let lowerBound = Swift.max(bounds.lowerBound, 0)
-        let start = base.index(base.startIndex, offsetBy: lowerBound)
-        let upperBound = Swift.min(bounds.upperBound, base.count)
-        let end = base.index(base.startIndex, offsetBy: upperBound)
-        return String(base[start..<end])
-    }
-}
-
 public struct AttributeStringBuilder {
     
     private var attString: NSMutableAttributedString = NSMutableAttributedString()
