@@ -8,38 +8,6 @@
 
 import UIKit
 
-public extension TimeInterval {
-    
-    /**
-     Date to String
-     ## Use example
-     ```swift
-     TimeInterval().dateSince1970
-     ```
-     - Parameter format: date format
-     */
-    var toDateSince1970: Date{
-        return Date(timeIntervalSince1970: self)
-    }
-    
-    /**
-     TimeInterval to String
-     ## Use example
-     ```swift
-     TimeInterval().toString()
-     // 2020-11-24 05:30:30
-     
-     TimeInterval().toString(format: "yyyy-MM-dd")
-     // 2020-11-24
-     
-     ```
-     - Parameter format: date format
-     */
-    func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
-        return toDateSince1970.toString(format: format)
-    }
-}
-
 public struct SafeRangeable<Base> {
     
     let base: Base
