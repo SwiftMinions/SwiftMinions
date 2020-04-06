@@ -56,7 +56,7 @@ public extension Float {
      ## Usage Example
      ```
      let num: Float = 6.4456
-     num.rounded(to: 2, option: .down) // 6.45
+     num.rounded(to: 2, option: .plain) // 6.45
      num.rounded(to: 2, option: .up) // 6.45
      num.rounded(to: 2, option: .down) // 6.44
      num.rounded(to: 2, option: .bankers) // 6.45
