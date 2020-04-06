@@ -2,14 +2,50 @@
 //  DoubleExtension.swift
 //  SwiftMinions
 //
-//  Created by Natalie Ng on 2020/3/26.
+//  Created by Ohlulu on 2020/3/29.
 //  Copyright © 2020 SwiftMinions. All rights reserved.
 //
 
 import Foundation
 
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
-extension Double {
+public extension Double {
+    
+    /**
+     Get Int type
+
+     ## Chinese description
+     轉型成 Int
+    */
+    var intValue: Int {
+        return Int(self)
+    }
+    
+    /**
+     Get Float type
+
+     ## Chinese description
+     轉型成 Float
+    */
+    var floatValue: Float {
+        return Float(self)
+    }
+    
+    /**
+     Get CGFloat type
+
+     ## Chinese description
+     轉型成 CGFloat
+    */
+    #if canImport(CoreGraphics)
+    var cgfloatValue: CGFloat {
+        return CGFloat(self)
+    }
+    #endif
+
     /**
      This function returns a Double number rounded correctly to a given number of digits using the given rounding mode, which can be rounded, round up, round down or round-to-even
 
@@ -36,7 +72,5 @@ extension Double {
 
         return roundedValue.doubleValue
     }
-
-
 
 }
