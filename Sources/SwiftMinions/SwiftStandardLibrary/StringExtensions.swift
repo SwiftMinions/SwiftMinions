@@ -123,3 +123,82 @@ public extension String {
         return String(data: data, encoding: decoding)
     }
 }
+
+/**
+ Wrapper for SafeRangeable compatible types. This type provides an extension point for connivence methods in SafeRangeable.
+*/
+public struct SafeRangeable<Base> where Base: Collection {
+    
+    let base: Base
+    init(_ base: Base) {
+        self.base = base
+    }
+}
+
+public extension String {
+    /// Gets a namespace holder for SafeRangeable compatible types.
+    var safe: SafeRangeable<Self> {
+        return .init(self)
+    }
+}
+
+extension SafeRangeable where Base == String {
+    
+    /**
+     It safe-able to get collection element.
+
+     ## Chinese description
+     安全的取得 collection 中的元素
+
+     ## Use example
+     ```swift
+        "Swift Minions".safe[0..<5] // "Swift"
+        "Swift Minions".safe[6..<13] // "Minions"
+        "Swift Minions".safe[6..<16] // "Minions"
+        "Swift Minions".safe[12..<16] // "s"
+        "Swift Minions".safe[14..<16] // ""
+
+     ```
+
+     - Returns: String
+    */
+    subscript(_ bounds: CountableClosedRange<Int>) -> String {
+        if bounds.lowerBound >= base.count || bounds.upperBound < 0 {
+            return ""
+        }
+        let lowerBound = Swift.max(bounds.lowerBound, 0)
+        let start = base.index(base.startIndex, offsetBy: lowerBound)
+        let upperBound = Swift.min(bounds.upperBound, base.count-1)
+        let end = base.index(base.startIndex, offsetBy: upperBound)
+        return String(base[start...end])
+    }
+    
+    /**
+     It safe-able to get collection element.
+
+     ## Chinese description
+     安全的取得 collection 中的元素
+
+     ## Use example
+     ```swift
+        "Swift Minions".safe[0...4] // "Swift"
+        "Swift Minions".safe[6...12] // "Minions"
+        "Swift Minions".safe[6...15] // "Minions"
+        "Swift Minions".safe[12...15] // "s"
+        "Swift Minions".safe[14...15] // ""
+
+     ```
+
+     - Returns: String
+    */
+    subscript(_ bounds: CountableRange<Int>) -> String {
+        if bounds.lowerBound >= base.count || bounds.upperBound < 0 {
+            return ""
+        }
+        let lowerBound = Swift.max(bounds.lowerBound, 0)
+        let start = base.index(base.startIndex, offsetBy: lowerBound)
+        let upperBound = Swift.min(bounds.upperBound, base.count)
+        let end = base.index(base.startIndex, offsetBy: upperBound)
+        return String(base[start..<end])
+    }
+}

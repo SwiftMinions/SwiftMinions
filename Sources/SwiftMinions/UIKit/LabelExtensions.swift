@@ -7,9 +7,6 @@
 //
 
 import UIKit
-#if !COCOAPODS
-import SwiftMinions
-#endif
 
 public extension UILabel {
     
