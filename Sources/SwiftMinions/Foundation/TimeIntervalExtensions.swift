@@ -11,7 +11,7 @@ import Foundation
 public extension TimeInterval {
     
     /**
-     Date to TimeInterval
+     Convenines get date since 1970 from TimeInterval.
     
      ## Chinese description
      取得 Date 值
@@ -21,7 +21,7 @@ public extension TimeInterval {
         TimeInterval().dateSince1970
      ```
     */
-    var dateSince1970: Date{
+    var dateSince1970: Date {
         return Date(timeIntervalSince1970: self)
     }
     
