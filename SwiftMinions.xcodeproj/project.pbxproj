@@ -20,6 +20,8 @@
 		501E3024242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */; };
 		5043E6AD242A560E00E705C4 /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */; };
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
+		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
+		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
 		A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B224128144000D8A0E /* StringExtensions.swift */; };
@@ -50,6 +52,8 @@
 		501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
 		5043E6AC242A560E00E705C4 /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
+		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B224128144000D8A0E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				5047132F24128D3E004A05A2 /* DateExtensions.swift */,
 				22C359E724262AFC006E2FD8 /* DataExtensions.swift */,
 				22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */,
+				50E8A0652438089900335673 /* TimeIntervalExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				501E301A242FCDCC004D5D97 /* IntExtensions.swift */,
 				501E301C242FCDD8004D5D97 /* DoubleExtension.swift */,
 				501E301E242FCDE4004D5D97 /* FloatExtensions.swift */,
+				50E8A06724380A0900335673 /* CollectionExtensions.swift */,
 			);
 			path = SwiftStandardLibrary;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
 				DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */,
+				50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */,
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
 				501E301B242FCDCC004D5D97 /* IntExtensions.swift in Sources */,
@@ -280,6 +287,7 @@
 				DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */,
 				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
+				50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */,
 				22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */,
 				501E301F242FCDE4004D5D97 /* FloatExtensions.swift in Sources */,
 				501E301D242FCDD8004D5D97 /* DoubleExtension.swift in Sources */,
@@ -424,7 +432,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NLHXHRPT3H;
+				DEVELOPMENT_TEAM = TSTQSY2TJN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -453,7 +461,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NLHXHRPT3H;
+				DEVELOPMENT_TEAM = S4CTGV7VH6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
