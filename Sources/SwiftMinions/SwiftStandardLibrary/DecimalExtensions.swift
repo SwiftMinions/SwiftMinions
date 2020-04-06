@@ -11,16 +11,14 @@ import Foundation
 
 extension Decimal {
     /**
-    Round a double to specific decimal places with specific option (rounded/ round up/ round down etc.)
-    ### Chinese description
-    用指定方法（四捨五入/ ）取至小數位第x位
+    Convert to Double value
+
+    ## Chinese description
+    轉型成 Double
 
     ### Usage Example
     ```
-    let anum = 6.445677
-    num.rounded(to: 2, option: .down) // get 6.45
-    num.rounded(to: 2, option: .up) // get 6.45
-    num.rounded(to: 2, option: .down) // get 6.44
+    Decimal(string: "3.14")?.doubleValue // 3.14
     ```
     */
     var doubleValue: Double {
