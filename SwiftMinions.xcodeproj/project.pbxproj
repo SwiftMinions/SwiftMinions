@@ -34,6 +34,7 @@
 		E035687C242CD9B200D7277A /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687B242CD9B200D7277A /* DoubleExtensions.swift */; };
 		E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687D242CDC0800D7277A /* DecimalExtensions.swift */; };
 		E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */; };
+		E060DEB1243AFCFF0073395C /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060DEB0243AFCFF0073395C /* CGFloatExtensions.swift */; };
 		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		E035687B242CD9B200D7277A /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		E035687D242CDC0800D7277A /* DecimalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
 		E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		E060DEB0243AFCFF0073395C /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalieExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				501E301A242FCDCC004D5D97 /* IntExtensions.swift */,
 				501E301C242FCDD8004D5D97 /* DoubleExtension.swift */,
 				501E301E242FCDE4004D5D97 /* FloatExtensions.swift */,
+				E060DEB0243AFCFF0073395C /* CGFloatExtensions.swift */,
 			);
 			path = SwiftStandardLibrary;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
 				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
+				E060DEB1243AFCFF0073395C /* CGFloatExtensions.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
 				E035687C242CD9B200D7277A /* DoubleExtensions.swift in Sources */,
 				22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */,
