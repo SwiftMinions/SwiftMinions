@@ -61,7 +61,7 @@ public extension Collection {
         ['a', 'b', 'c', 'd'].chunk(by: 2)
         // [['a', 'b'], ['c', 'd']]
          
-        ['a', 'b', 'c', 'd'].chunk(by: 2)
+        ['a', 'b', 'c', 'd'].chunk(by: 3)
         // [['a', 'b', 'c'], ['d']]
      ```
      - Parameter size: The length of each chunk
@@ -143,7 +143,6 @@ public extension Collection where Element: FloatingPoint {
      - Returns: the average of the array's elements.
     */
     func average() -> Element {
-        guard !isEmpty else { return 0 }
-        return reduce(0, {$0 + $1}) / Element(count)
+        return isEmpty ? 0 : reduce(0, {$0 + $1}) / Element(count)
     }
 }
