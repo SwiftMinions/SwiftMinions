@@ -16,6 +16,11 @@ public extension CLLocation {
     
      ## Chinese description
      計算兩個 Location 之間 timeStemp 的時間差，主要用在 `locationManager(_ manager:, didUpdateLocations locations:)` 更新位置時方便計算兩次更新的時間差。
+     
+     ## Use example
+     ```swift
+     let playTime = currentLocation.timeInterval(since: lastLocation)
+     ```
     */
     func timeInterval(since lastLocation: CLLocation) -> TimeInterval {
         return self.timestamp.timeIntervalSince(lastLocation.timestamp)
