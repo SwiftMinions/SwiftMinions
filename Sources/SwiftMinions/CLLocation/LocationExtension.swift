@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-extension CLLocation {
+public extension CLLocation {
     
     /**
      Calculate the interval between two location's timestamp. It's useful to calculate the location return from `locationManager(_ manager:, didUpdateLocations locations:)`.
