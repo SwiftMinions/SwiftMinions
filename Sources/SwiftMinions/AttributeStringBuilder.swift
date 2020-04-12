@@ -152,15 +152,26 @@ public extension NSAttributedString {
 }
 
 private extension String {
+    /**
+     ## Chinese description
+     在源字串中比對與 searchString 相同字串，並回傳其 [Range<String.Index>]（有可能比對到復數）。
+     僅供 AttributeStringBuilder 使用。
+     */
     func ranges(of searchString: String) -> [Range<String.Index>] {
-        let _indices = indices(of: searchString)
+        let _indices = getStartIndices(of: searchString)
         let count = searchString.count
-        return _indices.map({ index(startIndex, offsetBy: $0)..<index(startIndex, offsetBy: $0+count) })
+        return _indices.map { index(startIndex, offsetBy: $0)..<index(startIndex, offsetBy: $0 + count) }
     }
 }
 
 private extension String {
-    func indices(of occurrence: String) -> [Int] {
+    
+    /**
+     ## Chinese description
+     在源字串中比對與 occurrence 相同字串，在源字串中的 start index。
+     僅供 AttributeStringBuilder 使用。
+    */
+    func getStartIndices(of occurrence: String) -> [Int] {
         var indices = [Int]()
         var position = startIndex
         while let range = range(of: occurrence, range: position..<endIndex) {
@@ -177,25 +188,5 @@ private extension String {
             position = index(after: after)
         }
         return indices
-    }
-}
-
-private extension String {
-    func nsRange(from range: Range<String.Index>) -> NSRange {
-        let from = range.lowerBound.samePosition(in: utf16)!
-        let to = range.upperBound.samePosition(in: utf16)!
-        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from ),
-                       length: utf16.distance(from: from, to: to))
-    }
-}
-
-private extension NSRange {
-    init(_ range: Range<String.Index>, in string: String) {
-        self.init()
-        let startIndex = range.lowerBound.samePosition(in: string.utf16)!
-        let endIndex = range.upperBound.samePosition(in: string.utf16)!
-        self.location = string.distance(from: string.startIndex,
-                                        to: range.lowerBound)
-        self.length = string.distance(from: startIndex, to: endIndex)
     }
 }
