@@ -57,15 +57,66 @@ public extension CGFloat {
      ## Usage Example
      ```
      let num: CGFloat = 6.4456
-     num.rounded(to: 2, option: .plain) // 6.45
-     num.rounded(to: 2, option: .up) // 6.45
-     num.rounded(to: 2, option: .down) // 6.44
-     num.rounded(to: 2, option: .bankers) // 6.45
+     num.rounding(withMode: .plain, toPlaces: 2) // 6.45
+     num.rounding(withMode: .up, toPlaces: 2) // 6.45
+     num.rounding(withMode: .down, toPlaces: 2) // 6.44
+     num.rounding(withMode: .bankers, toPlaces: 2) // 6.45
 
      ```
      */
-    func rounded(to places: Int, option: NSDecimalNumber.RoundingMode) -> CGFloat {
-        return CGFloat(Double(self).rounded(to: places, option: option))
+    func rounding(withMode option: NSDecimalNumber.RoundingMode, toPlaces places: Int) -> CGFloat {
+        return CGFloat(Double(self).rounding(withMode: option, toPlaces: places))
+    }
+
+
+    /**
+     This function returns a number rounded UP to the given decimal places
+
+     ## Chinese description
+     用指定方法無條件進位至小數位第x位
+
+     ## Usage Example
+     ```
+     let num: CGFloat = 6.444677
+     num.ceil(to: 2) // 6.45
+     ```
+     */
+    func ceil(to places: Int) -> CGFloat {
+        return self.rounding(withMode: .up, toPlaces: places)
+    }
+
+    /**
+     This function returns a number rounded DOWN to the given decimal places
+
+     ## Chinese description
+     用指定方法無條件捨去至小數位第x位
+
+     ## Usage Example
+     ```
+     let num: CGFloat = 6.445677
+     num.floor(to: 2) // 6.44
+     ```
+     */
+
+    func floor(to places: Int) -> CGFloat {
+        return self.rounding(withMode: .down, toPlaces: places)
+    }
+
+    /**
+     This function returns a number rounded to the given decimal places
+
+     ## Chinese description
+     用指定方法四捨五入至小數位第x位
+
+     ## Usage Example
+     ```
+     let num: CGFloat = 6.445677
+     num.rounded(to: 2) // 6.45
+     ```
+     */
+
+    func rounded(to places: Int) -> CGFloat {
+        return self.rounding(withMode: .plain, toPlaces: places)
     }
 
 }
