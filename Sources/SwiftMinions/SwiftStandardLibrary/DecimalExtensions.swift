@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension Decimal {
+public extension Decimal {
     /**
     Convert to Double value
 
