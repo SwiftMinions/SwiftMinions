@@ -19,7 +19,7 @@ public extension Float {
 
      ## Chinese description
      轉型成 Double
-    */
+     */
     var doubleValue: Double {
         return Double(self)
     }
@@ -29,7 +29,7 @@ public extension Float {
 
      ## Chinese description
      轉型成 Int
-    */
+     */
     var intValue: Int {
         return Int(self)
     }
@@ -39,7 +39,7 @@ public extension Float {
 
      ## Chinese description
      轉型成 CGFloat
-    */
+     */
     #if canImport(CoreGraphics)
     var cgfloatValue: CGFloat {
         return CGFloat(self)
@@ -56,14 +56,63 @@ public extension Float {
      ## Usage Example
      ```
      let num: Float = 6.4456
-     num.rounded(to: 2, option: .plain) // 6.45
-     num.rounded(to: 2, option: .up) // 6.45
-     num.rounded(to: 2, option: .down) // 6.44
-     num.rounded(to: 2, option: .bankers) // 6.45
+     num.rounding(withMode: .plain, toPlaces: 2) // 6.45
+     num.rounding(withMode: .up, toPlaces: 2) // 6.45
+     num.rounding(withMode: .down, toPlaces: 2) // 6.44
+     num.rounding(withMode: .bankers, toPlaces: 2) // 6.45
      ```
      */
-    func rounded(to places: Int, option: NSDecimalNumber.RoundingMode) -> Float {
-        return self.doubleValue.rounded(to: places, option: option).floatValue
+    func rounding(withMode option: NSDecimalNumber.RoundingMode,
+                  toPlaces places: Int) -> Float {
+        return self.doubleValue.rounding(withMode: option, toPlaces: places).floatValue
+    }
+
+    /**
+     This function returns a number rounded UP to the given decimal places
+
+     ## Chinese description
+     用指定方法無條件進位至小數位第x位
+
+     ## Usage Example
+     ```
+     let num: Float = 6.444677
+     num.ceil(to: 2) // 6.45
+     ```
+     */
+    func ceil(to places: Int) -> Float {
+        return self.rounding(withMode: .up, toPlaces: places)
+    }
+
+    /**
+     This function returns a number rounded DOWN to the given decimal places
+
+     ## Chinese description
+     用指定方法無條件捨去至小數位第x位
+
+     ## Usage Example
+     ```
+     let num: Float = 6.445677
+     num.floor(to: 2) // 6.44
+     ```
+     */
+    func floor(to places: Int) -> Float {
+        return self.rounding(withMode: .down, toPlaces: places)
+    }
+
+    /**
+     This function returns a number rounded to the given decimal places
+
+     ## Chinese description
+     用指定方法四捨五入至小數位第x位
+
+     ## Usage Example
+     ```
+     let num: Float = 6.445677
+     num.rounded(to: 2) // 6.45
+     ```
+     */
+    func rounded(to places: Int) -> Float {
+        return self.rounding(withMode: .plain, toPlaces: places)
     }
 
 }
