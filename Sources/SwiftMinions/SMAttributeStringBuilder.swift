@@ -1,5 +1,5 @@
 //
-//  AttributeStringBuilder.swift
+//  SMAttributeStringBuilder.swift
 //  SwiftMinions
 //
 //  Created by Ohlulu on 2020/4/7.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// Convenience to build NSMutableAttributedString
-public class AttributeStringBuilder {
+public class SMAttributeStringBuilder {
     
     private var attString: NSMutableAttributedString = NSMutableAttributedString()
     private(set) var baseAttributed: [NSAttributedString.Key: Any] = [:]
@@ -22,7 +22,7 @@ public class AttributeStringBuilder {
      設置一個 base attribute 以便重用。
 
      - Parameter attribute:[NSAttributedString.Key: Any]
-     - Returns: AttributeStringBuilder
+     - Returns: SMAttributeStringBuilder
     */
     public func setBase(attribute: [NSAttributedString.Key: Any]) -> Self {
         baseAttributed = attribute
@@ -36,7 +36,7 @@ public class AttributeStringBuilder {
      設置一個 special attribute 以便重用。
 
      - Parameter attribute:[NSAttributedString.Key: Any]
-     - Returns: AttributeStringBuilder
+     - Returns: SMAttributeStringBuilder
     */
     public func setSpecial(attribute: [NSAttributedString.Key: Any]) -> Self {
         specialAttributed = attribute
@@ -52,7 +52,7 @@ public class AttributeStringBuilder {
      - Parameters:
         - text: A text.
         - attribute: Text's attribute. (default by \`func setBase(attribute:)\`)
-     - Returns: AttributeStringBuilder
+     - Returns: SMAttributeStringBuilder
     */
     public func setBase(
         text: String,
@@ -71,7 +71,7 @@ public class AttributeStringBuilder {
      - Parameters:
         - text: A text.
         - attribute: Text's attribute. (default by \`func setSpecial(attribute:)\`)
-     - Returns: AttributeStringBuilder
+     - Returns: SMAttributeStringBuilder
     */
     public func setSpecial(
         text specialText: String,
@@ -94,7 +94,7 @@ public class AttributeStringBuilder {
      - Parameters:
         - text: A text.
         - attribute: Text's attribute.
-     - Returns: AttributeStringBuilder
+     - Returns: SMAttributeStringBuilder
     */
     public func append(
         text: String,
@@ -114,10 +114,10 @@ public class AttributeStringBuilder {
 public extension NSAttributedString {
 
     /**
-     Create a AttributeStringBuilder
+     Create a SMAttributeStringBuilder
 
      ## Chinese description
-     建立一個 AttributeStringBuilder
+     建立一個 SMAttributeStringBuilder
 
      ### Usage Exsample ###
      
@@ -143,10 +143,10 @@ public extension NSAttributedString {
          .build()
      ```
      
-     - Returns: AttributeStringBuilder
+     - Returns: SMAttributeStringBuilder
     */
-    static var builder: AttributeStringBuilder {
-        get { return AttributeStringBuilder() }
+    static var builder: SMAttributeStringBuilder {
+        get { return SMAttributeStringBuilder() }
         set { }
     }
 }
@@ -155,7 +155,7 @@ private extension String {
     /**
      ## Chinese description
      在源字串中比對與 searchString 相同字串，並回傳其 [Range<String.Index>]（有可能比對到復數）。
-     僅供 AttributeStringBuilder 使用。
+     僅供 SMAttributeStringBuilder 使用。
      */
     func ranges(of searchString: String) -> [Range<String.Index>] {
         let _indices = getStartIndices(of: searchString)
@@ -169,7 +169,7 @@ private extension String {
     /**
      ## Chinese description
      在源字串中比對與 occurrence 相同字串，在源字串中的 start index。
-     僅供 AttributeStringBuilder 使用。
+     僅供 SMAttributeStringBuilder 使用。
     */
     func getStartIndices(of occurrence: String) -> [Int] {
         var indices = [Int]()
