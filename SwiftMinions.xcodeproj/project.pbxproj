@@ -15,7 +15,7 @@
 		22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3CFF62419D857009B09F8 /* LabelExtensions.swift */; };
 		500DED30243CBB1700B603A0 /* SMAttributeStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */; };
 		501E301B242FCDCC004D5D97 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301A242FCDCC004D5D97 /* IntExtensions.swift */; };
-		501E301D242FCDD8004D5D97 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301C242FCDD8004D5D97 /* DoubleExtension.swift */; };
+		501E301D242FCDD8004D5D97 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301C242FCDD8004D5D97 /* DoubleExtensions.swift */; };
 		501E301F242FCDE4004D5D97 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301E242FCDE4004D5D97 /* FloatExtensions.swift */; };
 		501E3021242FCDF1004D5D97 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E3020242FCDF1004D5D97 /* CGFloatExtensions.swift */; };
 		501E3024242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */; };
@@ -23,6 +23,7 @@
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
+		6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */; };
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
 		A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B224128144000D8A0E /* StringExtensions.swift */; };
@@ -35,6 +36,7 @@
 		DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF112426845F001E08B4 /* MinionsHelper.swift */; };
 		DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AF1324268559001E08B4 /* MinionsFunctions.swift */; };
 		DC63C55D23F6D718005684DE /* SwiftMinions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC63C55B23F6D718005684DE /* SwiftMinions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035687D242CDC0800D7277A /* DecimalExtensions.swift */; };
 		E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */; };
 		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -48,7 +50,7 @@
 		22D3CFF62419D857009B09F8 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMAttributeStringBuilder.swift; sourceTree = "<group>"; };
 		501E301A242FCDCC004D5D97 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
-		501E301C242FCDD8004D5D97 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		501E301C242FCDD8004D5D97 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		501E301E242FCDE4004D5D97 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
 		501E3020242FCDF1004D5D97 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		501E3023242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B224128144000D8A0E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		DC63C55823F6D718005684DE /* SwiftMinions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMinions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC63C55B23F6D718005684DE /* SwiftMinions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMinions.h; sourceTree = "<group>"; };
 		DC63C55C23F6D718005684DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E035687D242CDC0800D7277A /* DecimalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
 		E05DCF01241A45A2003B5B46 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalieExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,14 @@
 			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
+		6C4C8DE8243E189600D657C0 /* CLLocation */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */,
+			);
+			path = CLLocation;
+			sourceTree = "<group>";
+		};
 		DC01EF2D24040F4000B8B65D /* CoreLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +142,10 @@
 				A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */,
 				A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */,
 				A2D9F3B224128144000D8A0E /* StringExtensions.swift */,
+				E035687D242CDC0800D7277A /* DecimalExtensions.swift */,
 				ADBB6024241A5B0A00FD0838 /* ArrayExtensions.swift */,
 				501E301A242FCDCC004D5D97 /* IntExtensions.swift */,
-				501E301C242FCDD8004D5D97 /* DoubleExtension.swift */,
+				501E301C242FCDD8004D5D97 /* DoubleExtensions.swift */,
 				501E301E242FCDE4004D5D97 /* FloatExtensions.swift */,
 				50E8A06724380A0900335673 /* CollectionExtensions.swift */,
 			);
@@ -176,6 +189,7 @@
 				500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */,
 				DC01EF2D24040F4000B8B65D /* CoreLocation */,
 				501E3022242FCFF5004D5D97 /* CoreGraphics */,
+				6C4C8DE8243E189600D657C0 /* CLLocation */,
 				DC01EF2F24040F4000B8B65D /* Foundation */,
 				DC01EF3124040F4000B8B65D /* SwiftStandardLibrary */,
 				DC63C5A023F6E287005684DE /* UIKit */,
@@ -276,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */,
 				E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */,
 				500DED30243CBB1700B603A0 /* SMAttributeStringBuilder.swift in Sources */,
 				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
@@ -286,6 +301,7 @@
 				DC297F0F240FEB6900B39B31 /* StephenExtensions.swift in Sources */,
 				501E301B242FCDCC004D5D97 /* IntExtensions.swift in Sources */,
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
+				E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */,
 				A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */,
 				501E3024242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift in Sources */,
 				DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */,
@@ -294,7 +310,7 @@
 				50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */,
 				22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */,
 				501E301F242FCDE4004D5D97 /* FloatExtensions.swift in Sources */,
-				501E301D242FCDD8004D5D97 /* DoubleExtension.swift in Sources */,
+				501E301D242FCDD8004D5D97 /* DoubleExtensions.swift in Sources */,
 				ADBB6025241A5B0A00FD0838 /* ArrayExtensions.swift in Sources */,
 				22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */,
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
