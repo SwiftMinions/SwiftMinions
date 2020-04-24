@@ -119,7 +119,7 @@ public extension NSAttributedString {
      ## Chinese description
      建立一個 SMAttributeStringBuilder
 
-     ### Usage Exsample ###
+     ## Use example
      
      - the `*` will be red
      ```swift
