@@ -213,37 +213,6 @@ public extension UIImage {
     }
 }
 
-fileprivate extension UIScrollView {
-    func addObserver() {
-        scrollViewObserverObj = observe(\.contentSize) { [weak self] (obj, change) in
-            guard let self = self, self.enableHeightToFit else {
-                return
-            }
-            
-            var height = max(obj.contentSize.height + obj.contentInset.vertical,
-                             self.minimunHeightToFit)
-            
-            if let maxHeight = self.maximunHeightToFit {
-                height = min(maxHeight, height)
-            }
-            
-            let heightContraint = obj.constraints.first(where: {
-                $0.firstAttribute == .height && $0.relation == .equal
-            })
-            
-            if let heightContraint = heightContraint {
-                heightContraint.constant = height
-            } else {
-                obj.heightAnchor.constraint(equalToConstant: height).isActive = true
-            }
-        }
-    }
-    
-    func removeObserver() {
-        objc_removeAssociatedObjects(self)
-    }
-}
-
 public extension UIStackView {
     
     func addArrangedSubviews(_ views: [UIView]) {
