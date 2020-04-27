@@ -138,49 +138,6 @@ private extension NSRange {
     }
 }
 
-public extension CGRect {
-    
-    /// x, y is 0
-    init(width: Double, height: Double) {
-        self.init(x: 0, y: 0, width: width, height: height)
-    }
-    
-    /// x, y is 0
-    init(width: Float, height: Float) {
-        self.init(x: 0, y: 0, width: width.cgfloatValue, height: height.cgfloatValue)
-    }
-    
-    /// x, y is 0
-    init(width: CGFloat, height: CGFloat) {
-        self.init(x: 0, y: 0, width: width, height: height)
-    }
-    
-    /// x, y is 0
-    init(width: Int, height: Int) {
-        self.init(x: 0, y: 0, width: width, height: height)
-    }
-    
-    /// x, y is 0
-    init(square: Double) {
-        self.init(x: 0, y: 0, width: square, height: square)
-    }
-    
-    /// x, y is 0
-    init(square: Float) {
-        self.init(x: 0, y: 0, width: square.cgfloatValue, height: square.cgfloatValue)
-    }
-    
-    /// x, y is 0
-    init(square: CGFloat) {
-        self.init(x: 0, y: 0, width: square, height: square)
-    }
-    
-    /// x, y is 0
-    init(square: Int) {
-        self.init(x: 0, y: 0, width: square, height: square)
-    }
-}
-
 public extension UIScreen {
     
     static var height: Double {
