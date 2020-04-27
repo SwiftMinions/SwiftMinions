@@ -13,6 +13,7 @@
 		22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
 		22D3CFF72419D857009B09F8 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3CFF62419D857009B09F8 /* LabelExtensions.swift */; };
+		500DED30243CBB1700B603A0 /* SMAttributeStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */; };
 		501E301B242FCDCC004D5D97 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301A242FCDCC004D5D97 /* IntExtensions.swift */; };
 		501E301D242FCDD8004D5D97 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301C242FCDD8004D5D97 /* DoubleExtensions.swift */; };
 		501E301F242FCDE4004D5D97 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501E301E242FCDE4004D5D97 /* FloatExtensions.swift */; };
@@ -47,6 +48,7 @@
 		22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
 		22D3CFF62419D857009B09F8 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
+		500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMAttributeStringBuilder.swift; sourceTree = "<group>"; };
 		501E301A242FCDCC004D5D97 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		501E301C242FCDD8004D5D97 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		501E301E242FCDE4004D5D97 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				DC62AF112426845F001E08B4 /* MinionsHelper.swift */,
 				A2D9F3B424128156000D8A0E /* MinionsConfig.swift */,
 				DC62AF1324268559001E08B4 /* MinionsFunctions.swift */,
+				500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */,
 				DC01EF2D24040F4000B8B65D /* CoreLocation */,
 				501E3022242FCFF5004D5D97 /* CoreGraphics */,
 				6C4C8DE8243E189600D657C0 /* CLLocation */,
@@ -289,6 +292,7 @@
 			files = (
 				6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */,
 				E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */,
+				500DED30243CBB1700B603A0 /* SMAttributeStringBuilder.swift in Sources */,
 				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
 				DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */,
