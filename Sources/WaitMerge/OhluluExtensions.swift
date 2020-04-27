@@ -138,30 +138,6 @@ private extension NSRange {
     }
 }
 
-public extension CGSize {
-    
-    /// create size with square
-    init(square: Double) {
-        self.init(width: square, height: square)
-    }
-    
-    /// create size with square
-    init(square: Float) {
-        self.init(width: square.cgfloatValue, height: square.cgfloatValue)
-    }
-    
-    /// create size with square
-    init(square: CGFloat) {
-        self.init(width: square, height: square)
-    }
-    
-    /// create size with square
-    init(square: Int) {
-        self = .init(width: square, height: square)
-    }
-}
-
-
 public extension CGRect {
     
     /// x, y is 0
