@@ -20,32 +20,6 @@ public extension Thread {
     }
 }
 
-public extension UIWindow {
-    
-    
-    
-    static func `switch`(
-        toRootViewController viewController: UIViewController,
-        animated: Bool = true,
-        duration: TimeInterval = 0.35,
-        options: UIView.AnimationOptions = .transitionCrossDissolve,
-        _ completion: (() -> Void)? = nil) {
-        guard let _window = UIApplication.shared.delegate?.window,
-            let window = _window else {
-                return
-        }
-        
-        UIView.transition(with: window, duration: duration, options: options, animations: {
-            let oldState = UIView.areAnimationsEnabled
-            UIView.setAnimationsEnabled(false)
-            window.rootViewController = viewController
-            UIView.setAnimationsEnabled(oldState)
-        }, completion: { _ in
-            completion?()
-        })
-    }
-}
-
 public extension UIImage {
     
     enum ImageMode {
