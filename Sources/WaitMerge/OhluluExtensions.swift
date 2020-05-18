@@ -8,18 +8,6 @@
 
 import UIKit
 
-public extension Thread {
-    static func mainThread(_ closure: @escaping () -> Void) {
-        if Thread.isMainThread {
-            closure()
-        } else {
-            DispatchQueue.main.async {
-                closure()
-            }
-        }
-    }
-}
-
 public extension UIImage {
     
     enum ImageMode {

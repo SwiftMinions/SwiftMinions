@@ -1,5 +1,5 @@
 //
-//  UILabelExtensions.swift
+//  UILabelExtensions.swift.swift
 //  SwiftMinions
 //
 //  Created by 郭景豪 on 2020/3/12.
