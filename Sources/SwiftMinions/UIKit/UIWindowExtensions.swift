@@ -21,7 +21,6 @@ public extension UIWindow {
       let topVC = UIWindow.toppestViewController()
      ```
     */
-
     func toppestViewController(
         base: UIViewController? = MinionsConfig.keyWindow?.rootViewController
     )
@@ -48,6 +47,18 @@ public extension UIWindow {
         return base
     }
     
+    /**
+     Switch window's rootViewController.
+
+     ## Chinese description
+     切換 window 的 rootViewController，可用在登入或登出。
+
+     ## Use example
+     ```swift
+        let loginVC = LoginViewController()
+        UIWindow.switch(toViewController: loginVC)
+     ```
+    */
     static func `switch`(
         toViewController viewController: UIViewController,
         animated: Bool = true,
@@ -56,9 +67,8 @@ public extension UIWindow {
         _ completion: (() -> Void)? = nil
     )
     {
-        guard let _window = UIApplication.shared.delegate?.window,
-            let window = _window else {
-                return
+        guard let window = MinionsConfig.keyWindow else {
+            return
         }
         
         UIView.transition(with: window, duration: duration, options: options, animations: {
