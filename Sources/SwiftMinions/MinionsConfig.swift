@@ -18,4 +18,7 @@ open class MinionsConfig {
     static public var calendar: Calendar = Calendar.current
     
     static public var decoder: JSONDecoder = JSONDecoder()
+    
+    // cf. https://stackoverflow.com/a/57169802
+    static public var keyWindow: UIWindow? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
 }

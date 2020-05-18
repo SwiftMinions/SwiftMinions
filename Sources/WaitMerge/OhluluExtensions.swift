@@ -23,18 +23,6 @@ public extension Thread {
 public extension UIWindow {
     
     
-    static var topViewController: UIViewController? {
-        var result: UIViewController? = nil
-        guard let window = UIApplication.shared.delegate?.window,
-            var topViewController = window?.rootViewController else {
-                return result
-        }
-        while let presentedVC = topViewController.presentedViewController {
-            topViewController = presentedVC
-        }
-        result = topViewController
-        return result
-    }
     
     static func `switch`(
         toRootViewController viewController: UIViewController,
