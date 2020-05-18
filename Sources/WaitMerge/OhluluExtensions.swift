@@ -8,25 +8,6 @@
 
 import UIKit
 
-public extension UIScreen {
-    
-    static var height: Double {
-        return Double(UIScreen.heightf)
-    }
-    
-    static var width: Double {
-        return Double(UIScreen.widthf)
-    }
-    
-    static var heightf: CGFloat {
-        return UIScreen.main.bounds.height
-    }
-    
-    static var widthf: CGFloat {
-        return UIScreen.main.bounds.width
-    }
-}
-
 public extension Thread {
     static func mainThread(_ closure: @escaping () -> Void) {
         if Thread.isMainThread {
