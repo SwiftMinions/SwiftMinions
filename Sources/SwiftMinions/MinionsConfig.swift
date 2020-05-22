@@ -13,9 +13,21 @@ import UIKit
 /// Anything you need to customize will go from here
 open class MinionsConfig {
     
-    static public var font: UIFont = UIFont.systemFont(ofSize: 20)
+    public static var font: UIFont = UIFont.systemFont(ofSize: 20)
     
-    static public var calendar: Calendar = Calendar.current
+    public static var calendar: Calendar = Calendar.current
     
-    static public var decoder: JSONDecoder = JSONDecoder()
+    public static var decoder: JSONDecoder = JSONDecoder()
+    
+    // cf. https://stackoverflow.com/a/57169802
+    static public var keyWindow: UIWindow? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+    
+    public struct AnimationDuration {
+        
+        public static var short: TimeInterval = 0.15
+        
+        public static var middle: TimeInterval = 0.25
+        
+        public static var long: TimeInterval = 0.35
+    }
 }

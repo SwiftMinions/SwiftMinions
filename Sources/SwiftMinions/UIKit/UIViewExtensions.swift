@@ -56,5 +56,214 @@ public extension UIView {
             self.transform = self.transform.rotated(by: degree.radiansValue)
         }, completion: nil)
     }
+}
 
+// MARK: - Animation
+
+public extension UIView {
+    
+    /**
+     UIView's AnimationType.
+    
+     ## Chinese description
+     UIView 的動畫類型
+    */
+    enum AnimationType {
+        
+        /**
+         Fade type.
+        
+         ## Chinese description
+         淡入/淡出。
+        */
+        public enum Fade {
+            case `in`
+            case out
+        }
+        case fade(Fade)
+        
+        /**
+         Shake type.
+        
+         ## Chinese description
+         晃動類型。
+        */
+        public enum ShakeOffsets {
+            case light
+            case medium
+            case heavy
+            case custom([CGFloat])
+        }
+        case shake(ShakeOffsets)
+    }
+}
+
+/**
+ Duration and delay animation timing.
+ Duration's default value by `MinionsConfig.AnimationDuration`, Delay's default is 0s.
+
+ ## Chinese description
+ 動畫的持續時間跟延遲時間。
+ 持續時間的預設職值來自 `MinionsConfig.AnimationDuration`，延遲時間預設值是０。
+*/
+protocol AnimationTiming {
+    var duration: TimeInterval { get }
+    var delay: TimeInterval { get }
+}
+
+extension UIView.AnimationType.Fade: AnimationTiming {
+    var duration: TimeInterval {
+        switch self {
+        case .in, .out:
+            return MinionsConfig.AnimationDuration.short
+        }
+    }
+    
+    var delay: TimeInterval { 0 }
+}
+
+extension UIView.AnimationType: AnimationTiming {
+    var duration: TimeInterval {
+        switch self {
+        case .fade(let type):
+            return type.duration
+        case .shake:
+            return MinionsConfig.AnimationDuration.long
+        }
+    }
+    
+    var delay: TimeInterval { 0 }
+}
+
+/**
+ Shake animation type need offsets.
+
+ ## Chinese description
+ 晃動類型的動畫的偏移量。
+*/
+protocol AnimationOffsets {
+    var offset: [CGFloat] { get }
+}
+
+extension UIView.AnimationType.ShakeOffsets: AnimationOffsets {
+    var offset: [CGFloat] {
+        switch self {
+        case .light:
+            return [-10.0, 10.0, -10.0, 10.0, -5.0, 5.0, 0.0]
+        case .medium:
+            return [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        case .heavy:
+            return [-30.0, 30.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        case .custom(let offsets):
+            return offsets
+        }
+    }
+}
+
+public extension UIView {
+    
+    /**
+     Eazy animation view.
+
+     ## Chinese description
+     簡單的讓view動起來。
+
+     - Parameters:
+        - animationType: An `AnimationType`.
+        - duration: Set this value to duration. If this value is nil then value will from UIView.AnimationType AnimationTiming setting.
+        - delay: Set this value to delay. (default is 0)
+        - completion:  optional completion handler. (default is nil)
+    */
+    func animation(
+        animationType: AnimationType,
+        duration: TimeInterval? = nil,
+        delay: TimeInterval? = nil,
+        _ completion: (() -> Void)? = nil)
+    {
+        let duration = duration ?? animationType.duration
+        let delay = delay ?? animationType.delay
+        
+        switch animationType {
+        case .fade(let type):
+            switch type {
+            case .in:
+                animation(isFadout: false, duration: duration, delay: delay, completion)
+            case .out:
+                animation(isFadout: true, duration: duration, delay: delay, completion)
+            }
+        case .shake(let type):
+            errorShake(duration: duration, delay: delay, offsets: type.offset, completion: completion)
+        }
+    }
+
+    private func animation(
+        isFadout: Bool,
+        duration: TimeInterval,
+        delay: TimeInterval,
+        _ completion: (() -> Void)? = nil)
+    {
+        if isHidden {
+           isHidden = false
+        }
+        
+        if alpha == (isFadout ? 0 : 1) {
+           alpha = (isFadout ? 1 : 0)
+        }
+        
+        UIView.animate(withDuration: duration, delay: delay, animations: {
+            self.alpha = (isFadout ? 0 : 1)
+        }, completion: { _ in
+            completion?()
+        })
+    }
+    
+    private func errorShake(
+        duration: CFTimeInterval,
+        delay: TimeInterval,
+        offsets: [CGFloat] = [-10.0, 10.0, -10.0, 10.0, -5.0, 5.0, 0.0],
+        completion:(() -> Void)? = nil
+    ) {
+        shakeHorizontal(
+            duration: MinionsConfig.AnimationDuration.long,
+            delay: delay,
+            offsets: offsets,
+            completion: completion
+        )
+    }
+    
+    /**
+     Animated with a horizontal shake.
+
+     ## Chinese description
+     簡單的讓試圖視圖左右晃動。
+
+     - Parameters:
+        - type: set this value with AnimationType.
+        - duration: set this value to duration.
+        - delay: set this value to delay.
+        - completion:  optional completion handler. (default is nil)
+    */
+    func shakeHorizontal(
+        duration: TimeInterval,
+        delay: TimeInterval,
+        offsets: [CGFloat],
+        completion:(() -> Void)? = nil)
+    {
+        constraints.forEach { $0.isActive = false }
+        translatesAutoresizingMaskIntoConstraints = true
+        
+        CATransaction.begin()
+        
+        let animation: CAKeyframeAnimation
+        
+        animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        animation.beginTime = CACurrentMediaTime() + delay
+        animation.duration = duration
+        animation.values = offsets
+        layer.add(animation, forKey: "shake")
+        CATransaction.setCompletionBlock(completion)
+        
+        CATransaction.commit()
+    }
 }
