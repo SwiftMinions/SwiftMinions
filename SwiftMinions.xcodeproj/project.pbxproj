@@ -27,6 +27,9 @@
 		5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047132F24128D3E004A05A2 /* DateExtensions.swift */; };
 		5052541224569EC40074CC0C /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5052541124569EC40074CC0C /* CGSizeExtensions.swift */; };
 		5052541424569F4A0074CC0C /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5052541324569F4A0074CC0C /* CGRectExtensions.swift */; };
+		50541461247D09C2000AB06A /* SwiftMinionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50541460247D09C2000AB06A /* SwiftMinionsTests.swift */; };
+		50541463247D09C2000AB06A /* SwiftMinions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC63C55823F6D718005684DE /* SwiftMinions.framework */; };
+		50541469247D09E1000AB06A /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50541457247D08BB000AB06A /* StringTests.swift */; };
 		505739232451E9F50045D7DD /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505739222451E9F50045D7DD /* UIWindowExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
@@ -49,6 +52,16 @@
 		E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		50541464247D09C2000AB06A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC63C54F23F6D718005684DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC63C55723F6D718005684DE;
+			remoteInfo = SwiftMinions;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		10273586240292CD00A0347F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhluluExtensions.swift; sourceTree = "<group>"; };
@@ -70,6 +83,10 @@
 		5047132F24128D3E004A05A2 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		5052541124569EC40074CC0C /* CGSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
 		5052541324569F4A0074CC0C /* CGRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
+		50541457247D08BB000AB06A /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		5054145E247D09C1000AB06A /* SwiftMinionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMinionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50541460247D09C2000AB06A /* SwiftMinionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMinionsTests.swift; sourceTree = "<group>"; };
+		50541462247D09C2000AB06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		505739222451E9F50045D7DD /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
@@ -95,6 +112,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5054145B247D09C1000AB06A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50541463247D09C2000AB06A /* SwiftMinions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC63C55523F6D718005684DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +151,31 @@
 				5052541324569F4A0074CC0C /* CGRectExtensions.swift */,
 			);
 			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		50541456247D0899000AB06A /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				50541459247D08C4000AB06A /* StandardLibrary */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		50541459247D08C4000AB06A /* StandardLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				50541457247D08BB000AB06A /* StringTests.swift */,
+			);
+			path = StandardLibrary;
+			sourceTree = "<group>";
+		};
+		5054145F247D09C1000AB06A /* SwiftMinionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				50541460247D09C2000AB06A /* SwiftMinionsTests.swift */,
+				50541462247D09C2000AB06A /* Info.plist */,
+			);
+			path = SwiftMinionsTests;
 			sourceTree = "<group>";
 		};
 		6C4C8DE8243E189600D657C0 /* CLLocation */ = {
@@ -177,6 +227,8 @@
 			children = (
 				10273586240292CD00A0347F /* .gitattributes */,
 				DC63C55A23F6D718005684DE /* Sources */,
+				50541456247D0899000AB06A /* UnitTest */,
+				5054145F247D09C1000AB06A /* SwiftMinionsTests */,
 				DC63C55923F6D718005684DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				DC63C55823F6D718005684DE /* SwiftMinions.framework */,
+				5054145E247D09C1000AB06A /* SwiftMinionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +300,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5054145D247D09C1000AB06A /* SwiftMinionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50541466247D09C2000AB06A /* Build configuration list for PBXNativeTarget "SwiftMinionsTests" */;
+			buildPhases = (
+				5054145A247D09C1000AB06A /* Sources */,
+				5054145B247D09C1000AB06A /* Frameworks */,
+				5054145C247D09C1000AB06A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50541465247D09C2000AB06A /* PBXTargetDependency */,
+			);
+			name = SwiftMinionsTests;
+			productName = SwiftMinionsTests;
+			productReference = 5054145E247D09C1000AB06A /* SwiftMinionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DC63C55723F6D718005684DE /* SwiftMinions */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC63C56023F6D718005684DE /* Build configuration list for PBXNativeTarget "SwiftMinions" */;
@@ -271,9 +342,13 @@
 		DC63C54F23F6D718005684DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = SwiftMinions;
 				TargetAttributes = {
+					5054145D247D09C1000AB06A = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					DC63C55723F6D718005684DE = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
@@ -294,11 +369,19 @@
 			projectRoot = "";
 			targets = (
 				DC63C55723F6D718005684DE /* SwiftMinions */,
+				5054145D247D09C1000AB06A /* SwiftMinionsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5054145C247D09C1000AB06A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC63C55623F6D718005684DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +393,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5054145A247D09C1000AB06A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50541469247D09E1000AB06A /* StringTests.swift in Sources */,
+				50541461247D09C2000AB06A /* SwiftMinionsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC63C55423F6D718005684DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,7 +449,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		50541465247D09C2000AB06A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC63C55723F6D718005684DE /* SwiftMinions */;
+			targetProxy = 50541464247D09C2000AB06A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		50541467247D09C2000AB06A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TSTQSY2TJN;
+				INFOPLIST_FILE = SwiftMinionsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftminions.SwiftMinionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50541468247D09C2000AB06A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TSTQSY2TJN;
+				INFOPLIST_FILE = SwiftMinionsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftminions.SwiftMinionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DC63C55E23F6D718005684DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,6 +676,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50541466247D09C2000AB06A /* Build configuration list for PBXNativeTarget "SwiftMinionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50541467247D09C2000AB06A /* Debug */,
+				50541468247D09C2000AB06A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DC63C55223F6D718005684DE /* Build configuration list for PBXProject "SwiftMinions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
