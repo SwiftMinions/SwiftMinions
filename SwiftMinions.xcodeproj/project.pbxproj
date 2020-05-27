@@ -31,6 +31,7 @@
 		50541463247D09C2000AB06A /* SwiftMinions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC63C55823F6D718005684DE /* SwiftMinions.framework */; };
 		50541469247D09E1000AB06A /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50541457247D08BB000AB06A /* StringTests.swift */; };
 		505739232451E9F50045D7DD /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505739222451E9F50045D7DD /* UIWindowExtensions.swift */; };
+		505DEB49247E596100146197 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB48247E596100146197 /* UIColorExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
 		6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */; };
@@ -88,6 +89,7 @@
 		50541460247D09C2000AB06A /* SwiftMinionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMinionsTests.swift; sourceTree = "<group>"; };
 		50541462247D09C2000AB06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		505739222451E9F50045D7DD /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
+		505DEB48247E596100146197 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				503CD60B2472755200058E06 /* UIScreenExtensions.swift */,
 				503CD60F24727AC000058E06 /* UIImageExtensions.swift */,
 				503CD6112472913200058E06 /* UIStackViewExtensions.swift */,
+				505DEB48247E596100146197 /* UIColorExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				DC297F11240FEDF900B39B31 /* StephenObjects.swift in Sources */,
 				5052541224569EC40074CC0C /* CGSizeExtensions.swift in Sources */,
 				E035687E242CDC0800D7277A /* DecimalExtensions.swift in Sources */,
+				505DEB49247E596100146197 /* UIColorExtensions.swift in Sources */,
 				A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */,
 				501E3024242FD0A6004D5D97 /* UIEdgeInsetsExtensions.swift in Sources */,
 				DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */,
