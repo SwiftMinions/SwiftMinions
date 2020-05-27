@@ -133,7 +133,7 @@ public extension String {
      String is validation with regular expression.
 
      ## Chinese description
-     字串是否匹配正則表達式。
+     字串是否匹配正規表示式。
 
      ## Use example
      ```swift
@@ -153,7 +153,7 @@ public extension String {
      First match with regular expression. Return nil if not found.
 
      ## Chinese description
-     找到第一個匹配正則表達式的字串，如果找不到則回傳 nil。
+     找到第一個匹配正規表示式的字串，如果找不到則回傳 nil。
 
      ## Use example
      ```swift
@@ -188,7 +188,7 @@ public extension String {
      Find all matches with regular expression. Return empty array if not found.
 
      ## Chinese description
-     找到所有匹配正則表達式的字串，如果找不到則回傳空陣列。
+     找到所有匹配正規表示式的字串，如果找不到則回傳空陣列。
 
      ## Use example
      ```swift
@@ -228,7 +228,7 @@ public extension String {
      Replace string with regular expression and content. It will return a new string.
 
      ## Chinese description
-     用正則表達式取代字串，將返為一個新的字串
+     用正規表示式取代字串，將返回一個新的字串
 
      ## Use example
      ```swift
