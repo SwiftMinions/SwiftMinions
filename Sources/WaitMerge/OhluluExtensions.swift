@@ -8,16 +8,7 @@
 
 import UIKit
 
-public extension UIViewController {
-    
-    @objc func dismiss(_ animated: Bool = true, _ completion: (() -> Void)? = nil) {
-        dismiss(animated: animated, completion: completion)
-    }
-    
-    @objc func present(_ vc: UIViewController, animated: Bool = true, _ completion: (() -> Void)? = nil) {
-        present(vc, animated: animated, completion: completion)
-    }
-}
+
 
 public extension UIViewController {
     

@@ -32,6 +32,7 @@
 		50541469247D09E1000AB06A /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50541457247D08BB000AB06A /* StringTests.swift */; };
 		505739232451E9F50045D7DD /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505739222451E9F50045D7DD /* UIWindowExtensions.swift */; };
 		505DEB49247E596100146197 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB48247E596100146197 /* UIColorExtensions.swift */; };
+		505DEB4B247E7D1900146197 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
 		6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */; };
@@ -90,6 +91,7 @@
 		50541462247D09C2000AB06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		505739222451E9F50045D7DD /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 		505DEB48247E596100146197 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				503CD60F24727AC000058E06 /* UIImageExtensions.swift */,
 				503CD6112472913200058E06 /* UIStackViewExtensions.swift */,
 				505DEB48247E596100146197 /* UIColorExtensions.swift */,
+				505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				AD7FB1CC2403FEA500453C03 /* HankExtensions.swift in Sources */,
 				A2D9F3B524128156000D8A0E /* MinionsConfig.swift in Sources */,
 				A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */,
+				505DEB4B247E7D1900146197 /* UIViewControllerExtensions.swift in Sources */,
 				22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */,
 				501E3021242FCDF1004D5D97 /* CGFloatExtensions.swift in Sources */,
 				505739232451E9F50045D7DD /* UIWindowExtensions.swift in Sources */,
