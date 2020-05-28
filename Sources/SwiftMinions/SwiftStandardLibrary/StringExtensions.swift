@@ -130,7 +130,7 @@ public extension String {
 public extension String {
     
     /**
-     String is validation with regular expression.
+     String is validate with regular expression.
 
      ## Chinese description
      字串是否匹配正規表示式。
@@ -138,14 +138,14 @@ public extension String {
      ## Use example
      ```swift
         let regex = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}$"#
-        let result = "minions@swiftminions.com".isValidation(withRegex: regex)
+        let result = "minions@swiftminions.com".isValidate(withRegex: regex)
         // result -> true
      ```
 
      - Parameter withRegex: regular expression.
      - Returns: Bool.
     */
-    func isValidation(withRegex regex: String) -> Bool {
+    func isValidate(withRegex regex: String) -> Bool {
         regularFirstMatch(withRegex: regex) != nil
     }
     
