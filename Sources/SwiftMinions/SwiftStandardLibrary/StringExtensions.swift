@@ -125,6 +125,145 @@ public extension String {
 }
 
 /**
+ * Regular expression
+ */
+public extension String {
+    
+    /**
+     String is validate with regular expression.
+
+     ## Chinese description
+     字串是否匹配正規表示式。
+
+     ## Use example
+     ```swift
+        let regex = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}$"#
+        let result = "minions@swiftminions.com".isValidate(withRegex: regex)
+        // result -> true
+     ```
+
+     - Parameter withRegex: regular expression.
+     - Returns: Bool.
+    */
+    func isValidate(withRegex regex: String) -> Bool {
+        regularFirstMatch(withRegex: regex) != nil
+    }
+    
+    /**
+     First match with regular expression. Return nil if not found.
+
+     ## Chinese description
+     找到第一個匹配正規表示式的字串，如果找不到則回傳 nil。
+
+     ## Use example
+     ```swift
+        let regex = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}$"#
+        let result = "minions@swiftminions.com".regularFirstMatch(withRegex: regex)
+        // result-> "minions@swiftminions.com"
+     ```
+
+     - Parameters:
+        - withRegex: regular expression.
+        - options: NSRegularExpression.Options. (default is MinionsConfig.regexOptions)
+     - Returns: String?
+    */
+    func regularFirstMatch(
+        withRegex regexString: String,
+        options: NSRegularExpression.Options = MinionsConfig.regexOptions)
+        -> String?
+    {
+        do {
+            let regExp: NSRegularExpression = try NSRegularExpression(pattern: regexString, options: options)
+            guard let match = regExp.firstMatch(in: self, options: [], range: NSMakeRange(0, count)) else {
+                return nil
+            }
+            return (self as NSString).substring(with: match.range)
+        } catch {
+            print("[ Error ] : \(error)")
+            return nil
+        }
+    }
+    
+    /**
+     Find all matches with regular expression. Return empty array if not found.
+
+     ## Chinese description
+     找到所有匹配正規表示式的字串，如果找不到則回傳空陣列。
+
+     ## Use example
+     ```swift
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}"
+        let results = """
+        minions@swiftminions.com
+        minions2@sdf.com
+        """.regularMatches(withRegex: regex)
+        // results -> ["minions@swiftminions.com", "minions2@sdf.com"]
+     ```
+
+     - Parameters:
+        - withRegex: regular expression.
+        - options: NSRegularExpression.Options. (default is MinionsConfig.regexOptions)
+     - Returns: [String]
+    */
+    func regularMatches(
+        withRegex regex: String,
+        options: NSRegularExpression.Options = MinionsConfig.regexOptions)
+        -> [String]
+    {
+        do {
+            let regExp: NSRegularExpression = try NSRegularExpression(pattern: regex, options: options)
+            let matches = regExp.matches(in: self, options: [], range: NSMakeRange(0, count))
+            var results = [String](repeating: "", count: matches.count)
+            for (index, item) in matches.enumerated() {
+                let string = (self as NSString).substring(with: item.range)
+                results[index] = string
+            }
+            return results
+        } catch {
+            return []
+        }
+    }
+    
+    /**
+     Replace string with regular expression and content. It will return a new string.
+
+     ## Chinese description
+     用正規表示式取代字串，將返回一個新的字串
+
+     ## Use example
+     ```swift
+        let regex = #"(\()([0][0-9]{1,2})(\))([\d]{9})"#
+        let phone = "(02)123456789"
+        let newPhone = phone.regularReplace(withRegex: regex, content: "$2-$4")
+        // newPhone -> 02-123456789
+     ```
+
+     - Parameters:
+        - withRegex: regular expression.
+        - options: NSRegularExpression.Options. (default is MinionsConfig.regexOptions)
+     - Returns: [String]
+    */
+    func regularReplace(
+        withRegex regex: String,
+        content: String,
+        options: NSRegularExpression.Options = MinionsConfig.regexOptions)
+        -> String
+    {
+        do {
+            let regExp = try NSRegularExpression(pattern: regex, options: options)
+            let modified = regExp.stringByReplacingMatches(
+                in: self,
+                options: .reportProgress,
+                range: NSRange(location: 0, length: count),
+                withTemplate: content)
+            return modified
+        } catch {
+            return self
+        }
+    }
+}
+
+/**
  Wrapper for SafeRangeable compatible types. This type provides an extension point for connivence methods in SafeRangeable.
 */
 public struct SafeRangeable<Base> where Base: Collection {

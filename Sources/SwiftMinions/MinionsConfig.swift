@@ -20,7 +20,9 @@ open class MinionsConfig {
     public static var decoder: JSONDecoder = JSONDecoder()
     
     // cf. https://stackoverflow.com/a/57169802
-    static public var keyWindow: UIWindow? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+    public static var keyWindow: UIWindow? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+    
+    public static var regexOptions: NSRegularExpression.Options = [.caseInsensitive]
     
     public struct AnimationDuration {
         
