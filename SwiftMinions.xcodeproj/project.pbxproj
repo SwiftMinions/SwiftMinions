@@ -33,6 +33,7 @@
 		505739232451E9F50045D7DD /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505739222451E9F50045D7DD /* UIWindowExtensions.swift */; };
 		505DEB49247E596100146197 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB48247E596100146197 /* UIColorExtensions.swift */; };
 		505DEB4B247E7D1900146197 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */; };
+		50E876972480CF45006EAD2B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E876962480CF45006EAD2B /* UITableViewExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
 		6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */; };
@@ -92,6 +93,7 @@
 		505739222451E9F50045D7DD /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 		505DEB48247E596100146197 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		50E876962480CF45006EAD2B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				503CD6112472913200058E06 /* UIStackViewExtensions.swift */,
 				505DEB48247E596100146197 /* UIColorExtensions.swift */,
 				505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */,
+				50E876962480CF45006EAD2B /* UITableViewExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				500DED30243CBB1700B603A0 /* SMAttributeStringBuilder.swift in Sources */,
 				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
+				50E876972480CF45006EAD2B /* UITableViewExtensions.swift in Sources */,
 				DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */,
 				50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */,
 				E02858822456B86C002E12BD /* KeyDecodingStrategyExtensions.swift in Sources */,
