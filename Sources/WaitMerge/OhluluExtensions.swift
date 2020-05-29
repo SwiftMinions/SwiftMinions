@@ -22,22 +22,6 @@ public extension UIViewController {
     }
 }
 
-public extension UIViewController {
-    func addChild(viewController child: UIViewController, containerView: UIView) {
-        addChild(child)
-        containerView.bounds = child.view.bounds
-        containerView.addSubview(child.view)
-        child.didMove(toParent: self)
-    }
-    
-    func removeChild(viewController child: UIViewController) {
-        guard parent != nil else { return }
-        child.willMove(toParent: nil)
-        child.view.removeFromSuperview()
-        child.removeFromParent()
-    }
-}
-
 public extension UIView {
     
 }
