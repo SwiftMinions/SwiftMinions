@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - Helper method
+
 public extension String {
     
     /**
@@ -120,9 +122,8 @@ public extension String {
     }
 }
 
-/**
- * Regular expression
- */
+// MARK: - Regular expression
+
 public extension String {
     
     /**
@@ -258,6 +259,8 @@ public extension String {
         }
     }
 }
+
+// MARK: - Safely to get string by range
 
 /**
  Wrapper for SafeRangeable compatible types. This type provides an extension point for connivence methods in SafeRangeable.
