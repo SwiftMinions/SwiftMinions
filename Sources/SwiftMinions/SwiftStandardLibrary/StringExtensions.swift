@@ -9,7 +9,7 @@
 import UIKit
 
 public extension String {
-
+    
     /**
      Get string size via given UIFont. Return CGSize includes height and width.
      
@@ -21,7 +21,7 @@ public extension String {
      
      let text = "Some text"
      let font = UIFont.systemFont(ofSize: 20)
-     let size = text.size(fontSize: font)   /// {w 87.334 h 23.867}
+     let size = text.size(withFont: font)   /// {w 87.334 h 23.867}
      size.height                            /// 23.8671875
      size.width                             /// 87.333984375
      
@@ -30,12 +30,9 @@ public extension String {
      
      Returns: CGSize
      */
-    func size(fontSize font: UIFont) -> CGSize {
-        return self.size(withAttributes: [NSAttributedString.Key.font: font])
+    func size(withFont font: UIFont) -> CGSize {
+        size(withAttributes: [.font: font])
     }
-}
-
-public extension String {
     
     /**
      Calculate the size of string in a max rect.
@@ -46,7 +43,7 @@ public extension String {
      ## Use example
      ```swift
      
-     let size: CGSize = "tttttttttttttttttt".calculateRectSize(font: UIFont.systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
+     let size: CGSize = "SwiftMinions".calculateRectSize(font: .systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
      print(size)
 
      ```
@@ -56,10 +53,9 @@ public extension String {
      Returns: CGSize
      */
     func calculateRectSize(font: UIFont, maxSize: CGSize) -> CGSize {
-        let attributedString = NSAttributedString.init(string: self, attributes: [NSAttributedString.Key.font:font])
+        let attributedString = NSAttributedString.init(string: self, attributes: [.font: font])
         let rect = attributedString.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, context: nil)
-        let size = CGSize(width:rect.size.width, height : rect.size.height)
-        return size
+        return rect.size
     }
     
     var toInt: Int? {
