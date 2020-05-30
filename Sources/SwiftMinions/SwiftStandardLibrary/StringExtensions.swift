@@ -260,6 +260,157 @@ public extension String {
     }
 }
 
+// MARK: - Hex helper method
+
+public extension String {
+    /**
+     Hex string to Int.
+     
+     ## Chinese description
+     16 進位文字轉 Int
+     
+     ## Use example
+     ````
+     let hexString = "FF"
+     let int = hexString.hexToInt()
+     // 255
+     ````
+     */
+    func hexToInt() -> Int {
+        Int(strtoul(self, nil, 16))
+    }
+    
+    /**
+     Hex string to brnary string.
+     
+     ## Chinese description
+     16 進位文字轉 Binary 文字
+     
+     ## Use example
+     ````
+     let hexString = "FF"
+     let binaryString = hexString.hexToBinary()
+     // 11111111
+     ````
+     */
+    func hexToBinary() -> String {
+        String(hexToInt(), radix: 2)
+    }
+    
+    /**
+     Int string to hex string.
+     
+     ## Chinese description
+     10 進位文字轉 16 進位文字
+     
+     ## Use example
+     ````
+     let decimalString = "255"
+     let hexString = decimalString.decimalToHex()
+     // FF
+     ````
+     */
+    func decimalToHex() -> String {
+        String(Int(self) ?? 0, radix: 16).uppercased()
+    }
+    
+    /**
+     Decimal string to binary string.
+     
+     ## Chinese description
+     10 進位文字轉 Binary 文字
+     
+     ## Use example
+     ````
+     let decimalString = "255"
+     let binaryString = decimalString.decimalToBinary()
+     // 11111111
+     ````
+     */
+    func decimalToBinary() -> String {
+        String(Int(self) ?? 0, radix: 2)
+    }
+    
+    /**
+     Binary string to Int.
+     
+     ## Chinese description
+     Binary 文字轉 10 進位
+     
+     ## Use example
+     ````
+     let binaryString = "11111111"
+     let decimal = binaryString.binaryToInt()
+     // 255
+     ````
+     */
+    func binaryToInt() -> Int {
+        Int(strtoul(self, nil, 2))
+    }
+    
+    /**
+     Binary string to hex string.
+     
+     ## Chinese description
+     Binary 文字轉 16 進位文字
+     
+     ## Use example
+     ````
+     let binaryString = "11111111"
+     let hexString = binaryString.binaryToHex()
+     // FF
+     ````
+     */
+    func binaryToHex() -> String {
+        String(binaryToInt(), radix: 16).uppercased()
+    }
+    
+    /**
+     Hex string to Float.
+     
+     ## Chinese description
+     16 進位文字轉 Float
+     
+     ## Use example
+     ````
+     let hexString = "3D512EE0"
+     print(hexString.hexToFloat())
+     // 0.051070094
+     ````
+     */
+    func hexToFloat() -> Float {
+        Float32(bitPattern: UInt32(strtol(self, nil, 16)))
+    }
+    
+    /**
+     Hex string to Data.
+     
+     ## Chinese description
+     16 進位文字轉 Data
+     
+     ## Use example
+     ````
+     let data = "FF".hexToData()
+     let hexString = data.map { String(format: "%02x", $0)}.joined(separator: "")
+     print(hexString)
+     // ff
+     ````
+     */
+    func hexToData() -> Data {
+        var dataBytes = Data()
+        var startPos = self.startIndex
+        while let endPos = self.index(startPos, offsetBy: 2, limitedBy: self.endIndex) {
+            let singleHexStr = self[startPos..<endPos]
+            let scanner = Scanner(string: String(singleHexStr))
+            var intValue: UInt64 = 0
+            scanner.scanHexInt64(&intValue)
+            dataBytes.append(UInt8(intValue))
+            startPos = endPos
+        }
+        return dataBytes
+    }
+}
+
 // MARK: - Safely to get string by range
 
 /**
