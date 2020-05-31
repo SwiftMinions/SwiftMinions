@@ -10,7 +10,7 @@ import UIKit
 import CommonCrypto
 import MapKit
    
-// 保留，不確定要不要
+// 以下保留，不確定要不要
 extension String {
     func toData() -> Data? {
         let data = self.data(using: .utf8)
@@ -25,7 +25,9 @@ extension Double {
     }
     
 }
+// 以上保留，不確定要不要
 
+// 以下太艱深，看不懂，無法寫註解
 extension MKMapRect: Equatable {
 
     public static func == (a: MKMapRect, b: MKMapRect) -> Bool {
