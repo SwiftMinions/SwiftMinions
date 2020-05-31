@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		10273587240292CD00A0347F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 10273586240292CD00A0347F /* .gitattributes */; };
-		1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */; };
 		22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E724262AFC006E2FD8 /* DataExtensions.swift */; };
 		22C359EA242630A9006E2FD8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */; };
 		22C5A31E240226D10077E880 /* TankExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5A31D240226D10077E880 /* TankExtensions.swift */; };
@@ -72,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		10273586240292CD00A0347F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
-		1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OhluluExtensions.swift; sourceTree = "<group>"; };
 		22C359E724262AFC006E2FD8 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 		22C359E9242630A9006E2FD8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		22C5A31D240226D10077E880 /* TankExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankExtensions.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				22C5A31D240226D10077E880 /* TankExtensions.swift */,
-				1054C54924026F1A009A7DE8 /* OhluluExtensions.swift */,
 				E07807CB2408C3B1004BF94F /* NatalieExtensions.swift */,
 				DC297F0E240FEB6800B39B31 /* StephenExtensions.swift */,
 				DC297F10240FEDF900B39B31 /* StephenObjects.swift */,
@@ -455,7 +452,6 @@
 				50271F5024833E9D0066E65D /* FileManagerExtensions.swift in Sources */,
 				DC62AF1424268559001E08B4 /* MinionsFunctions.swift in Sources */,
 				503CD60E24727A7400058E06 /* ThreadExtensions.swift in Sources */,
-				1054C54A24026F1A009A7DE8 /* OhluluExtensions.swift in Sources */,
 				A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */,
 				50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */,
 				22C359E824262AFC006E2FD8 /* DataExtensions.swift in Sources */,
