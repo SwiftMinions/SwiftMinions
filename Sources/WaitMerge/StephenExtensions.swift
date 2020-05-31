@@ -46,7 +46,7 @@ extension String {
     /// Remove decimal for price-like strings. Ex: 1000.000 to 1000
     ///
     /// - Returns: String
-    public func noDecimal() -> String? {
+    public func removeDecimal() -> String? {
         if let subString = self.split(separator: ".").first {
             return String(subString)
         }
