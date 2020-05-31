@@ -22,6 +22,7 @@
 		50271F572483B3960066E65D /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50271F562483B3960066E65D /* UIButtonExtensions.swift */; };
 		50271F592483B4670066E65D /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50271F582483B4670066E65D /* UITextFieldExtension.swift */; };
 		50271F5B2483B4930066E65D /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50271F5A2483B4930066E65D /* UITextViewExtensions.swift */; };
+		50271F5D2483B6C90066E65D /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50271F5C2483B6C90066E65D /* URLExtensions.swift */; };
 		502EC9D524822A9B00B9BE18 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EC9D424822A9B00B9BE18 /* UICollectionViewExtensions.swift */; };
 		503CD60C2472755200058E06 /* UIScreenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CD60B2472755200058E06 /* UIScreenExtensions.swift */; };
 		503CD60E24727A7400058E06 /* ThreadExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CD60D24727A7400058E06 /* ThreadExtensions.swift */; };
@@ -85,6 +86,7 @@
 		50271F562483B3960066E65D /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		50271F582483B4670066E65D /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		50271F5A2483B4930066E65D /* UITextViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtensions.swift; sourceTree = "<group>"; };
+		50271F5C2483B6C90066E65D /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		502EC9D424822A9B00B9BE18 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		503CD60B2472755200058E06 /* UIScreenExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreenExtensions.swift; sourceTree = "<group>"; };
 		503CD60D24727A7400058E06 /* ThreadExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadExtensions.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				E02858812456B86C002E12BD /* KeyDecodingStrategyExtensions.swift */,
 				503CD60D24727A7400058E06 /* ThreadExtensions.swift */,
 				50271F4F24833E9D0066E65D /* FileManagerExtensions.swift */,
+				50271F5C2483B6C90066E65D /* URLExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				5047133024128D3E004A05A2 /* DateExtensions.swift in Sources */,
 				50E876972480CF45006EAD2B /* UITableViewExtensions.swift in Sources */,
 				DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */,
+				50271F5D2483B6C90066E65D /* URLExtensions.swift in Sources */,
 				50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */,
 				E02858822456B86C002E12BD /* KeyDecodingStrategyExtensions.swift in Sources */,
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
