@@ -12,6 +12,9 @@ import UIKit
 
 public extension String {
     
+    /// Helper property for logic.
+    var isNotEmpty: Bool { !isEmpty }
+    
     /**
      Convert String into Date type.
      

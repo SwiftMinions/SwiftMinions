@@ -9,6 +9,13 @@
 import UIKit
 
 public extension UIView {
+    
+    /// Helper property for logic.
+    var isShow: Bool {
+        get { !isHidden }
+        set { isHidden = !newValue}
+    }
+    
 
     /**
     Use UIBezierPath to create rounded corners for this view.
