@@ -80,4 +80,25 @@ public extension UIWindow {
             completion?()
         })
     }
+    
+    /// Convert given view origin (x, y) to key window coordinate
+    ///
+    /// - Parameter sender: the view need to be convert
+    /// - Returns: the view in window's coordinate
+    func toKeyWindowsCoordinate(sender: UIView) -> CGPoint? {
+        var point: CGPoint?
+        guard let window = MinionsConfig.keyWindow else { return point }
+        guard let superView = sender.superview else { return point }
+        point = superView.convert(sender.frame.origin, to: window)
+        return point
+    }
+    
+    /// The Frame of status bar
+    static var statusBarFrame: CGRect {
+        if #available(iOS 13.0, *) {
+            return MinionsConfig.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect()
+        } else {
+            return UIApplication.shared.statusBarFrame
+        }
+    }
 }

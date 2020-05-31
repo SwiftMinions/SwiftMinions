@@ -132,38 +132,6 @@ extension UIApplication {
         return base
     }
     
-    /// Detect whether application can open URL or not
-    ///
-    /// - Parameter url: url
-    public func openURL(with url: String) {
-    
-        guard let aURL = URL(string: url) else {
-            return
-        }
-        
-        if !UIApplication.shared.canOpenURL(aURL) {
-            return
-        }
-        
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(aURL, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(aURL)
-        }
-    }
-    
-    /// Convert given view origin (x, y) to key window coordinate
-    ///
-    /// - Parameter sender: the view need to be convert
-    /// - Returns: the view in window's coordinate
-    public func toKeyWindowsCoordinate(sender: UIView) -> CGPoint? {
-        var point: CGPoint?
-        guard let window = UIApplication.shared.keyWindow else { return point }
-        guard let superView = sender.superview else { return point }
-        point = superView.convert(sender.frame.origin, to: window)
-        return point
-    }
-    
     /// Get status bar
     public var statusBarView: UIView? {
         return self.value(forKey: "statusBar") as? UIView
