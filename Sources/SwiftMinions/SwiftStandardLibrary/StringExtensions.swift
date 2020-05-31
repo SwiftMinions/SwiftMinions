@@ -310,8 +310,9 @@ public extension String {
      // FF
      ````
      */
-    func decimalToHex() -> String {
-        String(Int(self) ?? 0, radix: 16).uppercased()
+    func decimalToHex(isUppercased: Bool = false) -> String {
+        let hex = String(Int(self) ?? 0, radix: 16)
+        return !isUppercased ? hex : hex.uppercased()
     }
     
     /**
@@ -361,8 +362,9 @@ public extension String {
      // FF
      ````
      */
-    func binaryToHex() -> String {
-        String(binaryToInt(), radix: 16).uppercased()
+    func binaryToHex(isUppercased: Bool = false) -> String {
+        let hex = String(binaryToInt(), radix: 16).uppercased()
+        return !isUppercased ? hex : hex.uppercased()
     }
     
     /**
