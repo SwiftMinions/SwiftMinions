@@ -273,7 +273,3 @@ extension Character {
         return Int(String(self)) != nil
     }
 }
-
-extension Date {
-    
-}
