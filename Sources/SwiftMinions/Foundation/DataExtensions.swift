@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import CommonCrypto
 
 public extension Data {
     
     /**
-     Data change to codable model.
+     Decode data into given object that confrims to Decodable.
      
      ## Chinese description
      Data 轉 Codable
@@ -19,22 +20,40 @@ public extension Data {
      ## Use example
      ```
      struct UserModel: Codable {
-     let id: String
-     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        let id: String
+        enum CodingKeys: String, CodingKey {
+            case id = "id"
         }
      }
-     let jsonString = "{ id : \"123\" }"
+     let jsonString = #"{ "id" : "123" }"#
      let data = string.data(using: .utf8)
-     let userModel: UserModel = data.toCodable()
-     print(userModel)
+     let userModel = data.decodeTo(UserModel.self)
      ```
+     
+     - Parameters:
+        - type: A object confrims to Decodable.
+        - decoder: Custom decoder. (default is MinionsConfig.decoder)
      */
-    func toCodable<T: Codable>(decoder: JSONDecoder = MinionsConfig.decoder) -> T? {
+    func decodeTo<T: Codable>(_ type: T.Type, decoder: JSONDecoder = MinionsConfig.decoder) -> T? {
         if let model = try? decoder.decode(T.self, from: self) {
             return model
         }
         return nil
+    }
+    
+    /**
+     Data to String.
+     
+     ## Chinese description
+     Data 轉 String
+     
+     ## Use example
+     ```
+     Data().toString()
+     ```
+    */
+    func toString(encoding: String.Encoding = MinionsConfig.stringEncoding) -> String? {
+        return String(bytes: self, encoding: encoding)
     }
     
     /**
@@ -54,5 +73,4 @@ public extension Data {
         return map { String(format: "%02x", $0) }
             .joined(separator: "")
     }
-    
 }

@@ -10,36 +10,6 @@ import UIKit
 import CommonCrypto
 import MapKit
 
-
-
-
-
-
-extension Data {
-    /**
-    Get md5
-     
-    ## Chinese description
-     取得資料的MD5
-    
-    ## Use example
-    ```swift
-    
-    let md5 = Data().md5
-    print(md5)
-    ```
-    */
-    var md5 : String {
-        let hash = self.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> [UInt8] in
-            var hash = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-            CC_MD5(bytes.baseAddress, CC_LONG(self.count), &hash)
-            return hash
-        }
-        return hash.map { String(format: "%02x", $0) }.joined()
-    }
-}
-
-
 extension String {
     //query = "a=1&b=2&c=3"
     //print(query.parseQueryString())

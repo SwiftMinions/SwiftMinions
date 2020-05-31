@@ -19,8 +19,10 @@ open class MinionsConfig {
     
     public static var decoder: JSONDecoder = JSONDecoder()
     
+    public static var stringEncoding: String.Encoding = .utf8
+    
     // cf. https://stackoverflow.com/a/57169802
-    public static var keyWindow: UIWindow? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+    public static var keyWindow: UIWindow? = UIApplication.shared.windows.filter { $0.isKeyWindow }.first
     
     public static var regexOptions: NSRegularExpression.Options = [.caseInsensitive]
     
