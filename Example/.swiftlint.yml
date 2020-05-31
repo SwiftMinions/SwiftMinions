@@ -1,52 +1,119 @@
-disabled_rules: # rule identifiers to exclude from running
-  # - colon
-  # - comma
-  # - control_statement
-opt_in_rules: # some rules are only opt-in
+included:
+  - Source
+  - Tests
+excluded:
+  - Tests/SwiftLintFrameworkTests/Resources
+analyzer_rules:
+  - unused_declaration
+  - unused_import
+opt_in_rules:
+  - anyobject_protocol
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - discouraged_object_literal
+  - empty_collection_literal
   - empty_count
-  # Find all the available rules by running:
-  # swiftlint rules
-included: # paths to include during linting. `--path` is ignored if present.
-  - Example
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
-  - Pods
-  - Source/ExcludedFolder
-  - Source/ExcludedFile.swift
-  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
-analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
-  - explicit_self
+  - empty_string
+  - empty_xctest_method
+  - enum_case_associated_values_count
+  - explicit_init
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - file_header
+  - file_name
+  - first_where
+  - flatmap_over_map_reduce
+  - identical_operands
+  - joined_default_parameter
+  - legacy_random
+  - let_var_whitespace
+  - last_where
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+  - modifier_order
+  - nimble_operator
+  - nslocalizedstring_key
+  - number_separator
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - prohibited_interface_builder
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - reduce_into
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  - strong_iboutlet
+  - toggle_bool
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - unowned_variable_capture
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - xct_specific_matcher
+  - yoda_condition
 
-# configurable rules can be customized from this configuration file
-# binary rules can set their severity level
-force_cast: warning # implicitly
-force_try:
-  severity: warning # explicitly
-# rules that have both warning and error levels, can set just the warning level
-# implicitly
-line_length: 110
-# they can set both implicitly with an array
-type_body_length:
-  - 300 # warning
-  - 400 # error
-# or they can set both explicitly
-file_length:
-  warning: 500
-  error: 1200
-# naming rules can set warnings/errors for min_length and max_length
-# additionally they can set excluded names
-type_name:
-  min_length: 4 # only warning
-  max_length: # warning and error
-    warning: 40
-    error: 50
-  excluded: iPhone # excluded via string
-  allowed_symbols: ["_"] # these are allowed in type names
 identifier_name:
-  min_length: # only min_length
-    error: 4 # only error
-  excluded: # excluded via string array
+  excluded:
     - id
-    - URL
-    - GlobalAPIKey
-reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
+number_separator:
+  minimum_length: 5
+file_name:
+  excluded:
+    - main.swift
+    - LinuxMain.swift
+    - TestHelpers.swift
+    - shim.swift
+    - AutomaticRuleTests.generated.swift
+
+custom_rules:
+  pirates_beat_ninjas: # documentation check
+    included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+    excluded: ".*Test\\.swift" # regex that defines paths to exclude during linting. optional
+    name: "Documentation check" # rule name. optional.
+    # regex: "([n,N]inja)" # matching pattern
+    capture_group: 0 # number of regex capture group to highlight the rule violation at. optional.
+    match_kinds: # SyntaxKinds to match. optional.
+      - comment
+    message: "Pirates are better than ninjas." # violation message. optional.
+    severity: error # violation severity. optional.
+  rule_id:
+    included: Source/SwiftLintFramework/Rules/.+/\w+\.swift
+    name: Rule ID
+    message: Rule IDs must be all lowercase, snake case and not end with `rule`
+    regex: identifier:\s*("\w+_rule"|"\S*[^a-z_]\S*")
+    severity: error
+  fatal_error:
+    name: Fatal Error
+    excluded: "Tests/*"
+    message: Prefer using `queuedFatalError` over `fatalError` to avoid leaking compiler host machine paths.
+    regex: \bfatalError\b
+    match_kinds:
+      - identifier
+    severity: error
+  rule_test_function:
+    included: Tests/SwiftLintFrameworkTests/RulesTests.swift
+    name: Rule Test Function
+    message: Rule Test Function mustn't end with `rule`
+    regex: func\s*test\w+(r|R)ule\(\)
+    severity: error
