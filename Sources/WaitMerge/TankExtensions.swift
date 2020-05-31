@@ -9,7 +9,7 @@
 import UIKit
 import CommonCrypto
 import MapKit
-
+   
 // 保留，不確定要不要
 extension String {
     func toData() -> Data? {
@@ -18,31 +18,8 @@ extension String {
     }
 }
 
-
-
-extension Float {
-
-    func cleanZeroElseToDisplay(decimal: Int) -> String {
-        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(format: "%.\(decimal)f", self)
-    }
-    
-    var cleanZero : String {
-        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
-    }
-    
-}
-
 extension Double {
-    
-    func cleanZeroElseToDisplay(decimal: Int) -> String {
-        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(format: "%.\(decimal)f", self)
-    }
-    
-    var cleanZero : String {
-        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
-    }
-    
-    
+
     func distanceToString() -> String {
         return self > 0 ? self > 1 ? String(format : "%.2f km",self) : String(format : "%.2f m",(self * 1000)) : ""
     }

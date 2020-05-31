@@ -122,4 +122,22 @@ public extension Double {
         return roundedValue.doubleValue
     }
     
+    /**
+     Clean decimal except keep position.
+
+     ## Chinese description
+     清除 position 以外的小數點
+
+     ## Usage Example
+     ```
+     let num: Double = 6
+     num.cleanDecimal(keepPosition: 2) // "6.00"
+     num.cleanDecimal() // "6"
+     ```
+    */
+    func cleanDecimal(keepPosition: Int = 0) -> String {
+        truncatingRemainder(dividingBy: 1) == 0
+            ? String(format: "%.0f", self)
+            : String(format: "%.\(keepPosition)f", self)
+    }
 }
