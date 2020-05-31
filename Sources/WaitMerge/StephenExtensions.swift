@@ -209,22 +209,6 @@ extension URL {
      }
 
 }
-
-/// NSObject haa been conform to protocol 'AletheiaCompatible',
-/// so 'FileManager' can benefit from it
-extension FileManager {
-    
-    public var documentDirectories: String {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [String]
-        return paths[0]
-    }
-    
-    public var cachesDirectories: String {
-        let paths = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true) as [String]
-        return paths[0]
-    }
-}
-
 /// Int 的擴充 方法 以及 參數
 extension Int {
     
