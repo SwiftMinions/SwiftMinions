@@ -8,7 +8,6 @@
 
 import Foundation
 
-private let formatter = DateFormatter()
 
 public extension Date {
     
@@ -26,12 +25,13 @@ public extension Date {
      Date().toString(format: "yyyy-MM-dd")
      // print 2020-11-24
      ```
-     - Parameter format: format string
-     
+     - Parameter format: string format. (default is MinionsConfig.dateFormatString)
      - Returns: String
      */
-    func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
+    func toString(format: String = MinionsConfig.dateFormatString) -> String {
+        let formatter = MinionsConfig.dateFormatter
         formatter.dateFormat = format
+        formatter.timeZone = MinionsConfig.timeZone
         return formatter.string(from: self)
     }
     

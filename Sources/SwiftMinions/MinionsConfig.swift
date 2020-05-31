@@ -13,6 +13,12 @@ import UIKit
 /// Anything you need to customize will go from here
 open class MinionsConfig {
     
+    public static var dateFormatter = DateFormatter()
+    
+    public static var dateFormatString = "yyyy-MM-dd HH:mm:ss"
+    
+    public static var timeZone: TimeZone = .current
+    
     public static var font: UIFont = UIFont.systemFont(ofSize: 20)
     
     public static var calendar: Calendar = Calendar.current

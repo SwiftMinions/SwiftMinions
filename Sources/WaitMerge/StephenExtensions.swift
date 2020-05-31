@@ -26,33 +26,7 @@ import Foundation
 
 
 extension String {
-    
 
-    
-    /// Convert into int type
-//    public var toInt: Int? { return Int(self) }
-    
-    /// Convert String into Date type
-    ///
-    /// - Parameter format: string format
-    /// - Returns: new date with given format
-    public func toDate(format: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        dateFormatter.timeZone = TimeZone.current
-        return dateFormatter.date(from: self)
-    }
-    
-    /// Remove decimal for price-like strings. Ex: 1000.000 to 1000
-    ///
-    /// - Returns: String
-    public func removeDecimal() -> String? {
-        if let subString = self.split(separator: ".").first {
-            return String(subString)
-        }
-        return nil
-    }
-    
     /// Check if given string is a vaild URL format
     ///
     /// - Returns: Bool
@@ -72,43 +46,9 @@ extension String {
         return emailTest.evaluate(with: self)
     }
     
-    /// self 64 encode
-    ///
-    /// - Returns: String?
-    public func self64Encoded() -> String? {
-        if let data = self.data(using: .utf8) {
-            return data.base64EncodedString()
-        }
-        return nil
-    }
-
-    /// self 64 decode
-    ///
-    /// - Returns: String?
-    public func self64Decoded() -> String? {
-        guard let data = Data(base64Encoded: self) else { return nil }
-        return String(data: data, encoding: .utf8)
-    }
-    
-    /// To NSAttributed HTML String
-    public var toHtmlNSAttributedString: NSAttributedString? {
-        guard
-            let data = self.data(using: .utf8)
-            else { return nil }
-        do {
-            return try NSAttributedString(data: data, options: [
-                NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-                NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
-                ], documentAttributes: nil)
-        } catch let error as NSError {
-            print(error.localizedDescription)
-            return  nil
-        }
-    }
-    
     /// HTML String
     public var toHTMLString: String {
-        return toHtmlNSAttributedString?.string ?? ""
+        return getNSAttributedStringFromHTMLTag()?.string ?? ""
     }
     
     /// To new string date format

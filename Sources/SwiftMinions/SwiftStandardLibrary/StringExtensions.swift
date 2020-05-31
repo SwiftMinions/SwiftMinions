@@ -13,6 +13,120 @@ import UIKit
 public extension String {
     
     /**
+     Convert String into Date type.
+     
+     ## Chinese description
+     將字串轉換為日期類型
+    
+     ## Use example
+     ```swift
+     "2020-11-24 05:30:30".todate()
+     ```
+     - Parameter format: string format. (default is MinionsConfig.dateFormatString)
+     - Returns: New date with given format. Retrun nil if format error.
+     */
+    func toDate(format: String = MinionsConfig.dateFormatString) -> Date? {
+        let dateFormatter = MinionsConfig.dateFormatter
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = MinionsConfig.timeZone
+        return dateFormatter.date(from: self)
+    }
+    
+    /**
+     Helper method to predicate string. Ignore case to check self is contains key.
+     
+     ## Chinese description
+     NSPredicate 的輔助方法，忽略大小寫的方式檢查源字串是否包含 key。
+    
+     ## Use example
+     ```swift
+     "SwiftMinions".containsPredicate(key: "swiftminions")
+     // true
+     ```
+     - Parameter key: String
+     - Returns: Bool
+     */
+    func containsPredicate(key: String) -> Bool{
+        let predicate = NSPredicate(format: "SELF CONTAINS[cd] %@", key)
+        return predicate.evaluate(with: self)
+    }
+
+    /**
+     Parse query string.
+     
+     ## Chinese description
+     刪除類似價格字串中的小數點。 例如：1000.000至1000
+    
+     ## Use example
+     ```swift
+     let query = "a=1&b=2&c=3"
+     query.parseQueryString()
+     // ["a": "1", "b": "2", "c": "3"]
+     ```
+     - Returns: String
+     */
+    func parseQueryString() -> [String: String] {
+        var dictionary = [String : String]()
+        let pairs = components(separatedBy: "&")
+        for pair in pairs {
+            let element = pair.components(separatedBy: "=")
+            if element.count == 2 {
+                let key = element[0]
+                let value = element[1]
+                dictionary[key] = value
+            }
+        }
+        return dictionary
+    }
+    
+    /**
+     Remove decimal point for price-like strings. Ex: 1000.000 to 1000
+     
+     ## Chinese description
+     刪除類似價格字串中的小數點。 例如：1000.000至1000
+    
+     ## Use example
+     ```swift
+     "1000.000".removeDecimal()
+     // "1000"
+     ```
+     - Returns: String
+     */
+    func removeDecimal() -> String {
+        if let subString = self.split(separator: ".").first {
+            return String(subString)
+        }
+        return self
+    }
+    
+    /**
+     Get NSAttributedString from HTML-string.
+     
+     ## Chinese description
+     將 HTML-string 轉換成 NSAttributedString
+    
+     - Returns: NSAttributedString? (return nil if not HTML-string)
+     */
+    func getNSAttributedStringFromHTMLTag() -> NSAttributedString? {
+        guard let data = self.data(using: .utf8) else {
+            return nil
+        }
+        do {
+            return try NSAttributedString(
+                data: data,
+                options: [
+                    .documentType: NSAttributedString.DocumentType.html,
+                    .characterEncoding: String.Encoding.utf8.rawValue
+                ],
+                documentAttributes: nil
+            )
+        } catch {
+            print(error.localizedDescription)
+            return  nil
+        }
+    }
+    
+    /**
      Get string size via given UIFont. Return CGSize includes height and width.
      
      ## Chinese description
@@ -20,17 +134,14 @@ public extension String {
     
      ## Use example
      ```swift
-     
      let text = "Some text"
      let font = UIFont.systemFont(ofSize: 20)
-     let size = text.size(withFont: font)   /// {w 87.334 h 23.867}
+     let size = text.size(withFont: font)   /// { w: 87.334, h: 23.867 }
      size.height                            /// 23.8671875
      size.width                             /// 87.333984375
-     
      ```
-     Parameter font: UIFont class
-     
-     Returns: CGSize
+     - Parameter font: UIFont class
+     - Returns: CGSize
      */
     func size(withFont font: UIFont) -> CGSize {
         size(withAttributes: [.font: font])
@@ -44,10 +155,8 @@ public extension String {
     
      ## Use example
      ```swift
-     
      let size: CGSize = "SwiftMinions".calculateRectSize(font: .systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
      print(size)
-
      ```
      Parameter font: UIFont class
      Parameter maxSize: CGSize class
