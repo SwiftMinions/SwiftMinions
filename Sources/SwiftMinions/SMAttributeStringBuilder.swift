@@ -151,6 +151,8 @@ public extension NSAttributedString {
     }
 }
 
+// MARK: - Provide for SMAttributeStringBuilder
+
 private extension String {
     /**
      ## Chinese description
@@ -162,9 +164,6 @@ private extension String {
         let count = searchString.count
         return _indices.map { index(startIndex, offsetBy: $0)..<index(startIndex, offsetBy: $0 + count) }
     }
-}
-
-private extension String {
     
     /**
      ## Chinese description

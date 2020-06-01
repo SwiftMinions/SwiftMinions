@@ -107,14 +107,5 @@ public struct ALScreen {
     public static var saftAreaContentHeight: CGFloat {
         return self.height
     }
-    
-    /// The height of status bar
-    static var statusBarFrame: CGRect {
-        if #available(iOS 13.0, *) {
-            return UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect()
-        } else {
-            return UIApplication.shared.statusBarFrame
-        }
-    }
 }
 

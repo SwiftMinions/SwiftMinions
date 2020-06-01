@@ -8,8 +8,127 @@
 
 import UIKit
 
-public extension String {
+// MARK: - Helper method
 
+public extension String {
+    
+    /// Helper property for logic.
+    var isNotEmpty: Bool { !isEmpty }
+    
+    /**
+     Convert String into Date type.
+     
+     ## Chinese description
+     將字串轉換為日期類型
+    
+     ## Use example
+     ```swift
+     "2020-11-24 05:30:30".todate()
+     ```
+     - Parameter format: string format. (default is MinionsConfig.dateFormatString)
+     - Returns: New date with given format. Retrun nil if format error.
+     */
+    func toDate(format: String = MinionsConfig.dateFormatString) -> Date? {
+        let dateFormatter = MinionsConfig.dateFormatter
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = MinionsConfig.timeZone
+        return dateFormatter.date(from: self)
+    }
+    
+    /**
+     Helper method to predicate string. Ignore case to check self is contains key.
+     
+     ## Chinese description
+     NSPredicate 的輔助方法，忽略大小寫的方式檢查源字串是否包含 key。
+    
+     ## Use example
+     ```swift
+     "SwiftMinions".containsPredicate(key: "swiftminions")
+     // true
+     ```
+     - Parameter key: String
+     - Returns: Bool
+     */
+    func containsPredicate(key: String) -> Bool{
+        let predicate = NSPredicate(format: "SELF CONTAINS[cd] %@", key)
+        return predicate.evaluate(with: self)
+    }
+
+    /**
+     Parse query string.
+     
+     ## Chinese description
+     刪除類似價格字串中的小數點。 例如：1000.000至1000
+    
+     ## Use example
+     ```swift
+     let query = "a=1&b=2&c=3"
+     query.parseQueryString()
+     // ["a": "1", "b": "2", "c": "3"]
+     ```
+     - Returns: String
+     */
+    func parseQueryString() -> [String: String] {
+        var dictionary = [String : String]()
+        let pairs = components(separatedBy: "&")
+        for pair in pairs {
+            let element = pair.components(separatedBy: "=")
+            if element.count == 2 {
+                let key = element[0]
+                let value = element[1]
+                dictionary[key] = value
+            }
+        }
+        return dictionary
+    }
+    
+    /**
+     Remove decimal point for price-like strings. Ex: 1000.000 to 1000
+     
+     ## Chinese description
+     刪除類似價格字串中的小數點。 例如：1000.000至1000
+    
+     ## Use example
+     ```swift
+     "1000.000".removeDecimal()
+     // "1000"
+     ```
+     - Returns: String
+     */
+    func removeDecimal() -> String {
+        if let subString = self.split(separator: ".").first {
+            return String(subString)
+        }
+        return self
+    }
+    
+    /**
+     Get NSAttributedString from HTML-string.
+     
+     ## Chinese description
+     將 HTML-string 轉換成 NSAttributedString
+    
+     - Returns: NSAttributedString? (return nil if not HTML-string)
+     */
+    func getNSAttributedStringFromHTMLTag() -> NSAttributedString? {
+        guard let data = self.data(using: .utf8) else {
+            return nil
+        }
+        do {
+            return try NSAttributedString(
+                data: data,
+                options: [
+                    .documentType: NSAttributedString.DocumentType.html,
+                    .characterEncoding: String.Encoding.utf8.rawValue
+                ],
+                documentAttributes: nil
+            )
+        } catch {
+            print(error.localizedDescription)
+            return  nil
+        }
+    }
+    
     /**
      Get string size via given UIFont. Return CGSize includes height and width.
      
@@ -18,24 +137,18 @@ public extension String {
     
      ## Use example
      ```swift
-     
      let text = "Some text"
      let font = UIFont.systemFont(ofSize: 20)
-     let size = text.size(fontSize: font)   /// {w 87.334 h 23.867}
+     let size = text.size(withFont: font)   /// { w: 87.334, h: 23.867 }
      size.height                            /// 23.8671875
      size.width                             /// 87.333984375
-     
      ```
-     Parameter font: UIFont class
-     
-     Returns: CGSize
+     - Parameter font: UIFont class
+     - Returns: CGSize
      */
-    func size(fontSize font: UIFont) -> CGSize {
-        return self.size(withAttributes: [NSAttributedString.Key.font: font])
+    func size(withFont font: UIFont) -> CGSize {
+        size(withAttributes: [.font: font])
     }
-}
-
-public extension String {
     
     /**
      Calculate the size of string in a max rect.
@@ -45,10 +158,8 @@ public extension String {
     
      ## Use example
      ```swift
-     
-     let size: CGSize = "tttttttttttttttttt".calculateRectSize(font: UIFont.systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
+     let size: CGSize = "SwiftMinions".calculateRectSize(font: .systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
      print(size)
-
      ```
      Parameter font: UIFont class
      Parameter maxSize: CGSize class
@@ -56,10 +167,9 @@ public extension String {
      Returns: CGSize
      */
     func calculateRectSize(font: UIFont, maxSize: CGSize) -> CGSize {
-        let attributedString = NSAttributedString.init(string: self, attributes: [NSAttributedString.Key.font:font])
+        let attributedString = NSAttributedString.init(string: self, attributes: [.font: font])
         let rect = attributedString.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, context: nil)
-        let size = CGSize(width:rect.size.width, height : rect.size.height)
-        return size
+        return rect.size
     }
     
     var toInt: Int? {
@@ -124,9 +234,8 @@ public extension String {
     }
 }
 
-/**
- * Regular expression
- */
+// MARK: - Regular expression
+
 public extension String {
     
     /**
@@ -262,6 +371,161 @@ public extension String {
         }
     }
 }
+
+// MARK: - Hex helper method
+
+public extension String {
+    /**
+     Hex string to Int.
+     
+     ## Chinese description
+     16 進位文字轉 Int
+     
+     ## Use example
+     ````
+     let hexString = "FF"
+     let int = hexString.hexToInt()
+     // 255
+     ````
+     */
+    func hexToInt() -> Int {
+        Int(strtoul(self, nil, 16))
+    }
+    
+    /**
+     Hex string to brnary string.
+     
+     ## Chinese description
+     16 進位文字轉 Binary 文字
+     
+     ## Use example
+     ````
+     let hexString = "FF"
+     let binaryString = hexString.hexToBinary()
+     // 11111111
+     ````
+     */
+    func hexToBinary() -> String {
+        String(hexToInt(), radix: 2)
+    }
+    
+    /**
+     Int string to hex string.
+     
+     ## Chinese description
+     10 進位文字轉 16 進位文字
+     
+     ## Use example
+     ````
+     let decimalString = "255"
+     let hexString = decimalString.decimalToHex()
+     // FF
+     ````
+     */
+    func decimalToHex(isUppercased: Bool = false) -> String {
+        let hex = String(Int(self) ?? 0, radix: 16)
+        return !isUppercased ? hex : hex.uppercased()
+    }
+    
+    /**
+     Decimal string to binary string.
+     
+     ## Chinese description
+     10 進位文字轉 Binary 文字
+     
+     ## Use example
+     ````
+     let decimalString = "255"
+     let binaryString = decimalString.decimalToBinary()
+     // 11111111
+     ````
+     */
+    func decimalToBinary() -> String {
+        String(Int(self) ?? 0, radix: 2)
+    }
+    
+    /**
+     Binary string to Int.
+     
+     ## Chinese description
+     Binary 文字轉 10 進位
+     
+     ## Use example
+     ````
+     let binaryString = "11111111"
+     let decimal = binaryString.binaryToInt()
+     // 255
+     ````
+     */
+    func binaryToInt() -> Int {
+        Int(strtoul(self, nil, 2))
+    }
+    
+    /**
+     Binary string to hex string.
+     
+     ## Chinese description
+     Binary 文字轉 16 進位文字
+     
+     ## Use example
+     ````
+     let binaryString = "11111111"
+     let hexString = binaryString.binaryToHex()
+     // FF
+     ````
+     */
+    func binaryToHex(isUppercased: Bool = false) -> String {
+        let hex = String(binaryToInt(), radix: 16).uppercased()
+        return !isUppercased ? hex : hex.uppercased()
+    }
+    
+    /**
+     Hex string to Float.
+     
+     ## Chinese description
+     16 進位文字轉 Float
+     
+     ## Use example
+     ````
+     let hexString = "3D512EE0"
+     print(hexString.hexToFloat())
+     // 0.051070094
+     ````
+     */
+    func hexToFloat() -> Float {
+        Float32(bitPattern: UInt32(strtol(self, nil, 16)))
+    }
+    
+    /**
+     Hex string to Data.
+     
+     ## Chinese description
+     16 進位文字轉 Data
+     
+     ## Use example
+     ````
+     let data = "FF".hexToData()
+     let hexString = data.map { String(format: "%02x", $0)}.joined(separator: "")
+     print(hexString)
+     // ff
+     ````
+     */
+    func hexToData() -> Data {
+        var dataBytes = Data()
+        var startPos = self.startIndex
+        while let endPos = self.index(startPos, offsetBy: 2, limitedBy: self.endIndex) {
+            let singleHexStr = self[startPos..<endPos]
+            let scanner = Scanner(string: String(singleHexStr))
+            var intValue: UInt64 = 0
+            scanner.scanHexInt64(&intValue)
+            dataBytes.append(UInt8(intValue))
+            startPos = endPos
+        }
+        return dataBytes
+    }
+}
+
+// MARK: - Safely to get string by range
 
 /**
  Wrapper for SafeRangeable compatible types. This type provides an extension point for connivence methods in SafeRangeable.
