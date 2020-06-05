@@ -25,13 +25,13 @@ public extension String {
      ```swift
      "2020-11-24 05:30:30".todate()
      ```
-     - Parameter format: string format. (default is MinionsConfig.dateFormatString)
+     - Parameter format: string format. (default is SMConfig.dateFormatString)
      - Returns: New date with given format. Retrun nil if format error.
      */
-    func toDate(format: String = MinionsConfig.dateFormatString) -> Date? {
-        let dateFormatter = MinionsConfig.dateFormatter
+    func toDate(format: String = SMConfig.dateFormatString) -> Date? {
+        let dateFormatter = SMConfig.dateFormatter
         dateFormatter.dateFormat = format
-        dateFormatter.timeZone = MinionsConfig.timeZone
+        dateFormatter.timeZone = SMConfig.timeZone
         return dateFormatter.date(from: self)
     }
     
@@ -273,12 +273,12 @@ public extension String {
 
      - Parameters:
         - withRegex: regular expression.
-        - options: NSRegularExpression.Options. (default is MinionsConfig.regexOptions)
+        - options: NSRegularExpression.Options. (default is SMConfig.regexOptions)
      - Returns: String?
     */
     func regularFirstMatch(
         withRegex regexString: String,
-        options: NSRegularExpression.Options = MinionsConfig.regexOptions)
+        options: NSRegularExpression.Options = SMConfig.regexOptions)
         -> String?
     {
         do {
@@ -311,12 +311,12 @@ public extension String {
 
      - Parameters:
         - withRegex: regular expression.
-        - options: NSRegularExpression.Options. (default is MinionsConfig.regexOptions)
+        - options: NSRegularExpression.Options. (default is SMConfig.regexOptions)
      - Returns: [String]
     */
     func regularMatches(
         withRegex regex: String,
-        options: NSRegularExpression.Options = MinionsConfig.regexOptions)
+        options: NSRegularExpression.Options = SMConfig.regexOptions)
         -> [String]
     {
         do {
@@ -349,13 +349,13 @@ public extension String {
 
      - Parameters:
         - withRegex: regular expression.
-        - options: NSRegularExpression.Options. (default is MinionsConfig.regexOptions)
+        - options: NSRegularExpression.Options. (default is SMConfig.regexOptions)
      - Returns: [String]
     */
     func regularReplace(
         withRegex regex: String,
         content: String,
-        options: NSRegularExpression.Options = MinionsConfig.regexOptions)
+        options: NSRegularExpression.Options = SMConfig.regexOptions)
         -> String
     {
         do {

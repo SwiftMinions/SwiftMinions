@@ -107,11 +107,11 @@ public extension UIView {
 
 /**
  Duration and delay animation timing.
- Duration's default value by `MinionsConfig.AnimationDuration`, Delay's default is 0s.
+ Duration's default value by `SMConfig.AnimationDuration`, Delay's default is 0s.
 
  ## Chinese description
  動畫的持續時間跟延遲時間。
- 持續時間的預設職值來自 `MinionsConfig.AnimationDuration`，延遲時間預設值是０。
+ 持續時間的預設職值來自 `SMConfig.AnimationDuration`，延遲時間預設值是０。
 */
 protocol AnimationTiming {
     var duration: TimeInterval { get }
@@ -122,7 +122,7 @@ extension UIView.AnimationType.Fade: AnimationTiming {
     var duration: TimeInterval {
         switch self {
         case .in, .out:
-            return MinionsConfig.AnimationDuration.short
+            return SMConfig.AnimationDuration.short
         }
     }
     
@@ -135,7 +135,7 @@ extension UIView.AnimationType: AnimationTiming {
         case .fade(let type):
             return type.duration
         case .shake:
-            return MinionsConfig.AnimationDuration.long
+            return SMConfig.AnimationDuration.long
         }
     }
     
@@ -231,7 +231,7 @@ public extension UIView {
         completion:(() -> Void)? = nil
     ) {
         shakeHorizontal(
-            duration: MinionsConfig.AnimationDuration.long,
+            duration: SMConfig.AnimationDuration.long,
             delay: delay,
             offsets: offsets,
             completion: completion

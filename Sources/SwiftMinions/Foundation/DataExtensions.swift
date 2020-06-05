@@ -32,9 +32,9 @@ public extension Data {
      
      - Parameters:
         - type: A object confrims to Decodable.
-        - decoder: Custom decoder. (default is MinionsConfig.decoder)
+        - decoder: Custom decoder. (default is SMConfig.decoder)
      */
-    func decodeTo<T: Codable>(_ type: T.Type, decoder: JSONDecoder = MinionsConfig.decoder) -> T? {
+    func decodeTo<T: Codable>(_ type: T.Type, decoder: JSONDecoder = SMConfig.decoder) -> T? {
         if let model = try? decoder.decode(T.self, from: self) {
             return model
         }
@@ -52,7 +52,7 @@ public extension Data {
      Data().toString()
      ```
     */
-    func toString(encoding: String.Encoding = MinionsConfig.stringEncoding) -> String? {
+    func toString(encoding: String.Encoding = SMConfig.stringEncoding) -> String? {
         return String(bytes: self, encoding: encoding)
     }
     
