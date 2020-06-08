@@ -11,10 +11,10 @@ import UIKit
 public extension UIWindow {
     
     /**
-     Get windows toppest view controller. (window default is `MinionsConfig.keyWindow`)
+     Get windows toppest view controller. (window default is `SMConfig.keyWindow`)
 
      ## Chinese description
-     取得 window 最上層的 view controller。(window 的預設值是 `MinionsConfig.keyWindow`)
+     取得 window 最上層的 view controller。(window 的預設值是 `SMConfig.keyWindow`)
 
      ## Use example
      ```swift
@@ -22,7 +22,7 @@ public extension UIWindow {
      ```
     */
     func toppestViewController(
-        base: UIViewController? = MinionsConfig.keyWindow?.rootViewController
+        base: UIViewController? = SMConfig.keyWindow?.rootViewController
     )
         -> UIViewController?
     {
@@ -67,7 +67,7 @@ public extension UIWindow {
         _ completion: (() -> Void)? = nil
     )
     {
-        guard let window = MinionsConfig.keyWindow else {
+        guard let window = SMConfig.keyWindow else {
             return
         }
         
@@ -87,7 +87,7 @@ public extension UIWindow {
     /// - Returns: the view in window's coordinate
     func toKeyWindowsCoordinate(sender: UIView) -> CGPoint? {
         var point: CGPoint?
-        guard let window = MinionsConfig.keyWindow else { return point }
+        guard let window = SMConfig.keyWindow else { return point }
         guard let superView = sender.superview else { return point }
         point = superView.convert(sender.frame.origin, to: window)
         return point
@@ -96,7 +96,7 @@ public extension UIWindow {
     /// The Frame of status bar
     static var statusBarFrame: CGRect {
         if #available(iOS 13.0, *) {
-            return MinionsConfig.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect()
+            return SMConfig.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect()
         } else {
             return UIApplication.shared.statusBarFrame
         }

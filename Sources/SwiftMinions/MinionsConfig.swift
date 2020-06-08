@@ -1,5 +1,5 @@
 //
-//  MinionsConfig.swift
+//  SMConfig.swift
 //  SwiftMinions
 //
 //  Created by twStephen on 2020/3/6.
@@ -11,7 +11,7 @@ import UIKit
 
 /// This config is for entire minions project.
 /// Anything you need to customize will go from here
-open class MinionsConfig {
+open class SMConfig {
     
     public static var dateFormatter = DateFormatter()
     

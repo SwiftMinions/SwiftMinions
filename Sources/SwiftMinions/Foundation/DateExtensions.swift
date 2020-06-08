@@ -25,13 +25,13 @@ public extension Date {
      Date().toString(format: "yyyy-MM-dd")
      // print 2020-11-24
      ```
-     - Parameter format: string format. (default is MinionsConfig.dateFormatString)
+     - Parameter format: string format. (default is SMConfig.dateFormatString)
      - Returns: String
      */
-    func toString(format: String = MinionsConfig.dateFormatString) -> String {
-        let formatter = MinionsConfig.dateFormatter
+    func toString(format: String = SMConfig.dateFormatString) -> String {
+        let formatter = SMConfig.dateFormatter
         formatter.dateFormat = format
-        formatter.timeZone = MinionsConfig.timeZone
+        formatter.timeZone = SMConfig.timeZone
         return formatter.string(from: self)
     }
     
@@ -55,7 +55,7 @@ public extension Date {
      */
     @discardableResult
     func added(by value: Int, _ component: Calendar.Component) -> Date {
-        MinionsConfig.calendar.date(byAdding: component, value: value, to: self) ?? self
+        SMConfig.calendar.date(byAdding: component, value: value, to: self) ?? self
     }
     
     /// SwifterSwift: Date by changing value of calendar component.
@@ -93,7 +93,7 @@ public extension Date {
      - Returns: date at the end of calendar component (if applicable).
     */
     func changing(by value: Int, _ component: Calendar.Component) -> Date {
-        let calendar = MinionsConfig.calendar
+        let calendar = SMConfig.calendar
         switch component {
         case .nanosecond:
             #if targetEnvironment(macCatalyst)
@@ -154,10 +154,10 @@ public extension Date {
     }
     
     /**
-     Get year from date. Calendar instance from `MinionsConfig.calendar`.
+     Get year from date. Calendar instance from `SMConfig.calendar`.
      
      ## Chinese description
-     從日期物件取得年。日曆物件從 `MinionsConfig.calendar` 取得。
+     從日期物件取得年。日曆物件從 `SMConfig.calendar` 取得。
     
      ## Use example
      ```swift
@@ -168,14 +168,14 @@ public extension Date {
      - Returns: Int
      */
     var year: Int {
-        MinionsConfig.calendar.component(.year, from: self)
+        SMConfig.calendar.component(.year, from: self)
     }
     
     /**
-     Get month from date. Calendar instance from `MinionsConfig.calendar`.
+     Get month from date. Calendar instance from `SMConfig.calendar`.
      
      ## Chinese description
-     從日期物件取得月。日曆物件從 `MinionsConfig.calendar` 取得。
+     從日期物件取得月。日曆物件從 `SMConfig.calendar` 取得。
     
      ## Use example
      ```swift
@@ -186,14 +186,14 @@ public extension Date {
      Returns: Int
      */
     var month: Int {
-        MinionsConfig.calendar.component(.month, from: self)
+        SMConfig.calendar.component(.month, from: self)
     }
     
     /**
-     Get day from date. Calendar instance from `MinionsConfig.calendar`.
+     Get day from date. Calendar instance from `SMConfig.calendar`.
      
      ## Chinese description
-     從日期物件取得日。日曆物件從 `MinionsConfig.calendar` 取得。
+     從日期物件取得日。日曆物件從 `SMConfig.calendar` 取得。
     
      ## Use example
      ```swift
@@ -204,14 +204,14 @@ public extension Date {
      Returns: Int
      */
     var day: Int {
-        MinionsConfig.calendar.component(.day, from: self)
+        SMConfig.calendar.component(.day, from: self)
     }
     
     /**
-     Get hour form date (24Hr). Calendar instance from `MinionsConfig.calendar`.
+     Get hour form date (24Hr). Calendar instance from `SMConfig.calendar`.
      
      ## Chinese description
-     從日期物件取得小時(24小時制)。日曆物件從 `MinionsConfig.calendar` 取得。
+     從日期物件取得小時(24小時制)。日曆物件從 `SMConfig.calendar` 取得。
     
      ## Use example
      ```swift
@@ -222,14 +222,14 @@ public extension Date {
      Returns: Int
      */
     var hour: Int {
-        MinionsConfig.calendar.component(.hour, from: self)
+        SMConfig.calendar.component(.hour, from: self)
     }
     
     /**
-     Get minute from date. Calendar instance from `MinionsConfig.calendar`.
+     Get minute from date. Calendar instance from `SMConfig.calendar`.
      
      ## Chinese description
-     從日期物件取得分鐘。日曆物件從 `MinionsConfig.calendar` 取得。
+     從日期物件取得分鐘。日曆物件從 `SMConfig.calendar` 取得。
     
      ## Use example
      ```swift
@@ -240,14 +240,14 @@ public extension Date {
      Returns: Int
      */
     var minute: Int {
-        MinionsConfig.calendar.component(.minute, from: self)
+        SMConfig.calendar.component(.minute, from: self)
     }
     
     /**
-     Get second from date. Calendar instance from `MinionsConfig.calendar`.
+     Get second from date. Calendar instance from `SMConfig.calendar`.
      
      ## Chinese description
-     從日期物件取得秒。日曆物件從 `MinionsConfig.calendar` 取得。
+     從日期物件取得秒。日曆物件從 `SMConfig.calendar` 取得。
     
      ## Use example
      ```swift
@@ -258,7 +258,7 @@ public extension Date {
      Returns: Int
      */
     var second: Int {
-        MinionsConfig.calendar.component(.second, from: self)
+        SMConfig.calendar.component(.second, from: self)
     }
 
     /**
@@ -281,7 +281,7 @@ public extension Date {
      */
     func beginning(of component: Calendar.Component) -> Date? {
         if component == .day {
-            return MinionsConfig.calendar.startOfDay(for: self)
+            return SMConfig.calendar.startOfDay(for: self)
         }
         
         var components: Set<Calendar.Component> {
@@ -310,7 +310,7 @@ public extension Date {
         }
         
         guard !components.isEmpty else { return nil }
-        return MinionsConfig.calendar.date(from: Calendar.current.dateComponents(components, from: self))
+        return SMConfig.calendar.date(from: Calendar.current.dateComponents(components, from: self))
     }
     
     /**
@@ -332,7 +332,7 @@ public extension Date {
      - Returns: date at the end of calendar component (if applicable).
     */
     func end(of component: Calendar.Component) -> Date? {
-        let calendar = MinionsConfig.calendar
+        let calendar = SMConfig.calendar
         switch component {
         case .second:
             var date = added(by: 1, .second)
@@ -412,7 +412,7 @@ public extension Date {
     /// - Parameter component: calendar component to check.
     /// - Returns: true if date is in current given calendar component.
     func isInCurrent(_ component: Calendar.Component) -> Bool {
-        MinionsConfig.calendar.isDate(self, equalTo: Date(), toGranularity: component)
+        SMConfig.calendar.isDate(self, equalTo: Date(), toGranularity: component)
     }
     
     /// Check if date is in future.
@@ -427,26 +427,26 @@ public extension Date {
 
     /// Check if date is within today.
     var isInToday: Bool {
-        MinionsConfig.calendar.isDateInToday(self)
+        SMConfig.calendar.isDateInToday(self)
     }
 
     /// Check if date is within yesterday.
     var isInYesterday: Bool {
-        MinionsConfig.calendar.isDateInYesterday(self)
+        SMConfig.calendar.isDateInYesterday(self)
     }
 
     /// Check if date is within tomorrow.
     var isInTomorrow: Bool {
-        MinionsConfig.calendar.isDateInTomorrow(self)
+        SMConfig.calendar.isDateInTomorrow(self)
     }
 
     /// Check if date is within a weekend period.
     var isInWeekend: Bool {
-        MinionsConfig.calendar.isDateInWeekend(self)
+        SMConfig.calendar.isDateInWeekend(self)
     }
 
     /// Check if date is within a weekday period.
     var isWorkday: Bool {
-        !MinionsConfig.calendar.isDateInWeekend(self)
+        !SMConfig.calendar.isDateInWeekend(self)
     }
 }
