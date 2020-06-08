@@ -1,11 +1,9 @@
 //
-//  HankExtensions.swift
+//  UITextViewExtensions.swift
 //  SwiftMinions
 //
-//  Created by Hank Lu on 2020/2/24.
+//  Created by Ohlulu on 2020/5/31.
 //  Copyright © 2020 SwiftMinions. All rights reserved.
 //
 
 import UIKit
-
-
