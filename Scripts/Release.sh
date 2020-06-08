@@ -54,7 +54,7 @@ Build() {
         -project SwiftMinions.xcodeproj \
         -scheme SwiftMinions \
         -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone 11 pro,OS=13.3' 
+        -destination 'platform=iOS Simulator,name=iPhone 11 pro,OS=13.0' 
     if [ $? != 0 ]; then
 		echo "${RED}xcodebuild fail!\nㄅㄅ"
 		exit 1
