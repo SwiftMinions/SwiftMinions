@@ -39,15 +39,7 @@ Pod::Spec.new do |s|
 
   # Foundation Extensions and this is core library
   s.subspec 'Core' do |ss|
-    ss.source_files  = 'Sources/SwiftMinions/*.swift', 'Sources/SwiftMinions/Foundation/*.swift', 'Sources/SwiftMinions/SwiftStandardLibrary/*.swift'
+    ss.source_files  = 'Sources/SwiftMinions/*.swift', 'Sources/SwiftMinions/**/*.swift'
   end
-
-  # UIKit Extensions
-  s.subspec 'UIKit' do |ss|
-    ss.source_files  = 'Sources/SwiftMinions/UIKit/*.swift'
-    ss.dependency 'SwiftMinions/Core'
-  end
-
-
 
 end
