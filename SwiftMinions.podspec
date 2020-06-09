@@ -48,6 +48,4 @@ Pod::Spec.new do |s|
     ss.dependency 'SwiftMinions/Core'
   end
 
-
-
 end

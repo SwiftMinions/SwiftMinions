@@ -42,7 +42,7 @@
 		50E876972480CF45006EAD2B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E876962480CF45006EAD2B /* UITableViewExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
-		6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */; };
+		6C4C8DEA243E192F00D657C0 /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C8DE9243E192F00D657C0 /* CLLocationExtension.swift */; };
 		A2D9F3AF24127A87000D8A0E /* BinaryIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */; };
 		A2D9F3B124127F4A000D8A0E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */; };
 		A2D9F3B324128144000D8A0E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D9F3B224128144000D8A0E /* StringExtensions.swift */; };
@@ -108,7 +108,7 @@
 		50E876962480CF45006EAD2B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
-		6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
+		6C4C8DE9243E192F00D657C0 /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		A2D9F3AE24127A87000D8A0E /* BinaryIntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B024127F4A000D8A0E /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		A2D9F3B224128144000D8A0E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -198,16 +198,9 @@
 		6C4C8DE8243E189600D657C0 /* CLLocation */ = {
 			isa = PBXGroup;
 			children = (
-				6C4C8DE9243E192F00D657C0 /* LocationExtension.swift */,
+				6C4C8DE9243E192F00D657C0 /* CLLocationExtension.swift */,
 			);
 			path = CLLocation;
-			sourceTree = "<group>";
-		};
-		DC01EF2D24040F4000B8B65D /* CoreLocation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreLocation;
 			sourceTree = "<group>";
 		};
 		DC01EF2F24040F4000B8B65D /* Foundation */ = {
@@ -279,7 +272,6 @@
 				A2D9F3B424128156000D8A0E /* MinionsConfig.swift */,
 				DC62AF1324268559001E08B4 /* MinionsFunctions.swift */,
 				500DED2F243CBB1700B603A0 /* SMAttributeStringBuilder.swift */,
-				DC01EF2D24040F4000B8B65D /* CoreLocation */,
 				501E3022242FCFF5004D5D97 /* CoreGraphics */,
 				6C4C8DE8243E189600D657C0 /* CLLocation */,
 				DC01EF2F24040F4000B8B65D /* Foundation */,
@@ -433,7 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C4C8DEA243E192F00D657C0 /* LocationExtension.swift in Sources */,
+				6C4C8DEA243E192F00D657C0 /* CLLocationExtension.swift in Sources */,
 				E05DCF02241A45A2003B5B46 /* UIViewExtensions.swift in Sources */,
 				500DED30243CBB1700B603A0 /* SMAttributeStringBuilder.swift in Sources */,
 				DC62AF122426845F001E08B4 /* MinionsHelper.swift in Sources */,
