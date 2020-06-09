@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftMinions'
-  s.version          = '5.0.0'
+  s.version          = '5.0.1'
   s.summary          = 'Save your day.'
 
   s.description      = <<-DESC
@@ -39,15 +39,7 @@ Pod::Spec.new do |s|
 
   # Foundation Extensions and this is core library
   s.subspec 'Core' do |ss|
-    ss.source_files  = 'Sources/SwiftMinions/*.swift', 'Sources/SwiftMinions/Foundation/*.swift', 'Sources/SwiftMinions/SwiftStandardLibrary/*.swift'
+    ss.source_files  = 'Sources/SwiftMinions/*.swift', 'Sources/SwiftMinions/**/*.swift'
   end
-
-  # UIKit Extensions
-  s.subspec 'UIKit' do |ss|
-    ss.source_files  = 'Sources/SwiftMinions/UIKit/*.swift'
-    ss.dependency 'SwiftMinions/Core'
-  end
-
-
 
 end
