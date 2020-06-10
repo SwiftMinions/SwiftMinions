@@ -34,7 +34,7 @@ public extension UIView {
     ```
     */
     func createRoundedBezierPathCorners(for corners: UIRectCorner, radius: CGFloat = SMConfig.cornerRadius) {
-        UICollectionView().regissup
+        
         let maskPath = UIBezierPath(
             roundedRect: bounds,
             byRoundingCorners: corners,
