@@ -63,7 +63,7 @@ public extension UITableView {
      let cell = tableView.dequeueReusableCell(type: Cell.self,for: indexPath)
      ````
     */
-    func dequeueCell<T: UITableViewCell>(type: T.Type) -> T {
+    func dequeueReusableCell<T: UITableViewCell>(with type: T.Type) -> T {
         dequeueReusableCell(withIdentifier: String(describing: type)) as! T
     }
     

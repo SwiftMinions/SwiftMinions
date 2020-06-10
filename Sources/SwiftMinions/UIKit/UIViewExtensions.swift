@@ -33,10 +33,13 @@ public extension UIView {
 
     ```
     */
-    func createRoundedBezierPathCorners(for corners: UIRectCorner, radius: Int = 10) {
-        let maskPath = UIBezierPath(roundedRect: bounds,
-                                    byRoundingCorners: corners,
-                                    cornerRadii: CGSize(width: radius, height: radius))
+    func createRoundedBezierPathCorners(for corners: UIRectCorner, radius: CGFloat = SMConfig.cornerRadius) {
+        UICollectionView().regissup
+        let maskPath = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
         let maskLayer = CAShapeLayer()
         maskLayer.frame = bounds
         maskLayer.path = maskPath.cgPath
