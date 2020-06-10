@@ -24,11 +24,11 @@ public extension UICollectionView {
      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
      
      // nes
-     collectionView.registerCell(cellType: Cell.self)
+     collectionView.registerCell(type: Cell.self)
      ```
      */
-    func registerCell<T: UICollectionViewCell>(cellType: T.Type) {
-        register(cellType, forCellWithReuseIdentifier: String(describing: cellType))
+    func registerCell<T: UICollectionViewCell>(type: T.Type) {
+        register(type, forCellWithReuseIdentifier: String(describing: type))
     }
     
     /**

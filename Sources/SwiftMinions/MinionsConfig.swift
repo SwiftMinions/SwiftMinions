@@ -27,6 +27,8 @@ open class SMConfig {
     
     public static var stringEncoding: String.Encoding = .utf8
     
+    public static var cornerRadius: CGFloat = 8
+    
     // cf. https://stackoverflow.com/a/57169802
     public static var keyWindow: UIWindow? = UIApplication.shared.windows.filter { $0.isKeyWindow }.first
     
