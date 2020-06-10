@@ -96,9 +96,9 @@ FinishRelease() {
     git flow release finish -m "" ${newVersion}
     unset GIT_MERGE_AUTOEDIT
     git checkout develop || exit $?
-    git push --tags || exit $?
+    git push origin --tags || exit $?
     git checkout master || exit $?
-    git push --tags || exit $?
+    git push origin --tags || exit $?
 }
 
 # pod lint & push
