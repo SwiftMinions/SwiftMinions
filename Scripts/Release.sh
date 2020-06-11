@@ -105,13 +105,13 @@ FinishRelease() {
 PodLintAndPush() {
     pod spec lint
     if [ $? != 0 ]; then
-        printf "${RED}pod lint fail.\nㄅㄅ"
+        printf "${RED}[ error ] : pod spec lint.\nㄅㄅ${NC}\n"
         exit 1
     fi
 
     pod trunk push
     if [ $? != 0 ]; then
-        printf "${RED}pod trunk push.\nㄅㄅ"
+        printf "${RED}[ error ] : pod trunk push.\nㄅㄅ${NC}\n"
         exit 1
     fi
 }
