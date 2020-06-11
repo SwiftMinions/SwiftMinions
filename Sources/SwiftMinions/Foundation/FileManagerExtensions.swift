@@ -22,10 +22,10 @@ public extension FileManager {
     /**
      Get file URL for temp
      
-     ## Chinese description
+     ### Chinese description
      取得檔案在 temp 的 URL
      
-     ## Use example
+     ### Use example
      ```swift
      let fileURL = FileManager.getFileURLFromTemp(url: url)
      print(fileURL)
@@ -39,10 +39,10 @@ public extension FileManager {
     /**
      Safely remove file.
      
-     ## Chinese description
+     ### Chinese description
       安全的刪除檔案
      
-     ## Use example
+     ### Use example
      ```swift
      if FileManager.safeRemove(url: url) {
         // success
@@ -69,10 +69,10 @@ public extension FileManager {
     /**
      Get file size. Unit is byte.
      
-     ## Chinese description
+     ### Chinese description
      取得檔案大小。單位是 byte
      
-     ## Use example
+     ### Use example
      ```swift
      let size = FileManager.getFileSize(url: url)
      print(size)

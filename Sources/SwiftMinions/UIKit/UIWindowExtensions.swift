@@ -13,10 +13,10 @@ public extension UIWindow {
     /**
      Get windows toppest view controller. (window default is `SMConfig.keyWindow`)
 
-     ## Chinese description
+     ### Chinese description
      取得 window 最上層的 view controller。(window 的預設值是 `SMConfig.keyWindow`)
 
-     ## Use example
+     ### Use example
      ```swift
       let topVC = UIWindow.toppestViewController()
      ```
@@ -50,10 +50,10 @@ public extension UIWindow {
     /**
      Switch window's rootViewController.
 
-     ## Chinese description
+     ### Chinese description
      切換 window 的 rootViewController，可用在登入或登出。
 
-     ## Use example
+     ### Use example
      ```swift
         let loginVC = LoginViewController()
         UIWindow.switch(toViewController: loginVC)

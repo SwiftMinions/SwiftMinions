@@ -17,7 +17,7 @@ public extension Int {
     /**
      Get Double type
 
-     ## Chinese description
+     ### Chinese description
      轉型成 Double
     */
     var doubleValue: Double {
@@ -27,7 +27,7 @@ public extension Int {
     /**
      Get Float type
 
-     ## Chinese description
+     ### Chinese description
      轉型成 Float
     */
     var floatValue: Float {
@@ -37,7 +37,7 @@ public extension Int {
     /**
      Get CGFloat type
 
-     ## Chinese description
+     ### Chinese description
      轉型成 CGFloat
     */
     #if canImport(CoreGraphics)

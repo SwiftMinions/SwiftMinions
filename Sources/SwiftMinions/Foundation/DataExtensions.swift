@@ -14,10 +14,10 @@ public extension Data {
     /**
      Decode data into given object that confrims to Decodable.
      
-     ## Chinese description
+     ### Chinese description
      Data 轉 Codable
      
-     ## Use example
+     ### Use example
      ```
      struct UserModel: Codable {
         let id: String
@@ -44,10 +44,10 @@ public extension Data {
     /**
      Data to String.
      
-     ## Chinese description
+     ### Chinese description
      Data 轉 String
      
-     ## Use example
+     ### Use example
      ```
      Data().toString()
      ```
@@ -59,10 +59,10 @@ public extension Data {
     /**
      Data to hex string.
      
-     ## Chinese description
+     ### Chinese description
      Data 轉 16進位文字
      
-     ## Use example
+     ### Use example
      ```
      let data = Data([255])
      let hexString = data.hexStringValue

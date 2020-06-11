@@ -21,10 +21,10 @@ public extension UIView {
     Use UIBezierPath to create rounded corners for this view.
     Although iOS 13 has provide a API for creatinf rounded corners for specific corners, the path of CAShapeLayer is different form UIBezierPath. You can use this if you need UIBezierPath rounded corners.
 
-    ## Chinese description
+    ### Chinese description
     用 UIBezierPath 加圓角。雖然 iOS 13 有提供了一個 API 為指定的幾個角設置圓角 ，但是 CAShapeLayer 的路徑與 UIBezierPath 不同。 如果需要UIBezierPath圓角，可以使用此方法。
 
-    ## Use example
+    ### Use example
     ```swift
 
      let button = UIButton()
@@ -49,10 +49,10 @@ public extension UIView {
     /**
     Apply a rotation animation by a given degree to this view
 
-    ## Chinese description
+    ### Chinese description
     把這個 view 旋轉指定的度數
 
-    ## Use example
+    ### Use example
     ```swift
      let button = UIButton()
 
@@ -75,7 +75,7 @@ public extension UIView {
     /**
      UIView's AnimationType.
     
-     ## Chinese description
+     ### Chinese description
      UIView 的動畫類型
     */
     enum AnimationType {
@@ -83,7 +83,7 @@ public extension UIView {
         /**
          Fade type.
         
-         ## Chinese description
+         ### Chinese description
          淡入/淡出。
         */
         public enum Fade {
@@ -95,7 +95,7 @@ public extension UIView {
         /**
          Shake type.
         
-         ## Chinese description
+         ### Chinese description
          晃動類型。
         */
         public enum ShakeOffsets {
@@ -112,7 +112,7 @@ public extension UIView {
  Duration and delay animation timing.
  Duration's default value by `SMConfig.AnimationDuration`, Delay's default is 0s.
 
- ## Chinese description
+ ### Chinese description
  動畫的持續時間跟延遲時間。
  持續時間的預設職值來自 `SMConfig.AnimationDuration`，延遲時間預設值是０。
 */
@@ -148,7 +148,7 @@ extension UIView.AnimationType: AnimationTiming {
 /**
  Shake animation type need offsets.
 
- ## Chinese description
+ ### Chinese description
  晃動類型的動畫的偏移量。
 */
 protocol AnimationOffsets {
@@ -175,7 +175,7 @@ public extension UIView {
     /**
      Eazy animation view.
 
-     ## Chinese description
+     ### Chinese description
      簡單的讓view動起來。
 
      - Parameters:
@@ -244,7 +244,7 @@ public extension UIView {
     /**
      Animated with a horizontal shake.
 
-     ## Chinese description
+     ### Chinese description
      簡單的讓試圖視圖左右晃動。
 
      - Parameters:

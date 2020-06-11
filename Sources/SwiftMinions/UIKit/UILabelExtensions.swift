@@ -13,10 +13,10 @@ public extension UILabel {
     /**
      Calculate the height of label in a width.
 
-     ## Chinese description
+     ### Chinese description
      計算 Label 高度.
 
-     ## Use example
+     ### Use example
      ```swift
      
      let height: CGFloat = UILabel().heightForLabel(text: "123", font: UIFont.systemFont(ofSize: 100), width: 100)

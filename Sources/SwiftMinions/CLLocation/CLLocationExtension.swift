@@ -14,10 +14,10 @@ public extension CLLocation {
     /**
      Calculate the interval between two location's timestamp. It's useful to calculate the location return from `locationManager(_ manager:, didUpdateLocations locations:)`.
     
-     ## Chinese description
+     ### Chinese description
      計算兩個 Location 之間 timestemp 的時間差，主要用在 `locationManager(_ manager:, didUpdateLocations locations:)` 更新位置時方便計算兩次更新的時間差。
      
-     ## Use example
+     ### Use example
      ```swift
      let playTime = currentLocation.timeInterval(since: lastLocation)
      ```

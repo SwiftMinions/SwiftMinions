@@ -13,10 +13,10 @@ public extension TimeInterval {
     /**
      Convenines get date since 1970 from TimeInterval.
     
-     ## Chinese description
+     ### Chinese description
      取得 Date 值
     
-     ## Use example
+     ### Use example
      ```swift
         TimeInterval().dateSince1970
      ```
@@ -28,10 +28,10 @@ public extension TimeInterval {
     /**
      Get string with format.
      
-     ## Chinese description
+     ### Chinese description
      輸出格式化日期
     
-     ## Use example
+     ### Use example
      ```swift
          TimeInterval().toString()
          // print 2020-11-24 05:30:30
