@@ -31,10 +31,10 @@ public extension SafeCollectionable {
     /**
      It safe-able to get collection element.
 
-     ## Chinese description
+     ### Chinese description
      安全的取得 collection 中的元素
 
-     ## Use example
+     ### Use example
      ```swift
         [1, 2, 3].safe[0] // 1
         [1, 2, 3].safe[3] // nil
@@ -53,10 +53,10 @@ public extension Collection {
     /**
      Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
      [cf.] https://lodash.com/docs/4.17.4#chunk
-     ## Chinese description
+     ### Chinese description
      創建一個元素陣列，將其分為大小長度的二維陣列。 如果無法均勻分割陣列，則最後一塊將是剩餘的元素。
     
-     ## Use example
+     ### Use example
      ```swift
         ['a', 'b', 'c', 'd'].chunk(by: 2)
         // [['a', 'b'], ['c', 'd']]
@@ -82,10 +82,10 @@ public extension Collection {
     
     /**
      Creates a dictionary with key is hash. (like SQL: GROUP BY)
-     ## Chinese description
+     ### Chinese description
      創建由雜湊鍵拆分的字典。
     
-     ## Use example
+     ### Use example
      ```swift
         [1585701811, 1585788211, 1585961011].group {
             return Double($0).dateSince1970.toString(format: "yyyy/MM/dd")
@@ -111,10 +111,10 @@ public extension Collection where Element == IntegerLiteralType, Index == Int {
     /**
      Average of all elements in array.
      [cf.] https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift
-     ## Chinese description
+     ### Chinese description
      陣列中所有元素的平均值。
     
-     ## Use example
+     ### Use example
      ```swift
         [80, 11, 24].average()
         // 38.333333
@@ -132,10 +132,10 @@ public extension Collection where Element: FloatingPoint {
     /**
      Average of all elements in array.
      [cf.] https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift
-     ## Chinese description
+     ### Chinese description
      陣列中所有元素的平均值。
     
-     ## Use example
+     ### Use example
      ```swift
         [1.2, 2.3, 4.5, 3.4, 4.5].average()
         // 3.18

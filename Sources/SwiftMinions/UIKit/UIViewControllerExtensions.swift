@@ -29,10 +29,10 @@ public extension UIViewController {
     /**
      Helper method to add a UIViewController as a childViewController.
 
-     ## Chinese description
+     ### Chinese description
      方便的增加一個 UIViewController 作為 childViewController。
 
-     ## Use example
+     ### Use example
      ```swift
         class SomeViewController: UIViewController {
      
@@ -59,10 +59,10 @@ public extension UIViewController {
     /**
      Helper method to remove a UIViewController from its parent.
 
-     ## Chinese description
+     ### Chinese description
      方便的移除 childViewController。
 
-     ## Use example
+     ### Use example
      ```swift
         removeChildViewController(childVC)
      ```

@@ -13,7 +13,7 @@ public extension JSONDecoder.KeyDecodingStrategy {
     /**
      Convert from the first letter of key to lower case before attempting to match a key with the one specified by each type. Mainly designed for coverting the upper camel case to lower camel case.
 
-     ## Chinese description
+     ### Chinese description
      把所有的 key 的第一個字母轉成小寫
 
      ## Usage Example
@@ -42,7 +42,7 @@ public extension JSONDecoder.KeyDecodingStrategy {
     /**
      Convert from the first letter of key to upper case before attempting to match a key with the one specified by each type. Mainly designed for coverting the lower camel case to upper camel case.
 
-     ## Chinese description
+     ### Chinese description
      把所有的 key 的第一個字母轉成大寫
 
      ## Usage Example
@@ -71,7 +71,7 @@ public extension JSONDecoder.KeyDecodingStrategy {
     /**
      Convert from the key to lower case before attempting to match a key with the one specified by each type.
 
-     ## Chinese description
+     ### Chinese description
      把所有的 key 轉成小寫，做到類似無視大小寫的效果
 
      ## Usage Example

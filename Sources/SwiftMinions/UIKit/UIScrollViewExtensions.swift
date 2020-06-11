@@ -13,10 +13,10 @@ public extension UIScrollView {
     /**
      Update contentSize height while scroll view did finish layout all subviews
     
-     ## Chinese description
+     ### Chinese description
      根據所有的 subviews 所有的高度來更新 scroll 的 contentSize 高度
     
-     ## Use example
+     ### Use example
      ```swift
      override func viewDidLayoutSubviews() {
          super.viewDidLayoutSubviews()
@@ -31,10 +31,10 @@ public extension UIScrollView {
     /**
      Update contentSize Width while scroll view did finish layout all subviews
     
-     ## Chinese description
+     ### Chinese description
      根據所有的 subviews 所有的寬度來更新 scroll 的 contentSize 寬度
     
-     ## Use example
+     ### Use example
      ```swift
      override func viewDidLayoutSubviews() {
          super.viewDidLayoutSubviews()
@@ -68,7 +68,7 @@ public extension UIScrollView {
      Set true, make scroll view frame height equal to content height.
      Note: This will reuse invalidation
     
-     ## Chinese description
+     ### Chinese description
      設置為 true 時，使 scroll view 的 frame height 等於 conetent height
      注意：這會讓 reuse 失效
      */
@@ -89,7 +89,7 @@ public extension UIScrollView {
     /**
      Set minimun frame height.
     
-     ## Chinese description
+     ### Chinese description
      設置最小高度。
      */
     var minimunHeightToFit: CGFloat {
@@ -104,7 +104,7 @@ public extension UIScrollView {
     /**
      Set maximun frame height. Unlimited when nil.
     
-     ## Chinese description
+     ### Chinese description
      設置最大高度，nil 時為不限制。
      */
     var maximunHeightToFit: CGFloat? {

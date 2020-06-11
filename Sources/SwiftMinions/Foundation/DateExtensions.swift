@@ -14,10 +14,10 @@ public extension Date {
     /**
      Get string with format.
      
-     ## Chinese description
+     ### Chinese description
      輸出格式化日期
     
-     ## Use example
+     ### Use example
      ```swift
      Date().toString()
      // print 2020-11-24 05:30:30
@@ -38,10 +38,10 @@ public extension Date {
     /**
      Date add value with component.
      
-     ## Chinese description
+     ### Chinese description
      依據 Calendar.Component & value ，回傳新的時間
      
-     ## Use example
+     ### Use example
      ```swift
      Date().added(.day, value: 5) // 2020/11/24 -> 2020/11/29
      Date().added(.month, value: -1) // 2020/11/24 -> 2021/10/24
@@ -75,10 +75,10 @@ public extension Date {
      Date by changing value of calendar component.
      cf. https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/Foundation/DateExtensions.swift
     
-     ## Chinese description
+     ### Chinese description
      通過日曆組件，改變日期的值。
      
-     ## Use example
+     ### Use example
      ```swift
      let date = Date() // "Jan 12, 2017, 7:07 PM"
      let date2 = date.changing(.minute, value: 10) // "Jan 12, 2017, 6:10 PM"
@@ -156,10 +156,10 @@ public extension Date {
     /**
      Get year from date. Calendar instance from `SMConfig.calendar`.
      
-     ## Chinese description
+     ### Chinese description
      從日期物件取得年。日曆物件從 `SMConfig.calendar` 取得。
     
-     ## Use example
+     ### Use example
      ```swift
      Date().year
      // 2020
@@ -174,10 +174,10 @@ public extension Date {
     /**
      Get month from date. Calendar instance from `SMConfig.calendar`.
      
-     ## Chinese description
+     ### Chinese description
      從日期物件取得月。日曆物件從 `SMConfig.calendar` 取得。
     
-     ## Use example
+     ### Use example
      ```swift
      Date().month
      // 11
@@ -192,10 +192,10 @@ public extension Date {
     /**
      Get day from date. Calendar instance from `SMConfig.calendar`.
      
-     ## Chinese description
+     ### Chinese description
      從日期物件取得日。日曆物件從 `SMConfig.calendar` 取得。
     
-     ## Use example
+     ### Use example
      ```swift
      Date().day
      // 24
@@ -210,10 +210,10 @@ public extension Date {
     /**
      Get hour form date (24Hr). Calendar instance from `SMConfig.calendar`.
      
-     ## Chinese description
+     ### Chinese description
      從日期物件取得小時(24小時制)。日曆物件從 `SMConfig.calendar` 取得。
     
-     ## Use example
+     ### Use example
      ```swift
      Date().hour
      // 8
@@ -228,10 +228,10 @@ public extension Date {
     /**
      Get minute from date. Calendar instance from `SMConfig.calendar`.
      
-     ## Chinese description
+     ### Chinese description
      從日期物件取得分鐘。日曆物件從 `SMConfig.calendar` 取得。
     
-     ## Use example
+     ### Use example
      ```swift
      Date().minute
      // 11
@@ -246,10 +246,10 @@ public extension Date {
     /**
      Get second from date. Calendar instance from `SMConfig.calendar`.
      
-     ## Chinese description
+     ### Chinese description
      從日期物件取得秒。日曆物件從 `SMConfig.calendar` 取得。
     
-     ## Use example
+     ### Use example
      ```swift
      Date().second
      // 59
@@ -265,10 +265,10 @@ public extension Date {
      Data at the beginning of calendar component.
      cf. https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/Foundation/DateExtensions.swift
      
-     ## Chinese description
+     ### Chinese description
      取得日曆組件起始時間
      
-     ## Use example
+     ### Use example
      ```swift
      let date = Date() // "Jan 12, 2017, 7:14 PM"
      let date2 = date.beginning(of: .hour) // "Jan 12, 2017, 7:00 PM"
@@ -317,10 +317,10 @@ public extension Date {
      Date at the end of calendar component.
      cf. https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/Foundation/DateExtensions.swift
     
-     ## Chinese description
+     ### Chinese description
      取得日曆組件的結尾期間
      
-     ## Use example
+     ### Use example
      ```swift
      let date = Date() // "Jan 12, 2017, 7:27 PM"
      let date2 = date.end(of: .day) // "Jan 12, 2017, 11:59 PM"
@@ -390,7 +390,7 @@ public extension Date {
     /**
      Check date is betwwen date1 and date2.
 
-     ## Chinese description
+     ### Chinese description
      清除 position 以外的小數點
 
      ## Usage Example

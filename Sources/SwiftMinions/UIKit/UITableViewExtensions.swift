@@ -12,10 +12,10 @@ public extension UITableView {
     /**
      Helper method to register tableView cell.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Cell
      
-     ## Use example
+     ### Use example
      ````
      // origin
      tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -31,10 +31,10 @@ public extension UITableView {
     /**
      Helper method to register tableView cell from xib.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Nib Cell
      
-     ## Use example
+     ### Use example
      ````
      // origin
      tableView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
@@ -51,10 +51,10 @@ public extension UITableView {
     /**
      Helper method to dequeue reuse cell without IndexPath.
      
-     ## Chinese description
+     ### Chinese description
      方便的取得 cell（無 IndexPath）。
      
-     ## Use example
+     ### Use example
      ````
      // origin
      let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
@@ -70,10 +70,10 @@ public extension UITableView {
     /**
      Helper method to dequeue reuse cell.
      
-     ## Chinese description
+     ### Chinese description
      方便的取得 cell。
 
-     ## Use example
+     ### Use example
      ````
      // origin
      let cell = tableView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
@@ -89,7 +89,7 @@ public extension UITableView {
     /**
      Get reload completion timing.
      
-     ## Chinese description
+     ### Chinese description
      reloadData 處理完畢後的通知。
      */
     func reloadData(_ completion: @escaping () -> Void) {
@@ -103,7 +103,7 @@ public extension UITableView {
     /**
      Get last IndexPath.
      
-     ## Chinese description
+     ### Chinese description
      取得最後的 IndexPath。
     */
     var lastIndexPath: IndexPath? {
@@ -118,7 +118,7 @@ public extension UITableView {
     /**
      Get last section.
      
-     ## Chinese description
+     ### Chinese description
      取得最後的 section。
     */
     var lastSection: Int? {
@@ -128,7 +128,7 @@ public extension UITableView {
     /**
      Safely scroll to IndexPath.
      
-     ## Chinese description
+     ### Chinese description
      安全地滾動到IndexPath。
      */
     func safeScrollToRow(at indexPath: IndexPath, at scrollPosition: UITableView.ScrollPosition, animated: Bool) {

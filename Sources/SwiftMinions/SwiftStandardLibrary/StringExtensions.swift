@@ -18,10 +18,10 @@ public extension String {
     /**
      Convert String into Date type.
      
-     ## Chinese description
+     ### Chinese description
      將字串轉換為日期類型
     
-     ## Use example
+     ### Use example
      ```swift
      "2020-11-24 05:30:30".todate()
      ```
@@ -38,10 +38,10 @@ public extension String {
     /**
      Helper method to predicate string. Ignore case to check self is contains key.
      
-     ## Chinese description
+     ### Chinese description
      NSPredicate 的輔助方法，忽略大小寫的方式檢查源字串是否包含 key。
     
-     ## Use example
+     ### Use example
      ```swift
      "SwiftMinions".containsPredicate(key: "swiftminions")
      // true
@@ -57,10 +57,10 @@ public extension String {
     /**
      Parse query string.
      
-     ## Chinese description
+     ### Chinese description
      刪除類似價格字串中的小數點。 例如：1000.000至1000
     
-     ## Use example
+     ### Use example
      ```swift
      let query = "a=1&b=2&c=3"
      query.parseQueryString()
@@ -85,10 +85,10 @@ public extension String {
     /**
      Remove decimal point for price-like strings. Ex: 1000.000 to 1000
      
-     ## Chinese description
+     ### Chinese description
      刪除類似價格字串中的小數點。 例如：1000.000至1000
     
-     ## Use example
+     ### Use example
      ```swift
      "1000.000".removeDecimal()
      // "1000"
@@ -105,7 +105,7 @@ public extension String {
     /**
      Get NSAttributedString from HTML-string.
      
-     ## Chinese description
+     ### Chinese description
      將 HTML-string 轉換成 NSAttributedString
     
      - Returns: NSAttributedString? (return nil if not HTML-string)
@@ -132,10 +132,10 @@ public extension String {
     /**
      Get string size via given UIFont. Return CGSize includes height and width.
      
-     ## Chinese description
+     ### Chinese description
      取得當前 String 的大小，回傳 CGSize 格式，可以再透過 CGSize 拿到 height 跟 width
     
-     ## Use example
+     ### Use example
      ```swift
      let text = "Some text"
      let font = UIFont.systemFont(ofSize: 20)
@@ -153,10 +153,10 @@ public extension String {
     /**
      Calculate the size of string in a max rect.
      
-     ## Chinese description
+     ### Chinese description
      計算 String 在一個方框下的大小.
     
-     ## Use example
+     ### Use example
      ```swift
      let size: CGSize = "SwiftMinions".calculateRectSize(font: .systemFont(ofSize: 20), maxSize: CGSize(width: 100, height: 200))
      print(size)
@@ -183,10 +183,10 @@ public extension String {
     /**
      String to base64.
 
-     ## Chinese description
+     ### Chinese description
      將字串編碼成 base64
 
-     ## Use example
+     ### Use example
      ```swift
         "SwiftMinions".base64Encoded()
         // "U3dpZnRNaW5pb25z"
@@ -204,10 +204,10 @@ public extension String {
     /**
      Base64 to string.
 
-     ## Chinese description
+     ### Chinese description
      將字串用 base64 解碼
 
-     ## Use example
+     ### Use example
      ```swift
         "U3dpZnRNaW5pb25z".base64Encoded()
         // "SwiftMinions"
@@ -241,10 +241,10 @@ public extension String {
     /**
      String is validate with regular expression.
 
-     ## Chinese description
+     ### Chinese description
      字串是否匹配正規表示式。
 
-     ## Use example
+     ### Use example
      ```swift
         let regex = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}$"#
         let result = "minions@swiftminions.com".isValidate(withRegex: regex)
@@ -261,10 +261,10 @@ public extension String {
     /**
      First match with regular expression. Return nil if not found.
 
-     ## Chinese description
+     ### Chinese description
      找到第一個匹配正規表示式的字串，如果找不到則回傳 nil。
 
-     ## Use example
+     ### Use example
      ```swift
         let regex = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}$"#
         let result = "minions@swiftminions.com".regularFirstMatch(withRegex: regex)
@@ -296,10 +296,10 @@ public extension String {
     /**
      Find all matches with regular expression. Return empty array if not found.
 
-     ## Chinese description
+     ### Chinese description
      找到所有匹配正規表示式的字串，如果找不到則回傳空陣列。
 
-     ## Use example
+     ### Use example
      ```swift
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,64}"
         let results = """
@@ -336,10 +336,10 @@ public extension String {
     /**
      Replace string with regular expression and content. It will return a new string.
 
-     ## Chinese description
+     ### Chinese description
      用正規表示式取代字串，將返回一個新的字串
 
-     ## Use example
+     ### Use example
      ```swift
         let regex = #"(\()([0][0-9]{1,2})(\))([\d]{9})"#
         let phone = "(02)123456789"
@@ -378,10 +378,10 @@ public extension String {
     /**
      Hex string to Int.
      
-     ## Chinese description
+     ### Chinese description
      16 進位文字轉 Int
      
-     ## Use example
+     ### Use example
      ````
      let hexString = "FF"
      let int = hexString.hexToInt()
@@ -395,10 +395,10 @@ public extension String {
     /**
      Hex string to brnary string.
      
-     ## Chinese description
+     ### Chinese description
      16 進位文字轉 Binary 文字
      
-     ## Use example
+     ### Use example
      ````
      let hexString = "FF"
      let binaryString = hexString.hexToBinary()
@@ -412,10 +412,10 @@ public extension String {
     /**
      Int string to hex string.
      
-     ## Chinese description
+     ### Chinese description
      10 進位文字轉 16 進位文字
      
-     ## Use example
+     ### Use example
      ````
      let decimalString = "255"
      let hexString = decimalString.decimalToHex()
@@ -430,10 +430,10 @@ public extension String {
     /**
      Decimal string to binary string.
      
-     ## Chinese description
+     ### Chinese description
      10 進位文字轉 Binary 文字
      
-     ## Use example
+     ### Use example
      ````
      let decimalString = "255"
      let binaryString = decimalString.decimalToBinary()
@@ -447,10 +447,10 @@ public extension String {
     /**
      Binary string to Int.
      
-     ## Chinese description
+     ### Chinese description
      Binary 文字轉 10 進位
      
-     ## Use example
+     ### Use example
      ````
      let binaryString = "11111111"
      let decimal = binaryString.binaryToInt()
@@ -464,10 +464,10 @@ public extension String {
     /**
      Binary string to hex string.
      
-     ## Chinese description
+     ### Chinese description
      Binary 文字轉 16 進位文字
      
-     ## Use example
+     ### Use example
      ````
      let binaryString = "11111111"
      let hexString = binaryString.binaryToHex()
@@ -482,10 +482,10 @@ public extension String {
     /**
      Hex string to Float.
      
-     ## Chinese description
+     ### Chinese description
      16 進位文字轉 Float
      
-     ## Use example
+     ### Use example
      ````
      let hexString = "3D512EE0"
      print(hexString.hexToFloat())
@@ -499,10 +499,10 @@ public extension String {
     /**
      Hex string to Data.
      
-     ## Chinese description
+     ### Chinese description
      16 進位文字轉 Data
      
-     ## Use example
+     ### Use example
      ````
      let data = "FF".hexToData()
      let hexString = data.map { String(format: "%02x", $0)}.joined(separator: "")
@@ -550,10 +550,10 @@ extension SafeRangeable where Base == String {
     /**
      It safe-able to get collection element.
 
-     ## Chinese description
+     ### Chinese description
      安全的取得 collection 中的元素
 
-     ## Use example
+     ### Use example
      ```swift
         "Swift Minions".safe[0..<5] // "Swift"
         "Swift Minions".safe[6..<13] // "Minions"
@@ -579,10 +579,10 @@ extension SafeRangeable where Base == String {
     /**
      It safe-able to get collection element.
 
-     ## Chinese description
+     ### Chinese description
      安全的取得 collection 中的元素
 
-     ## Use example
+     ### Use example
      ```swift
         "Swift Minions".safe[0...4] // "Swift"
         "Swift Minions".safe[6...12] // "Minions"

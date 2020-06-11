@@ -13,7 +13,7 @@ public extension Decimal {
     /**
     Convert to Double value
 
-    ## Chinese description
+    ### Chinese description
     轉型成 Double
 
     ### Usage Example
@@ -28,7 +28,7 @@ public extension Decimal {
     /**
     This function returns a Decimal number rounded correctly to a given number of digits using the given rounding mode, which can be rounded, round up, round down or round-to-even
 
-    ## Chinese description
+    ### Chinese description
     用指定方法（四捨五入/無條件進位/無條件捨去/四捨五入取偶數）取至小數位第x位
 
     ## Usage Example
@@ -53,7 +53,7 @@ public extension Decimal {
     /**
      This function returns a number rounded UP to the given decimal places
 
-     ## Chinese description
+     ### Chinese description
      用指定方法無條件進位至小數位第x位
 
      ## Usage Example
@@ -69,7 +69,7 @@ public extension Decimal {
     /**
      This function returns a number rounded DOWN to the given decimal places
 
-     ## Chinese description
+     ### Chinese description
      用指定方法無條件捨去至小數位第x位
 
      ## Usage Example
@@ -85,7 +85,7 @@ public extension Decimal {
     /**
      This function returns a number rounded to the given decimal places
 
-     ## Chinese description
+     ### Chinese description
      用指定方法四捨五入至小數位第x位
 
      ## Usage Example

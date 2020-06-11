@@ -13,10 +13,10 @@ public extension UIColor {
     /**
      From RGB(0~255) and alpha(0~1) to initialize UIColor
 
-     ## Chinese description
+     ### Chinese description
      通過 RGB (0〜255) 和 alpha(0〜1) 初始化 UIColor 。
 
-     ## Use example
+     ### Use example
      ```swift
         UIColor.rgba(red: 255, green: 255, blue: 255, alpha: CGFloat = 1)
         // equal to
@@ -33,11 +33,11 @@ public extension UIColor {
      From hex string to initialize UIColor. It support alpha like android.
      Note: alpha from hex will not work, if parameter alpha is not nil.
 
-     ## Chinese description
+     ### Chinese description
      從十六進制字串初始化UIColor。它支援透明度通道，就像 Android一樣。
      注意：如果參數 alpha 不為 nil，則十六進制的 alpha 將不起作用。
 
-     ## Use example
+     ### Use example
      ```swift
         let blackColor = UIColor.hex("#000000")
         
@@ -77,7 +77,7 @@ public extension UIColor {
     /**
      Short namespacing with `withAlphaComponent(_:)`.
 
-     ## Chinese description
+     ### Chinese description
      withAlphaComponent(_:) 的簡短命。
     */
     @discardableResult

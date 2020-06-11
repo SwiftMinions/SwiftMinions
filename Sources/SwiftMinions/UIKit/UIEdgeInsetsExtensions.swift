@@ -38,10 +38,10 @@ public extension UIEdgeInsets {
     /**
      Get veritical edge
     
-     ## Chinese description
+     ### Chinese description
      取得 top & bottom 加總
     
-     ## Use example
+     ### Use example
      ```swift
         let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
         inset.vertical
@@ -54,10 +54,10 @@ public extension UIEdgeInsets {
     /**
      Get horizontal edge
     
-     ## Chinese description
+     ### Chinese description
      取得 left & right 加總
     
-     ## Use example
+     ### Use example
      ```swift
         let inset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
         inset.vertical

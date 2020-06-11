@@ -18,7 +18,7 @@ public class SMAttributeStringBuilder {
     /**
      Set attribute and mark to base for reuse.
     
-     ## Chinese description
+     ### Chinese description
      設置一個 base attribute 以便重用。
 
      - Parameter attribute:[NSAttributedString.Key: Any]
@@ -32,7 +32,7 @@ public class SMAttributeStringBuilder {
     /**
      Set special attribute and mark to special for reuse.
     
-     ## Chinese description
+     ### Chinese description
      設置一個 special attribute 以便重用。
 
      - Parameter attribute:[NSAttributedString.Key: Any]
@@ -46,7 +46,7 @@ public class SMAttributeStringBuilder {
     /**
      Set base text of attribute.
 
-     ## Chinese description
+     ### Chinese description
      設置 base 文字並給予一個 attribute。
 
      - Parameters:
@@ -65,7 +65,7 @@ public class SMAttributeStringBuilder {
     /**
      Change the special attribute of the same string as special text.
 
-     ## Chinese description
+     ### Chinese description
      改變與 special text 相同字串的 special attribute。
 
      - Parameters:
@@ -88,7 +88,7 @@ public class SMAttributeStringBuilder {
     /**
      Append a text of attribute.
 
-     ## Chinese description
+     ### Chinese description
      改變與 special text 相同字串的 special attribute。
 
      - Parameters:
@@ -116,10 +116,10 @@ public extension NSAttributedString {
     /**
      Create a SMAttributeStringBuilder
 
-     ## Chinese description
+     ### Chinese description
      建立一個 SMAttributeStringBuilder
 
-     ## Use example
+     ### Use example
      
      - the `*` will be red
      ```swift
@@ -155,7 +155,7 @@ public extension NSAttributedString {
 
 private extension String {
     /**
-     ## Chinese description
+     ### Chinese description
      在源字串中比對與 searchString 相同字串，並回傳其 [Range<String.Index>]（有可能比對到復數）。
      僅供 SMAttributeStringBuilder 使用。
      */
@@ -166,7 +166,7 @@ private extension String {
     }
     
     /**
-     ## Chinese description
+     ### Chinese description
      在源字串中比對與 occurrence 相同字串，在源字串中的 start index。
      僅供 SMAttributeStringBuilder 使用。
     */

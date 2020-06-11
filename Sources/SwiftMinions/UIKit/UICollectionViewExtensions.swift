@@ -15,10 +15,10 @@ public extension UICollectionView {
     /**
      Helper method to register collectionView cell.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Cell
      
-     ## Use example
+     ### Use example
      ```
      // origin
      collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -34,10 +34,10 @@ public extension UICollectionView {
     /**
      Helper method to register collectionView cell from nib.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Nib Cell
      
-     ## Use example
+     ### Use example
      ```
      // origin
      collectionView.register(UINib(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
@@ -54,10 +54,10 @@ public extension UICollectionView {
     /**
      Helper method to register collectionView Header from xib.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Nib Header
      
-     ## Use example
+     ### Use example
      ```
      // origin
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
@@ -75,10 +75,10 @@ public extension UICollectionView {
     /**
      Helper method to register collectionView Footer from xib.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Nib Footer
      
-     ## Use example
+     ### Use example
      ```
      // origin
      collectionView.register(UINib(nibName: "className", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
@@ -96,10 +96,10 @@ public extension UICollectionView {
     /**
      Helper method to register collectionView Header.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Header
 
-     ## Use example
+     ### Use example
      ```
      // origin
      collectionView.register(Header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "className")
@@ -116,10 +116,10 @@ public extension UICollectionView {
     /**
      Helper method to register collectionView Footer.
      
-     ## Chinese description
+     ### Chinese description
      方便的註冊 Footer
 
-     ## Use example
+     ### Use example
      ```
      // origin
      collectionView.register(Footer.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "className")
@@ -137,10 +137,10 @@ public extension UICollectionView {
     /**
      Helper method to dequeue reuse header view.
      
-     ## Chinese description
+     ### Chinese description
      方便的取得重用的 header view。
      
-     ## Use example
+     ### Use example
      ```
      // origin
      let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath) as? HeaderClass
@@ -156,10 +156,10 @@ public extension UICollectionView {
     /**
      Helper method to dequeue reuse footer view.
      
-     ## Chinese description
+     ### Chinese description
      方便的取得重用的 footer view。
      
-     ## Use example
+     ### Use example
      ```
      // origin
      let Footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Footer", for: indexPath) as? FooterClass
@@ -175,10 +175,10 @@ public extension UICollectionView {
     /**
      Helper method to dequeue reuse cell.
      
-     ## Chinese description
+     ### Chinese description
      方便的取得重用的 cell。
      
-     ## Use example
+     ### Use example
      ```
      // origin
      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
@@ -197,7 +197,7 @@ public extension UICollectionView {
     /**
      Get reload completion timing.
      
-     ## Chinese description
+     ### Chinese description
      reloadData 處理完畢後的通知。
     */
     func reloadData(completion: @escaping () -> Void) {
