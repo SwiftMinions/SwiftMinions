@@ -39,19 +39,19 @@ You can define the default parameter of the function by yourself.
 
 -   SwiftMinions
 
-  ```swift
-  open class SMConfig {
-      public static var dateFormatString = "yyyy-MM-dd HH:mm:ss"
-      // ...  
-  }
-  
-  func toString(format: String = SMConfig.dateFormatString) -> String {
-      let formatter = SMConfig.dateFormatter
-      formatter.dateFormat = format
-      formatter.timeZone = SMConfig.timeZone
-      return formatter.string(from: self)
-  }
-  ```
+    ```swift
+    open class SMConfig {
+        public static var dateFormatString = "yyyy-MM-dd HH:mm:ss"
+        // ...  
+    }
+
+    func toString(format: String = SMConfig.dateFormatString) -> String {
+        let formatter = SMConfig.dateFormatter
+        formatter.dateFormat = format
+        formatter.timeZone = SMConfig.timeZone
+        return formatter.string(from: self)
+    }
+    ```
 
 ## License
 
