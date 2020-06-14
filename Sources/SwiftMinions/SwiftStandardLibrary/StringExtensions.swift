@@ -545,7 +545,7 @@ public extension String {
     }
 }
 
-extension SafeRangeable where Base == String {
+public extension SafeRangeable where Base == String {
     
     /**
      It safe-able to get collection element.
@@ -560,7 +560,6 @@ extension SafeRangeable where Base == String {
         "Swift Minions".safe[6..<16] // "Minions"
         "Swift Minions".safe[12..<16] // "s"
         "Swift Minions".safe[14..<16] // ""
-
      ```
 
      - Returns: String
