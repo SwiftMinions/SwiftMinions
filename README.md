@@ -8,12 +8,12 @@ Instead of creating a product without reasons and purposes, we built our own fra
 
 We are inspired by SwifterSwift and strictly follow the naming conventions.
 
-## Requirement
+## Requirements
 
 -   iOS 10.0+
 -   Swift 5.0+
 
-## Install
+## Installation
 
 OhSwifter available through [Cocoapods](http://cocoapods.org). Just add the following line to your Podfile:
 
