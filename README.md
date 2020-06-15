@@ -17,7 +17,7 @@ We inspire from SwifterSwift and strict follow naming conventions
 
 ## Install
 
-OhSwifter available through [Cocoapods](http://cocoapods.org), simply add the following line to your Podfile:
+SwiftMinions available through [Cocoapods](http://cocoapods.org), simply add the following line to your Podfile:
 
 ```
 pod 'SwiftMinions'
