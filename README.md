@@ -1,6 +1,8 @@
 # SwiftMinions
 
-![latest version](https://img.shields.io/cocoapods/v/SwiftMinions)![license](https://img.shields.io/github/license/SwiftMinions/SwiftMinions)![platform](https://img.shields.io/cocoapods/p/SwiftMinions)
+![latest version](https://img.shields.io/cocoapods/v/SwiftMinions?label=version)
+![license](https://img.shields.io/github/license/SwiftMinions/SwiftMinions)
+![platform](https://img.shields.io/cocoapods/p/SwiftMinions)
 
 This project is a collection of frequent used Swift functions, and the purpose is to save your day.
 
