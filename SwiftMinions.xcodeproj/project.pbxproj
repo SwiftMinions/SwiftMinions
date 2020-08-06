@@ -39,6 +39,8 @@
 		505739232451E9F50045D7DD /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505739222451E9F50045D7DD /* UIWindowExtensions.swift */; };
 		505DEB49247E596100146197 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB48247E596100146197 /* UIColorExtensions.swift */; };
 		505DEB4B247E7D1900146197 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */; };
+		508E834624DBE5580040209D /* IndexPathExtension_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508E834424DBE51F0040209D /* IndexPathExtension_Test.swift */; };
+		508E834824DBEAF20040209D /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508E834724DBEAF20040209D /* IndexPathExtensions.swift */; };
 		50E876972480CF45006EAD2B /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E876962480CF45006EAD2B /* UITableViewExtensions.swift */; };
 		50E8A0662438089900335673 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A0652438089900335673 /* TimeIntervalExtensions.swift */; };
 		50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8A06724380A0900335673 /* CollectionExtensions.swift */; };
@@ -105,6 +107,8 @@
 		505739222451E9F50045D7DD /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 		505DEB48247E596100146197 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		505DEB4A247E7D1900146197 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		508E834424DBE51F0040209D /* IndexPathExtension_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtension_Test.swift; sourceTree = "<group>"; };
+		508E834724DBEAF20040209D /* IndexPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtensions.swift; sourceTree = "<group>"; };
 		50E876962480CF45006EAD2B /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		50E8A0652438089900335673 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		50E8A06724380A0900335673 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				50541457247D08BB000AB06A /* StringTests.swift */,
+				508E834424DBE51F0040209D /* IndexPathExtension_Test.swift */,
 			);
 			path = StandardLibrary;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				503CD60D24727A7400058E06 /* ThreadExtensions.swift */,
 				50271F4F24833E9D0066E65D /* FileManagerExtensions.swift */,
 				50271F5C2483B6C90066E65D /* URLExtensions.swift */,
+				508E834724DBEAF20040209D /* IndexPathExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50541469247D09E1000AB06A /* StringTests.swift in Sources */,
+				508E834624DBE5580040209D /* IndexPathExtension_Test.swift in Sources */,
 				50541461247D09C2000AB06A /* SwiftMinionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +441,7 @@
 				DC005E6424309975004229E0 /* UIScrollViewExtensions.swift in Sources */,
 				50271F5D2483B6C90066E65D /* URLExtensions.swift in Sources */,
 				50E8A06824380A0900335673 /* CollectionExtensions.swift in Sources */,
+				508E834824DBEAF20040209D /* IndexPathExtensions.swift in Sources */,
 				E02858822456B86C002E12BD /* KeyDecodingStrategyExtensions.swift in Sources */,
 				E07807CC2408C3B1004BF94F /* NatalieExtensions.swift in Sources */,
 				50271F592483B4670066E65D /* UITextFieldExtension.swift in Sources */,

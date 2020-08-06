@@ -50,6 +50,9 @@ public extension SafeCollectionable {
 
 public extension Collection {
     
+    /// Helper property for logic.
+    var isNotEmpty: Bool { !isEmpty }
+    
     /**
      Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
      [cf.] https://lodash.com/docs/4.17.4#chunk
