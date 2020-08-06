@@ -1,29 +1,29 @@
 # SwiftMinions
 
-![latest version](https://img.shields.io/cocoapods/v/SwiftMinions)![license](https://img.shields.io/github/license/SwiftMinions/SwiftMinions)![platform](https://img.shields.io/cocoapods/p/SwiftMinions)
+![latest version](https://img.shields.io/cocoapods/v/SwiftMinions?label=version)
+![license](https://img.shields.io/github/license/SwiftMinions/SwiftMinions)
+![platform](https://img.shields.io/cocoapods/p/SwiftMinions)
 
-This project is a collection of offen used swift functions, the purpose is to save your day.
+This project is a collection of frequent used Swift functions, and the purpose is to save your day.
 
-There are lots of frameworks that better than us. 
+Instead of creating a product without reasons and purposes, we built our own framework from a clear starting point.
 
-Instead of creating products without reasons and purpose, we choose to build our own Framework from a clear starting point.
+We are inspired by SwifterSwift and strictly follow the naming conventions.
 
-We inspire from SwifterSwift and strict follow naming conventions
-
-## Request
+## Requirements
 
 -   iOS 10.0+
 -   Swift 5.0+
 
-## Install
+## Installation
 
-OhSwifter available through [Cocoapods](http://cocoapods.org), simply add the following line to your Podfile:
+SwiftMinions is available through [Cocoapods](http://cocoapods.org). Just add the following line to your Podfile:
 
 ```
 pod 'SwiftMinions'
 ```
 
-## What different with SwifterSwift?
+## What's the difference with this and SwifterSwift?
 
 You can define the default parameter of the function by yourself.
 
@@ -39,19 +39,19 @@ You can define the default parameter of the function by yourself.
 
 -   SwiftMinions
 
-  ```swift
-  open class SMConfig {
-      public static var dateFormatString = "yyyy-MM-dd HH:mm:ss"
-      // ...  
-  }
-  
-  func toString(format: String = SMConfig.dateFormatString) -> String {
-      let formatter = SMConfig.dateFormatter
-      formatter.dateFormat = format
-      formatter.timeZone = SMConfig.timeZone
-      return formatter.string(from: self)
-  }
-  ```
+    ```swift
+    open class SMConfig {
+        public static var dateFormatString = "yyyy-MM-dd HH:mm:ss"
+        // ...  
+    }
+
+    func toString(format: String = SMConfig.dateFormatString) -> String {
+        let formatter = SMConfig.dateFormatter
+        formatter.dateFormat = format
+        formatter.timeZone = SMConfig.timeZone
+        return formatter.string(from: self)
+    }
+    ```
 
 ## License
 

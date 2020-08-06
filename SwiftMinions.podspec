@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftMinions'
-  s.version          = '5.0.3'
+  s.version          = '5.0.4'
   s.summary          = 'Save your day.'
 
   s.description      = <<-DESC
