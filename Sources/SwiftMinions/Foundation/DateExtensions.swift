@@ -11,6 +11,24 @@ import Foundation
 
 public extension Date {
     
+    /// SwifterSwift: Day name format.
+    ///
+    /// - threeLetters: 3 letter day abbreviation of day name.
+    /// - oneLetter: 1 letter day abbreviation of day name.
+    /// - full: Full day name.
+    enum DayNameStyle {
+
+        /// SwifterSwift: 3 letter day abbreviation of day name.
+        case threeLetters
+
+        /// SwifterSwift: 1 letter day abbreviation of day name.
+        case oneLetter
+
+        /// SwifterSwift: Full day name.
+        case full
+
+    }
+    
     /**
      Get string with format.
      
@@ -56,6 +74,39 @@ public extension Date {
     @discardableResult
     func added(by value: Int, _ component: Calendar.Component) -> Date {
         SMConfig.calendar.date(byAdding: component, value: value, to: self) ?? self
+    }
+    
+     /**
+     Day name from date.
+     
+     ### Chinese description
+     根據 DayNameStyle 的樣式，回傳星期幾
+     
+     ### Use example
+     ```swift
+     Date().dayName(ofStyle: .oneLetter) -> "T"
+     Date().dayName(ofStyle: .threeLetters) -> "Thu"
+     Date().dayName(ofStyle: .full) -> "Thursday"
+     ```
+     
+     - Parameters:
+        - style: day name style
+     - Returns: Day name string
+    */
+    func dayName(ofStyle style: DayNameStyle = .full) -> String {
+        // http://www.codingexplorer.com/swiftly-getting-human-readable-date-nsdateformatter/
+        var format: String {
+            switch style {
+            case .oneLetter:
+                return "EEEEE"
+            case .threeLetters:
+                return "EEE"
+            case .full:
+                return "EEEE"
+            }
+        }
+        SMConfig.dateFormatter.setLocalizedDateFormatFromTemplate(format)
+        return SMConfig.dateFormatter.string(from: self)
     }
     
     /// SwifterSwift: Date by changing value of calendar component.
