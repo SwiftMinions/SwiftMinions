@@ -13,10 +13,10 @@ public extension UIScreen {
     /**
      Get safe area inset length.
      
-     ## Chinese description
+     ### Chinese description
      取得當前螢幕，瀏海內縮的距離。
     
-     ## Use example
+     ### Use example
      ```swift
         // iPhone X
         UIWindow.safeAreaInset.top -> 32
@@ -27,7 +27,7 @@ public extension UIScreen {
      Returns: UIEdgeInsets
      */
     static var safeAreaInset: UIEdgeInsets {
-        guard let window = MinionsConfig.keyWindow else {
+        guard let window = SMConfig.keyWindow else {
             return .init(top: 0, left: 0, bottom: 0, right: 0)
         }
         if #available(iOS 11.0, *) {
@@ -40,7 +40,7 @@ public extension UIScreen {
     /**
      Get Screen height with short namespacing.
      
-     ## Chinese description
+     ### Chinese description
      使用較短的命名空間，取得螢幕的高。
      */
     static var height: CGFloat {
@@ -50,7 +50,7 @@ public extension UIScreen {
     /**
      Get Screen width with short namespacing.
      
-     ## Chinese description
+     ### Chinese description
      使用較短的命名空間，取得螢幕的寬。
     */
     static var width: CGFloat {

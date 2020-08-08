@@ -11,18 +11,18 @@ import UIKit
 public extension UIWindow {
     
     /**
-     Get windows toppest view controller. (window default is `MinionsConfig.keyWindow`)
+     Get windows toppest view controller. (window default is `SMConfig.keyWindow`)
 
-     ## Chinese description
-     取得 window 最上層的 view controller。(window 的預設值是 `MinionsConfig.keyWindow`)
+     ### Chinese description
+     取得 window 最上層的 view controller。(window 的預設值是 `SMConfig.keyWindow`)
 
-     ## Use example
+     ### Use example
      ```swift
       let topVC = UIWindow.toppestViewController()
      ```
     */
     func toppestViewController(
-        base: UIViewController? = MinionsConfig.keyWindow?.rootViewController
+        base: UIViewController? = SMConfig.keyWindow?.rootViewController
     )
         -> UIViewController?
     {
@@ -50,10 +50,10 @@ public extension UIWindow {
     /**
      Switch window's rootViewController.
 
-     ## Chinese description
+     ### Chinese description
      切換 window 的 rootViewController，可用在登入或登出。
 
-     ## Use example
+     ### Use example
      ```swift
         let loginVC = LoginViewController()
         UIWindow.switch(toViewController: loginVC)
@@ -67,7 +67,7 @@ public extension UIWindow {
         _ completion: (() -> Void)? = nil
     )
     {
-        guard let window = MinionsConfig.keyWindow else {
+        guard let window = SMConfig.keyWindow else {
             return
         }
         
@@ -79,5 +79,26 @@ public extension UIWindow {
         }, completion: { _ in
             completion?()
         })
+    }
+    
+    /// Convert given view origin (x, y) to key window coordinate
+    ///
+    /// - Parameter sender: the view need to be convert
+    /// - Returns: the view in window's coordinate
+    func toKeyWindowsCoordinate(sender: UIView) -> CGPoint? {
+        var point: CGPoint?
+        guard let window = SMConfig.keyWindow else { return point }
+        guard let superView = sender.superview else { return point }
+        point = superView.convert(sender.frame.origin, to: window)
+        return point
+    }
+    
+    /// The Frame of status bar
+    static var statusBarFrame: CGRect {
+        if #available(iOS 13.0, *) {
+            return SMConfig.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect()
+        } else {
+            return UIApplication.shared.statusBarFrame
+        }
     }
 }

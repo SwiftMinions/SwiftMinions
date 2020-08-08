@@ -17,7 +17,7 @@ public extension UIImage {
     /**
      Resize image.
 
-     ## Chinese description
+     ### Chinese description
      將圖片重新裁切成指定的大小。
 
      - Parameters:
@@ -70,7 +70,7 @@ public extension UIImage {
     /**
      Create UIImage from UIColor.
 
-     ## Chinese description
+     ### Chinese description
      利用顏色建立圖片。
 
      - Parameters:

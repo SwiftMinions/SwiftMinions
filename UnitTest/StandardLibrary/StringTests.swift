@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftMinions
+@testable import SwiftMinions
 
 class StringTests: XCTestCase {
     
@@ -17,6 +17,16 @@ class StringTests: XCTestCase {
 
     override func tearDown() {
         
+    }
+    
+    func testStringSafable() {
+        let str = "Swift Minions"
+        
+        XCTAssertEqual(str.safe[0..<5], "Swift") 
+        XCTAssertEqual(str.safe[6..<13], "Minions") 
+        XCTAssertEqual(str.safe[6..<16], "Minions") 
+        XCTAssertEqual(str.safe[12..<16], "s") 
+        XCTAssertEqual(str.safe[14..<16], "") 
     }
 
     func testSuccessRegularExpression() {
@@ -37,7 +47,7 @@ class StringTests: XCTestCase {
         
         for regex in successRegexs {
             regex.value.forEach {
-                let isValidation = $0.isValidation(withRegex: regex.key)
+                let isValidation = $0.isValidate(withRegex: regex.key)
                 XCTAssertEqual(isValidation, true)
                 
                 let firstMatch = $0.regularFirstMatch(withRegex: regex.key) != nil
@@ -74,7 +84,7 @@ class StringTests: XCTestCase {
         
         for regex in failureRegexs {
             regex.value.forEach {
-                let result = $0.isValidation(withRegex: regex.key)
+                let result = $0.isValidate(withRegex: regex.key)
                 print("\($0): \(result)")
                 XCTAssertEqual(result, false)
             }

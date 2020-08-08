@@ -13,10 +13,10 @@ public extension UserDefaults {
     /**
      Save codable model to user defaults.
      
-     ## Chinese description
+     ### Chinese description
      將 Codable 存入 UserDefaults
      
-     ## Use example
+     ### Use example
      ```
      struct UserModel: Codable {
      let id: String
@@ -40,10 +40,10 @@ public extension UserDefaults {
     /**
      Get codable model from user defaults.
      
-     ## Chinese description
+     ### Chinese description
      從 UserDefaults 取出 Codable
      
-     ## Use example
+     ### Use example
      ```
      struct UserModel: Codable {
      let id: String

@@ -13,10 +13,10 @@ public extension UINavigationController {
     /**
      push view controller with completion handler.
      
-     ## Chinese description ###
+     ### Chinese description ###
      為 pushViewController 加上 call back.
      
-     ## Use example
+     ### Use example
      ```swift
      let vc = UIViewController()
      pushViewController(vc) {
@@ -48,10 +48,10 @@ public extension UINavigationController {
     /**
      pop view controller with completion handler.
      
-     ## Chinese description ###
+     ### Chinese description ###
      為 popViewController 加上 call back.
      
-     ## Use example
+     ### Use example
      ```swift
      popViewController {
         print("did popViewController")
@@ -80,10 +80,10 @@ public extension UINavigationController {
     /**
      pop to root view controller with completion handler.
      
-     ## Chinese description ###
+     ### Chinese description ###
      為 popToRootViewController 加上 call back.
      
-     ## Use example
+     ### Use example
      ```swift
      popToRootViewController {
         print("did popToRootViewController")
@@ -112,10 +112,10 @@ public extension UINavigationController {
     /**
      pop to view controller with completion handler.
      
-     ## Chinese description ###
+     ### Chinese description ###
      為 popToViewController 加上 call back.
      
-     ## Use example
+     ### Use example
      ```swift
      let vc = UIViewController()
      popToViewController(vc) {

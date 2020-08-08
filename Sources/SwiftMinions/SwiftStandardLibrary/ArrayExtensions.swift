@@ -12,7 +12,7 @@ public extension Array {
     
     /**
      Shift elements in array by index
-     ## Chinese description
+     ### Chinese description
      將陣列裡的元素移動到 後綴(正數) or 前綴(負數)
      
      ## Usage Example: ##
@@ -41,7 +41,7 @@ public extension Array {
     
     /**
      Shift elements in array by index
-     ## Chinese description
+     ### Chinese description
      將陣列裡的元素移動到 後綴(正數) or 前綴(負數), 無回傳值
      
      ## Usage Example: ##
@@ -63,7 +63,7 @@ public extension Array {
     
     
     /**
-     ## Chinese description
+     ### Chinese description
      將陣列裡的元素移動到 指定的位子
      
      ## Usage Example: ##

@@ -54,7 +54,7 @@ Build() {
         -project SwiftMinions.xcodeproj \
         -scheme SwiftMinions \
         -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone 11 pro,OS=13.3' 
+        -destination 'platform=iOS Simulator,name=iPhone 11 pro,OS=13.0' 
     if [ $? != 0 ]; then
 		echo "${RED}xcodebuild fail!\nㄅㄅ"
 		exit 1
@@ -96,22 +96,22 @@ FinishRelease() {
     git flow release finish -m "" ${newVersion}
     unset GIT_MERGE_AUTOEDIT
     git checkout develop || exit $?
-    git push || exit $?
+    git push origin --tags || exit $?
     git checkout master || exit $?
-    git push || exit $?
+    git push origin --tags || exit $?
 }
 
 # pod lint & push
 PodLintAndPush() {
     pod spec lint
     if [ $? != 0 ]; then
-        printf "${RED}pod lint fail.\nㄅㄅ"
+        printf "${RED}[ error ] : pod spec lint.\nㄅㄅ${NC}\n"
         exit 1
     fi
 
     pod trunk push
     if [ $? != 0 ]; then
-        printf "${RED}pod trunk push.\nㄅㄅ"
+        printf "${RED}[ error ] : pod trunk push.\nㄅㄅ${NC}\n"
         exit 1
     fi
 }
