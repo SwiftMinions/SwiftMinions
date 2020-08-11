@@ -21,7 +21,7 @@ public extension UIWindow {
       let topVC = UIWindow.toppestViewController()
      ```
     */
-    func toppestViewController(
+    static func toppestViewController(
         base: UIViewController? = SMConfig.keyWindow?.rootViewController
     )
         -> UIViewController?
