@@ -260,7 +260,7 @@ public extension String {
         
         guard let data = self.data(using: .utf8) else { return nil }
         
-        if let model = try? SMConfig.decoder.decode(T.self, from: data){
+        if let model = try? SMConfig.decoder.decode(T.self, from: data) {
             return model
         }
         
