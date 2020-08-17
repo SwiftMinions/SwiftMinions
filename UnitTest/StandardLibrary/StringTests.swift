@@ -96,4 +96,21 @@ class StringTests: XCTestCase {
         let newPhone = phone.regularReplace(withRegex: regex, content: "$2-$4")
         XCTAssertEqual(newPhone, "02-123456789")
     }
+    
+    func testStringToJSONModel(){
+        
+        struct UserModel: Codable {
+            let id: String
+            enum CodingKeys: String, CodingKey {
+                case id = "id"
+            }
+        }
+        let jsonString = "{ \"id\" : \"123\" }"
+        
+        if let user: UserModel = jsonString.toJsonModel() {
+            XCTAssertEqual(user.id, "123")
+        }else {
+            XCTFail()
+        }
+    }
 }

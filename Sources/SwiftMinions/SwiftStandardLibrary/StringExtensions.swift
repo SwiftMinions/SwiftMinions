@@ -232,6 +232,40 @@ public extension String {
 
         return String(data: data, encoding: decoding)
     }
+    
+    /**
+     String to JSON Model.
+     
+     ### Chinese description
+     將文字轉換成JSON Model 用在假資料上
+    
+     ### Use example
+     ```
+     struct UserModel: Codable {
+         let id: String
+         enum CodingKeys: String, CodingKey {
+             case id = "id"
+         }
+     }
+     let jsonString = "{ \"id\" : \"123\" }"
+     
+     if let user: UserModel = jsonString.toJsonModel() {
+         print(user.id)
+         //"123"
+     }
+     ```
+     - Returns: T
+     */
+    func toJsonModel<T: Codable>() -> T? {
+        
+        guard let data = self.data(using: .utf8) else { return nil }
+        
+        if let model = try? SMConfig.decoder.decode(T.self, from: data) {
+            return model
+        }
+        
+        return nil
+    }
 }
 
 // MARK: - Regular expression
