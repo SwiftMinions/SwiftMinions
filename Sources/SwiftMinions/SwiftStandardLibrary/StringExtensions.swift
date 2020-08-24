@@ -282,6 +282,34 @@ public extension String {
         }
         return result
     }
+
+     /**
+     Generate sha256 algorithm hash string
+     
+     Adapted from https://firebase.google.com/docs/auth/ios/apple
+     
+     ### Chinese description
+     使用 sha256 來雜湊字串
+     
+     ### Use example
+     String.randomNonceString()
+     ```swift
+        let afterSha256 = "string input here".withSha256()
+     ```
+     
+     - Parameters:
+        - input: string that wanted to be sha256 hash
+     - Returns: hashed via sha256 string
+    */
+    @available(iOS 13.0, *)
+    func withSha256() -> String {
+        let inputData = Data(self.utf8)
+        let hashedData = SHA256.hash(data: inputData)
+        let hashString = hashedData.compactMap {
+            return String(format: "%02x", $0)
+        }.joined()
+        return hashString
+    }
 }
 
 // MARK: - Regular expression
