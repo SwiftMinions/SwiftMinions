@@ -19,11 +19,13 @@ public extension UserDefaults {
      ### Use example
      ```
      struct UserModel: Codable {
-     let id: String
-     enum CodingKeys: String, CodingKey {
-     case id = "id"
+        let id: String
+        
+        enum CodingKeys: String, CodingKey {
+            case id = "id"
+        }
      }
-     }
+     
      let jsonString = "{ id : \"123\" }"
      let data = string.data(using: .utf8)
      let userModel: UserModel = data.toCodable()
