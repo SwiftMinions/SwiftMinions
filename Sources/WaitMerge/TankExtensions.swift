@@ -11,6 +11,21 @@ import CommonCrypto
 import MapKit
    
 
+extension BinaryInteger {
+    /**
+     Check even
+     
+     ### Chinese description
+     檢查是否為偶數
+     
+     ## Usage Example: ##
+     ````
+     2.isEven //true
+     ````
+     */
+    var isEven: Bool { return self % 2 == 0 }
+}
+
 extension Array {
     
     /**
