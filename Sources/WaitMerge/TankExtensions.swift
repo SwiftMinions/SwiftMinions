@@ -10,6 +10,30 @@ import UIKit
 import CommonCrypto
 import MapKit
    
+
+extension Array {
+    
+    /**
+     Get element from array first to reduce default value
+     
+     ### Chinese description
+     從 Array 取第一個 element 當預設值
+     
+     ## Usage Example: ##
+     ````
+     [1, 2, 3, 4].reduce(+)// Optional(10)
+     ````
+     - Parameter nextPartialResult
+     A closure that combines an accumulating value and an element of the sequence into a new accumulating value, to be used in the next call of the nextPartialResult closure or returned to the caller.
+     - Returns: The final accumulated value. If the sequence has no elements, the result is initialResult.
+     */
+    func reduce(_ nextPartialResult: (Element, Element) -> Element) -> Element? {
+        guard let first = first else { return nil }
+        return dropFirst().reduce(first, nextPartialResult)
+    }
+}
+
+
 // 以下保留，不確定要不要
 extension String {
     func toData() -> Data? {
